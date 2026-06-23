@@ -27,6 +27,7 @@ Module 1 xây dựng cơ sở tri thức từ chương trình đào tạo ngành
 
 ### Chạy file: test_module1.py
 Tìm và sửa đoạn sau thành những môn đã học
+Ví dụ hoặc thêm các môn học khác:
 ```bash
 passed_courses = [
     "MAT1041",
