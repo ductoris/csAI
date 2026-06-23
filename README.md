@@ -2,9 +2,9 @@
 
 ## gudluck
 
-## Module 1: Curriculum Knowledge Base
+## Module 0: Knowledge Base
 
-Module 1 xây dựng cơ sở tri thức từ chương trình đào tạo ngành Kỹ thuật Robot dưới dạng JSON và đồ thị học phần (Course Graph).
+Module 0 xây dựng cơ sở tri thức từ chương trình đào tạo ngành Kỹ thuật Robot dưới dạng JSON và đồ thị học phần (Course Graph).
 
 ### Chức năng
 
