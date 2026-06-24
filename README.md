@@ -2,36 +2,35 @@
 
 ## gudluck
 
-## Module 0: Knowledge Base
+# Module 1 - Rule-based Knowledge Engine
 
-Module 0 xây dựng cơ sở tri thức từ chương trình đào tạo ngành Kỹ thuật Robot dưới dạng JSON và đồ thị học phần (Course Graph).
+Module 1 đọc hồ sơ sinh viên và chương trình đào tạo, sau đó xuất ra file JSON làm đầu vào cho Module 2.
 
-### Chức năng
+## 1. Cài đặt
 
-* Đọc dữ liệu chương trình đào tạo từ `ctdt_ky_thuat_robot.json`
-* Quản lý thông tin học phần và điều kiện tiên quyết
-* Xây dựng đồ thị học phần bằng NetworkX
-* Xác định các môn học đủ điều kiện đăng ký (Eligible Courses)
-* Xác định các môn học còn thiếu điều kiện tiên quyết (Blocked Courses)
-
-### Đầu vào
-
-* Chương trình đào tạo ngành Kỹ thuật Robot (JSON)
-
-### Đầu ra
-
-* Course Knowledge Base
-* Curriculum Graph
-* Eligible Courses
-* Blocked Courses
-
-### Chạy file: test_module1.py
-Tìm và sửa đoạn sau thành những môn đã học
-Ví dụ hoặc thêm các môn học khác:
 ```bash
-passed_courses = [
-    "MAT1041",
-    "INT1008",
-    "EPN1095"
-]
+pip install pandas
 ```
+Cấu trúc file cần có: 
+```bash
+module1_rule_engine.py
+
+courses_uet_robotics_ctdt_official.csv
+
+student_profiles.csv
+```
+## Chạy module 1:
+### Chạy 1 sinh viên đầu tiên:
+```bash
+python module1_rule_engine.py
+```
+### Chạy với một sinh viên cụ thể:
+```bash
+python module1_rule_engine.py --student UET230001
+```
+### Nếu muốn chạy toàn bộ:
+```bash
+python module1_rule_engine.py --all
+```
+### Khi đó sẽ tạo ra 1 folder
+

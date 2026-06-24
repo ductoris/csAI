@@ -1,19 +1,46 @@
 import pandas as pd
 import random
-import re
+import unicodedata
 from pathlib import Path
+
 
 # =========================================================
 # CONFIG
 # =========================================================
 
 RANDOM_SEED = 2026
-NUM_STUDENTS = 150
 
 COURSES_FILE = "courses_uet_robotics_ctdt_official.csv"
 OUTPUT_FILE = "student_profiles.csv"
 
 MAJOR_NAME = "Kỹ thuật Robot"
+TOTAL_PROGRAM_CREDITS = 150
+
+# Với dữ liệu train ML, nên để False.
+# Vì sinh viên kỳ 1 chưa có GPA thật.
+INCLUDE_SEMESTER_1_NEW_STUDENTS = False
+
+NUM_STUDENTS = 150
+
+YEAR_DISTRIBUTION = {
+    1: 38,
+    2: 37,
+    3: 37,
+    4: 38,
+}
+
+# current_semester = học kỳ sắp bắt đầu
+# completed_credits = tín chỉ đã tích lũy trước học kỳ đó
+SEMESTER_CREDIT_RANGES = {
+    1: (0, 0),
+    2: (12, 22),
+    3: (28, 45),
+    4: (45, 65),
+    5: (65, 85),
+    6: (85, 105),
+    7: (105, 125),
+    8: (120, 145),
+}
 
 GRADE_TO_GPA = {
     "A+": 4.0,
@@ -50,29 +77,61 @@ CAREER_PATHS = [
     ("Vision-based Robotics Engineer", "Robot thông minh"),
 ]
 
-SMART_KEYWORDS = [
-    "AI", "Machine Learning", "Vision", "Navigation",
-    "Mobile", "AMR", "Cloud", "Motion", "Kinematics"
-]
-
-AUTOMATION_KEYWORDS = [
-    "PLC", "SCADA", "Automation", "Industrial",
-    "Embedded", "Firmware", "IoT", "Microcontroller", "Smart Home"
-]
-
 
 # =========================================================
-# LOAD DATA
+# BASIC UTILS
 # =========================================================
 
-def read_csv_auto(path):
-    for enc in ["utf-8-sig", "utf-8", "cp1258", "latin1"]:
+def read_csv_auto(file_path):
+    encodings = ["utf-8-sig", "utf-8", "cp1258", "latin1"]
+
+    for enc in encodings:
         try:
-            return pd.read_csv(path, encoding=enc)
+            return pd.read_csv(file_path, encoding=enc)
         except Exception:
             pass
-    raise ValueError(f"Không đọc được file: {path}")
 
+    raise ValueError(f"Không đọc được file CSV: {file_path}")
+
+
+def normalize_text(text):
+    if pd.isna(text):
+        return ""
+
+    text = str(text).lower().strip()
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(ch for ch in text if unicodedata.category(ch) != "Mn")
+    return text
+
+
+def is_empty(value):
+    if pd.isna(value):
+        return True
+
+    value = str(value).strip()
+
+    return value == "" or value.lower() in [
+        "nan", "none", "null", "-", "không", "khong"
+    ]
+
+
+def parse_prerequisites(value):
+    if is_empty(value):
+        return []
+
+    text = str(value)
+    text = text.replace(",", ";").replace("/", ";").replace("|", ";")
+
+    return [
+        item.strip()
+        for item in text.split(";")
+        if item.strip() and item.strip().lower() != "nan"
+    ]
+
+
+# =========================================================
+# LOAD COURSE DATA
+# =========================================================
 
 def clean_courses(df):
     required_cols = [
@@ -81,16 +140,17 @@ def clean_courses(df):
         "credits",
         "semester",
         "category",
-        "prerequisite_code"
+        "prerequisite_code",
     ]
 
     for col in required_cols:
         if col not in df.columns:
-            raise ValueError(f"Thiếu cột bắt buộc trong courses.csv: {col}")
+            raise ValueError(f"courses.csv thiếu cột bắt buộc: {col}")
 
     df = df.copy()
 
     df["course_code"] = df["course_code"].astype(str).str.strip()
+
     df = df[
         (df["course_code"] != "") &
         (df["course_code"].str.lower() != "nan")
@@ -98,28 +158,12 @@ def clean_courses(df):
 
     df["course_name"] = df["course_name"].astype(str).str.strip()
     df["category"] = df["category"].astype(str).str.strip()
-    df["credits"] = pd.to_numeric(df["credits"], errors="coerce").fillna(0).astype(int)
+    df["credits"] = pd.to_numeric(
+        df["credits"],
+        errors="coerce"
+    ).fillna(0).astype(int)
 
     return df
-
-
-# =========================================================
-# COURSE HELPERS
-# =========================================================
-
-def parse_prerequisites(value):
-    if pd.isna(value):
-        return []
-
-    text = str(value).strip()
-
-    if text == "" or text.lower() in ["nan", "none", "không", "khong", "-"]:
-        return []
-
-    text = text.replace(",", ";").replace("/", ";")
-    parts = [x.strip() for x in text.split(";") if x.strip()]
-
-    return parts
 
 
 def build_course_maps(df_courses):
@@ -127,10 +171,11 @@ def build_course_maps(df_courses):
     prerequisites = {}
 
     for _, row in df_courses.iterrows():
-        code = row["course_code"]
+        code = str(row["course_code"]).strip()
 
         course_info[code] = {
-            "name": row["course_name"],
+            "course_code": code,
+            "course_name": row["course_name"],
             "credits": int(row["credits"]),
             "semester": row["semester"],
             "category": row["category"],
@@ -138,8 +183,49 @@ def build_course_maps(df_courses):
 
         prerequisites[code] = parse_prerequisites(row["prerequisite_code"])
 
+    valid_codes = set(course_info.keys())
+
+    # Loại prerequisite không tồn tại trong CTĐT
+    for course in list(prerequisites.keys()):
+        prerequisites[course] = [
+            p for p in prerequisites[course]
+            if p in valid_codes and p != course
+        ]
+
     return course_info, prerequisites
 
+
+def filter_by_category(df_courses, keywords):
+    keywords_norm = [normalize_text(k) for k in keywords]
+
+    result = []
+
+    for _, row in df_courses.iterrows():
+        category = normalize_text(row["category"])
+
+        if any(k in category for k in keywords_norm):
+            result.append(row["course_code"])
+
+    return result
+
+
+def filter_by_name(df_courses, keywords):
+    keywords_norm = [normalize_text(k) for k in keywords]
+
+    result = []
+
+    for _, row in df_courses.iterrows():
+        name = normalize_text(row["course_name"])
+
+        if any(k in name for k in keywords_norm):
+            result.append(row["course_code"])
+
+    return result
+
+
+# =========================================================
+# PREREQUISITE HELPERS
+# =========================================================
 
 def get_ancestors(course_code, prerequisites, valid_codes, visited=None):
     if visited is None:
@@ -160,51 +246,169 @@ def get_ancestors(course_code, prerequisites, valid_codes, visited=None):
     return result
 
 
-def add_course_with_prereqs(course_set, course_code, prerequisites, valid_codes):
-    if course_code not in valid_codes:
-        return
-
-    ancestors = get_ancestors(course_code, prerequisites, valid_codes)
-
-    for p in ancestors:
-        course_set.add(p)
-
-    course_set.add(course_code)
-
-
 def total_credits(course_set, course_info):
-    return sum(course_info[c]["credits"] for c in course_set if c in course_info)
+    return sum(
+        course_info[c]["credits"]
+        for c in course_set
+        if c in course_info
+    )
 
 
-def filter_by_category(df_courses, patterns):
-    pattern = "|".join(patterns)
-    return df_courses[
-        df_courses["category"].str.contains(pattern, case=False, na=False)
-    ]["course_code"].tolist()
+def add_course_with_prereqs(
+    completed,
+    course_code,
+    course_info,
+    prerequisites,
+    valid_codes,
+    target_max
+):
+    """
+    Thêm môn và toàn bộ tiên quyết của nó.
+    Chỉ thêm nếu không làm vượt quá target_max quá nhiều.
+    """
+
+    if course_code not in valid_codes:
+        return False
+
+    to_add = set()
+    to_add.add(course_code)
+    to_add |= get_ancestors(course_code, prerequisites, valid_codes)
+
+    new_courses = [c for c in to_add if c not in completed]
+    added_credits = sum(course_info[c]["credits"] for c in new_courses)
+
+    current_credits = total_credits(completed, course_info)
+
+    if current_credits + added_credits > target_max + 3:
+        return False
+
+    for c in new_courses:
+        completed.add(c)
+
+    return True
 
 
-def filter_by_name(df_courses, patterns):
-    pattern = "|".join(patterns)
-    return df_courses[
-        df_courses["course_name"].str.contains(pattern, case=False, na=False)
-    ]["course_code"].tolist()
+def add_from_pool(
+    completed,
+    pool,
+    course_info,
+    prerequisites,
+    valid_codes,
+    target_min,
+    target_max,
+    max_courses=None
+):
+    pool = [c for c in pool if c in valid_codes and c not in completed]
+    random.shuffle(pool)
+
+    count = 0
+
+    for c in pool:
+        current_credits = total_credits(completed, course_info)
+
+        if current_credits >= target_min:
+            break
+
+        added = add_course_with_prereqs(
+            completed,
+            c,
+            course_info,
+            prerequisites,
+            valid_codes,
+            target_max
+        )
+
+        if added:
+            count += 1
+
+        if max_courses is not None and count >= max_courses:
+            break
 
 
 # =========================================================
-# GPA AND GRADES
+# SEMESTER LOGIC
 # =========================================================
 
-def choose_performance_level(year):
+def choose_current_semester(year):
+    """
+    current_semester là học kỳ sắp bắt đầu.
+    """
+
+    if year == 1:
+        if INCLUDE_SEMESTER_1_NEW_STUDENTS:
+            return random.choice([1, 2])
+        return 2
+
+    if year == 2:
+        return random.choice([3, 4])
+
+    if year == 3:
+        return random.choice([5, 6])
+
+    return random.choice([7, 8])
+
+
+def allowed_pools_by_semester(current_semester, pools, career_track):
+    """
+    Quy định nhóm môn có thể đã hoàn thành trước current_semester.
+    """
+
+    common = pools["common"]
+    field = pools["field"]
+    block = pools["block"]
+    group = pools["group"]
+    mandatory = pools["mandatory"]
+    support = pools["support"]
+    intro = pools["intro"]
+    smart = pools["smart"]
+    automation = pools["automation"]
+
+    track_pool = smart if career_track == "Robot thông minh" else automation
+
+    if current_semester == 1:
+        return []
+
+    if current_semester == 2:
+        return intro + common + field
+
+    if current_semester == 3:
+        return intro + common + field + block
+
+    if current_semester == 4:
+        return intro + common + field + block + group
+
+    if current_semester == 5:
+        return common + field + block + group + mandatory[:6] + support[:2]
+
+    if current_semester == 6:
+        return common + field + block + group + mandatory + track_pool[:3] + support[:3]
+
+    if current_semester == 7:
+        return common + field + block + group + mandatory + track_pool[:5] + support[:4] + ["RBE4004"]
+
+    if current_semester == 8:
+        return common + field + block + group + mandatory + track_pool + support + ["RBE4004", "RBE3052"]
+
+    return []
+
+
+# =========================================================
+# GRADES / GPA
+# =========================================================
+
+def choose_performance_level():
     r = random.random()
 
     if r < 0.10:
         return "weak"
-    elif r < 0.45:
+
+    if r < 0.45:
         return "average"
-    elif r < 0.85:
+
+    if r < 0.85:
         return "good"
-    else:
-        return "excellent"
+
+    return "excellent"
 
 
 def random_grade(level):
@@ -228,53 +432,55 @@ def random_grade(level):
 
     return random.choices(
         ["C", "D+", "D", "F"],
-        weights=[0.35, 0.25, 0.25, 0.15]
+        weights=[0.30, 0.25, 0.25, 0.20]
     )[0]
 
 
 def calculate_gpa(course_grades, course_info):
     total_points = 0
-    total_credits = 0
+    total_credits_value = 0
 
-    for code, grade in course_grades.items():
-        if code not in course_info:
+    for course, grade in course_grades.items():
+        if course not in course_info:
             continue
 
-        credits = course_info[code]["credits"]
+        credits = course_info[course]["credits"]
         total_points += GRADE_TO_GPA[grade] * credits
-        total_credits += credits
+        total_credits_value += credits
 
-    if total_credits == 0:
+    if total_credits_value == 0:
         return 0.0
 
-    return round(total_points / total_credits, 2)
+    return round(total_points / total_credits_value, 2)
 
 
-def generate_failed_courses(eligible_pool, completed_set, level, year):
-    failed = []
-
+def generate_failed_courses(completed_set, possible_pool, level):
     if level == "weak":
-        k = random.choice([1, 2, 2, 3])
-    elif level == "average" and random.random() < 0.25:
+        k = random.choice([1, 1, 2, 2, 3])
+    elif level == "average" and random.random() < 0.20:
         k = 1
     else:
         k = 0
 
-    candidates = [c for c in eligible_pool if c not in completed_set]
+    candidates = [
+        c for c in possible_pool
+        if c not in completed_set
+    ]
 
     if not candidates:
         return []
 
-    failed = random.sample(candidates, min(k, len(candidates)))
-
-    return failed
+    return random.sample(candidates, min(k, len(candidates)))
 
 
 # =========================================================
-# ADVISOR OUTPUT FIELDS
+# ADVISOR FIELDS
 # =========================================================
 
-def recommend_credits(gpa, failed_count, year):
+def recommend_credits(gpa, failed_count, current_semester):
+    if current_semester == 1:
+        return 18
+
     if gpa < 2.0:
         return 14
 
@@ -284,13 +490,13 @@ def recommend_credits(gpa, failed_count, year):
     if gpa < 3.2:
         return 18
 
-    if year <= 2:
-        return 20
-
     return random.choice([20, 22])
 
 
-def study_hours(gpa, failed_count):
+def study_hours(gpa, failed_count, current_semester):
+    if current_semester == 1:
+        return 8
+
     if gpa < 2.0:
         return random.choice([12, 13, 14, 15])
 
@@ -303,7 +509,10 @@ def study_hours(gpa, failed_count):
     return random.choice([6, 7, 8])
 
 
-def risk_level(gpa, failed_count):
+def risk_level(gpa, failed_count, current_semester):
+    if current_semester == 1:
+        return "NEW_STUDENT"
+
     if gpa < 2.0 or failed_count >= 2:
         return "HIGH"
 
@@ -315,36 +524,21 @@ def risk_level(gpa, failed_count):
 
 def infer_weak_skills(career_goal, course_grades):
     weak = []
-
     low_grades = {"C", "D+", "D", "F"}
 
-    math_codes = ["MAT1041", "MAT1042", "MAT1093"]
-    programming_codes = ["INT1008", "ELT3240"]
-    electronics_codes = ["ELT2201", "ELT3290", "ELT3292"]
-    control_codes = ["RBE3012", "RBE3042"]
-    ai_codes = ["AIT2004", "RBE3047", "RBE3043", "RBE3046"]
-    vision_codes = ["RBE3015"]
+    skill_map = {
+        "Toán nền tảng": ["MAT1041", "MAT1042", "MAT1093", "MAT1101"],
+        "Lập trình": ["INT1008", "INT2210", "ELT3240"],
+        "Điện tử - vi xử lý": ["ELT2201", "ELT3290", "ELT3240"],
+        "Điều khiển": ["ELT3051", "RBE3012", "RBE3042"],
+        "AI - Machine Learning": ["AIT2004", "RBE3043", "RBE3046", "RBE3056"],
+        "Thị giác máy tính": ["RBE3015"],
+        "ROS": ["RBE3017"],
+    }
 
-    def has_low(codes):
-        return any(course_grades.get(c) in low_grades for c in codes)
-
-    if has_low(math_codes):
-        weak.append("Toán nền tảng")
-
-    if has_low(programming_codes):
-        weak.append("Lập trình")
-
-    if has_low(electronics_codes):
-        weak.append("Điện tử - vi điều khiển")
-
-    if has_low(control_codes):
-        weak.append("Điều khiển")
-
-    if has_low(ai_codes):
-        weak.append("AI - Machine Learning")
-
-    if has_low(vision_codes):
-        weak.append("Xử lý ảnh - thị giác máy tính")
+    for skill, courses in skill_map.items():
+        if any(course_grades.get(c) in low_grades for c in courses):
+            weak.append(skill)
 
     if "Vision" in career_goal or "Computer Vision" in career_goal:
         weak.append("OpenCV")
@@ -355,175 +549,109 @@ def infer_weak_skills(career_goal, course_grades):
     if "PLC" in career_goal or "SCADA" in career_goal:
         weak.append("PLC/SCADA")
 
-    if "Embedded" in career_goal or "Firmware" in career_goal or "Microcontroller" in career_goal:
+    if (
+        "Embedded" in career_goal
+        or "Firmware" in career_goal
+        or "Microcontroller" in career_goal
+    ):
         weak.append("Embedded C/C++")
 
     return ";".join(sorted(set(weak)))
 
 
 # =========================================================
-# STUDENT GENERATION
+# BUILD STUDENT PROFILE
 # =========================================================
 
-def build_student_courses(
-    year,
+def build_completed_courses_for_student(
+    current_semester,
     career_track,
-    level,
-    df_courses,
+    pools,
     course_info,
-    prerequisites,
-    special_project=False
+    prerequisites
 ):
     valid_codes = set(course_info.keys())
+
     completed = set()
 
-    common = filter_by_category(df_courses, ["Khối kiến thức chung"])
-    field = filter_by_category(df_courses, ["Khối kiến thức theo lĩnh vực"])
-    block = filter_by_category(df_courses, ["Khối kiến thức theo khối ngành"])
-    group = filter_by_category(df_courses, ["Khối kiến thức theo nhóm ngành"])
-    mandatory = filter_by_category(df_courses, ["Khối kiến thức ngành bắt buộc"])
-    support = filter_by_category(df_courses, ["Khối kiến thức bổ trợ"])
-    smart = filter_by_category(df_courses, ["Robot thông minh"])
-    automation = filter_by_category(df_courses, ["Tự động hóa"])
+    target_min, target_max = SEMESTER_CREDIT_RANGES[current_semester]
 
-    intro_courses = filter_by_name(df_courses, ["Nhập môn", "Trải nghiệm", "khám phá"])
+    if current_semester == 1:
+        return completed
 
-    graduation_courses = filter_by_category(df_courses, ["Thực tập và tốt nghiệp"])
-    replacement_courses = filter_by_category(df_courses, ["Thay thế Đồ án tốt nghiệp"])
+    allowed_pool = allowed_pools_by_semester(
+        current_semester,
+        pools,
+        career_track
+    )
 
-    target_credit_ranges = {
-        1: (18, 42),
-        2: (45, 82),
-        3: (85, 122),
-        4: (120, 150),
-    }
+    allowed_pool = [c for c in allowed_pool if c in valid_codes]
 
-    target_min, target_max = target_credit_ranges[year]
-    target_credits = random.randint(target_min, target_max)
+    # Ưu tiên môn nhập môn và đại cương trước
+    ordered_pool = []
 
-    def add_from_pool(pool, max_courses=None):
-        pool = [c for c in pool if c in valid_codes]
-        random.shuffle(pool)
+    for key in ["intro", "common", "field", "block", "group", "mandatory"]:
+        for c in pools[key]:
+            if c in allowed_pool and c not in ordered_pool:
+                ordered_pool.append(c)
 
-        count = 0
+    track_key = "smart" if career_track == "Robot thông minh" else "automation"
 
-        for c in pool:
-            if total_credits(completed, course_info) >= target_credits:
-                break
+    for c in pools[track_key]:
+        if c in allowed_pool and c not in ordered_pool:
+            ordered_pool.append(c)
 
-            add_course_with_prereqs(completed, c, prerequisites, valid_codes)
-            count += 1
+    for c in pools["support"]:
+        if c in allowed_pool and c not in ordered_pool:
+            ordered_pool.append(c)
 
-            if max_courses is not None and count >= max_courses:
-                break
+    random.shuffle(ordered_pool)
 
-    # -------------------------------
-    # YEAR 1
-    # -------------------------------
-    if year == 1:
-        add_from_pool(intro_courses, max_courses=3)
-        add_from_pool(common + field + block)
+    # Với các kỳ đầu, giữ độ random nhưng không nhảy quá xa
+    if current_semester <= 3:
+        early_pool = []
 
-        if level in ["good", "excellent"]:
-            add_from_pool(group, max_courses=2)
+        for key in ["intro", "common", "field", "block"]:
+            for c in pools[key]:
+                if c in allowed_pool:
+                    early_pool.append(c)
 
-    # -------------------------------
-    # YEAR 2
-    # -------------------------------
-    elif year == 2:
-        for c in common + field + block:
-            add_course_with_prereqs(completed, c, prerequisites, valid_codes)
+        random.shuffle(early_pool)
+        ordered_pool = early_pool
 
-        add_from_pool(group)
+    for course in ordered_pool:
+        current_credits = total_credits(completed, course_info)
 
-        if level in ["good", "excellent"]:
-            add_from_pool(mandatory, max_courses=random.choice([2, 3]))
+        if current_credits >= target_min:
+            break
 
-    # -------------------------------
-    # YEAR 3
-    # -------------------------------
-    elif year == 3:
-        for c in common + field + block + group:
-            add_course_with_prereqs(completed, c, prerequisites, valid_codes)
-
-        major_count = random.randint(
-            max(6, len(mandatory) // 2),
-            min(len(mandatory), max(8, len(mandatory)))
+        add_course_with_prereqs(
+            completed,
+            course,
+            course_info,
+            prerequisites,
+            valid_codes,
+            target_max
         )
 
-        add_from_pool(mandatory, max_courses=major_count)
+    # Nếu vẫn chưa đủ target_min, cố gắng thêm môn phù hợp bất kỳ trong allowed_pool
+    retry_pool = [c for c in allowed_pool if c not in completed]
+    random.shuffle(retry_pool)
 
-        # Thực tập ngành ưu tiên năm 3
-        if "RBE4004" in valid_codes:
-            add_course_with_prereqs(completed, "RBE4004", prerequisites, valid_codes)
+    for course in retry_pool:
+        current_credits = total_credits(completed, course_info)
 
-        track_pool = smart if career_track == "Robot thông minh" else automation
-        add_from_pool(track_pool, max_courses=random.choice([2, 3, 4]))
+        if current_credits >= target_min:
+            break
 
-        add_from_pool(support, max_courses=random.choice([1, 2]))
-
-    # -------------------------------
-    # YEAR 4
-    # -------------------------------
-    else:
-        for c in common + field + block + group + mandatory:
-            add_course_with_prereqs(completed, c, prerequisites, valid_codes)
-
-        if "RBE4004" in valid_codes:
-            add_course_with_prereqs(completed, "RBE4004", prerequisites, valid_codes)
-
-        track_pool = smart if career_track == "Robot thông minh" else automation
-
-        # Chuyên sâu: 12-15 tín chỉ
-        selected_track = []
-        track_credits = 0
-        shuffled_track = [c for c in track_pool if c in valid_codes]
-        random.shuffle(shuffled_track)
-
-        for c in shuffled_track:
-            if track_credits >= random.choice([12, 13, 14, 15]):
-                break
-
-            selected_track.append(c)
-            track_credits += course_info[c]["credits"]
-
-        for c in selected_track:
-            add_course_with_prereqs(completed, c, prerequisites, valid_codes)
-
-        # Bổ trợ: 6-9 tín chỉ
-        selected_support = []
-        support_credits = 0
-        shuffled_support = [c for c in support if c in valid_codes]
-        random.shuffle(shuffled_support)
-
-        for c in shuffled_support:
-            if support_credits >= random.choice([6, 7, 8, 9]):
-                break
-
-            selected_support.append(c)
-            support_credits += course_info[c]["credits"]
-
-        for c in selected_support:
-            add_course_with_prereqs(completed, c, prerequisites, valid_codes)
-
-        # Đồ án ngành nếu đã đạt khoảng 120 tín
-        if "RBE3052" in valid_codes and total_credits(completed, course_info) >= 115:
-            add_course_with_prereqs(completed, "RBE3052", prerequisites, valid_codes)
-
-        # Dự án ngành thay ĐATN cho một nhóm nhỏ
-        if special_project:
-            if "RBE4003" in valid_codes:
-                add_course_with_prereqs(completed, "RBE4003", prerequisites, valid_codes)
-
-            if "RBE4001" in completed:
-                completed.remove("RBE4001")
-
-            # Học thêm 6 tín tự chọn định hướng
-            add_from_pool(track_pool, max_courses=2)
-
-        else:
-            if "RBE4001" in valid_codes and total_credits(completed, course_info) >= 130:
-                add_course_with_prereqs(completed, "RBE4001", prerequisites, valid_codes)
+        add_course_with_prereqs(
+            completed,
+            course,
+            course_info,
+            prerequisites,
+            valid_codes,
+            target_max
+        )
 
     return completed
 
@@ -533,59 +661,62 @@ def generate_students(df_courses):
 
     course_info, prerequisites = build_course_maps(df_courses)
 
-    year_distribution = {
-        1: 38,
-        2: 37,
-        3: 37,
-        4: 38,
+    pools = {
+        "common": filter_by_category(df_courses, ["Khối kiến thức chung"]),
+        "field": filter_by_category(df_courses, ["Khối kiến thức theo lĩnh vực"]),
+        "block": filter_by_category(df_courses, ["Khối kiến thức theo khối ngành"]),
+        "group": filter_by_category(df_courses, ["Khối kiến thức theo nhóm ngành"]),
+        "mandatory": filter_by_category(df_courses, ["Khối kiến thức ngành bắt buộc"]),
+        "support": filter_by_category(df_courses, ["Khối kiến thức bổ trợ"]),
+        "smart": filter_by_category(df_courses, ["Robot thông minh"]),
+        "automation": filter_by_category(df_courses, ["Tự động hóa"]),
+        "intro": filter_by_name(df_courses, ["Nhập môn", "Trải nghiệm", "khám phá"]),
     }
 
     rows = []
     student_counter = 1
 
-    # 3 sinh viên năm 4 học Dự án ngành thay ĐATN
-    year4_project_indices = set(random.sample(range(38), 3))
-
-    for year, count in year_distribution.items():
-        for i in range(count):
+    for year, count in YEAR_DISTRIBUTION.items():
+        for _ in range(count):
             student_id = f"UET{230000 + student_counter:06d}"
-            current_semester = random.choice([year * 2 - 1, year * 2])
+
+            current_semester = choose_current_semester(year)
 
             career_goal, career_track = random.choice(CAREER_PATHS)
-            level = choose_performance_level(year)
+            level = choose_performance_level()
 
-            special_project = year == 4 and i in year4_project_indices
-
-            completed_set = build_student_courses(
-                year=year,
+            completed_set = build_completed_courses_for_student(
+                current_semester=current_semester,
                 career_track=career_track,
-                level=level,
-                df_courses=df_courses,
+                pools=pools,
                 course_info=course_info,
-                prerequisites=prerequisites,
-                special_project=special_project
+                prerequisites=prerequisites
             )
 
-            # Các môn có thể trượt: chọn từ các môn chưa hoàn thành nhưng cùng vùng năm học
-            eligible_failed_pool = list(course_info.keys())
+            possible_failed_pool = allowed_pools_by_semester(
+                current_semester,
+                pools,
+                career_track
+            )
+
             failed_courses = generate_failed_courses(
-                eligible_failed_pool,
-                completed_set,
-                level,
-                year
+                completed_set=completed_set,
+                possible_pool=possible_failed_pool,
+                level=level
             )
 
             course_grades = {}
 
+            # Môn hoàn thành: không cho F
             for c in sorted(completed_set):
                 grade = random_grade(level)
 
-                # Completed courses không được F
                 if grade == "F":
                     grade = "D"
 
                 course_grades[c] = grade
 
+            # Môn trượt
             for c in failed_courses:
                 course_grades[c] = "F"
 
@@ -594,18 +725,39 @@ def generate_students(df_courses):
             completed_credits = total_credits(completed_set, course_info)
             failed_count = len(failed_courses)
 
-            rec_credits = recommend_credits(gpa, failed_count, year)
+            rec_credits = recommend_credits(
+                gpa,
+                failed_count,
+                current_semester
+            )
+
             max_credits = min(22, rec_credits + 2)
-            hours = study_hours(gpa, failed_count)
-            risk = risk_level(gpa, failed_count)
-            weak_skills = infer_weak_skills(career_goal, course_grades)
+
+            hours = study_hours(
+                gpa,
+                failed_count,
+                current_semester
+            )
+
+            risk = risk_level(
+                gpa,
+                failed_count,
+                current_semester
+            )
+
+            weak_skills = infer_weak_skills(
+                career_goal,
+                course_grades
+            )
 
             completed_courses_str = ";".join(sorted(completed_set))
-            failed_courses_str = ";".join(sorted(failed_courses))
 
             course_grades_str = ";".join(
-                [f"{code}:{grade}" for code, grade in sorted(course_grades.items())]
+                f"{course}:{grade}"
+                for course, grade in sorted(course_grades.items())
             )
+
+            failed_courses_str = ";".join(sorted(failed_courses))
 
             rows.append({
                 "student_id": student_id,
@@ -640,13 +792,52 @@ def validate_students(df_students):
 
     assert df_students["student_id"].is_unique, "student_id bị trùng"
 
-    assert df_students["completed_courses"].notna().all(), "Có completed_courses bị rỗng"
+    assert df_students["gpa"].between(0, 4).all(), "GPA ngoài khoảng 0-4"
 
-    assert df_students["gpa"].between(0, 4).all(), "GPA nằm ngoài hệ 4"
+    assert (
+        df_students["completed_credits"] <= TOTAL_PROGRAM_CREDITS
+    ).all(), "completed_credits vượt 150"
 
-    assert df_students["recommended_credits"].between(10, 24).all(), "recommended_credits bất thường"
+    for _, row in df_students.iterrows():
+        sem = int(row["current_semester"])
+        credits = int(row["completed_credits"])
 
-    assert df_students["study_hours_per_week"].between(4, 20).all(), "study_hours_per_week bất thường"
+        min_credit, max_credit = SEMESTER_CREDIT_RANGES[sem]
+
+        if not (min_credit <= credits <= max_credit + 3):
+            raise ValueError(
+                f"Sinh viên {row['student_id']} có current_semester={sem}, "
+                f"completed_credits={credits}, ngoài khoảng hợp lý "
+                f"{min_credit}-{max_credit}"
+            )
+
+    # Kiểm tra kỳ 1
+    sem1 = df_students[df_students["current_semester"] == 1]
+
+    if not sem1.empty:
+        assert (
+            sem1["completed_credits"] == 0
+        ).all(), "Sinh viên kỳ 1 phải có completed_credits = 0"
+
+    # Kiểm tra không có năm 1 kỳ 1 đã học nhiều tín
+    bad = df_students[
+        (df_students["current_semester"] == 1) &
+        (df_students["completed_credits"] > 0)
+    ]
+
+    assert bad.empty, "Có sinh viên kỳ 1 đã có tín chỉ hoàn thành"
+
+    # Kiểm tra năm 1 không có đồ án/thực tập/tốt nghiệp
+    year1 = df_students[df_students["year"] == 1]
+
+    forbidden = ["RBE4001", "RBE4003", "RBE4004", "RBE3052"]
+
+    for code in forbidden:
+        bad_rows = year1[
+            year1["completed_courses"].astype(str).str.contains(code, na=False)
+        ]
+
+        assert bad_rows.empty, f"Năm 1 không được có {code}"
 
 
 # =========================================================
@@ -675,16 +866,32 @@ def main():
         encoding="utf-8-sig"
     )
 
-    print("Đã tạo xong file:", OUTPUT_FILE)
+    print("=" * 70)
+    print("ĐÃ TẠO XONG student_profiles.csv")
+    print("=" * 70)
+
     print("Số sinh viên:", len(df_students))
-    print()
-    print("Phân bố năm học:")
+
+    print("\nPhân bố năm học:")
     print(df_students["year"].value_counts().sort_index())
-    print()
-    print("Phân bố risk_level:")
+
+    print("\nPhân bố current_semester:")
+    print(df_students["current_semester"].value_counts().sort_index())
+
+    print("\nThống kê completed_credits theo current_semester:")
+    print(
+        df_students
+        .groupby("current_semester")["completed_credits"]
+        .agg(["min", "max", "mean"])
+        .round(2)
+    )
+
+    print("\nPhân bố risk_level:")
     print(df_students["risk_level"].value_counts())
-    print()
-    print("GPA trung bình:", round(df_students["gpa"].mean(), 2))
+
+    print("\nGPA trung bình:", round(df_students["gpa"].mean(), 2))
+
+    print("\nFile đầu ra:", OUTPUT_FILE)
 
 
 if __name__ == "__main__":
