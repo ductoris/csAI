@@ -34,3 +34,7 @@ python module1_rule_engine.py --all
 ```
 ### Khi đó sẽ tạo ra 1 folder
 
+# Để chạy toàn bộ ra tổng output cuối cùng với từng sinh viên:
+```bash
+  python3 run_pipeline.py --student UET230001
+```
