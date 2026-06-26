@@ -1,0 +1,66 @@
+{
+    "student_id": "UET_MaiDucTri",
+    "career_goal": "Computer Vision Engineer",
+    "current_semester": 3,
+    "top_k_recommendations": [
+        {
+            "rank": 1,
+            "utility_f_score": 9.0,
+            "micro_plan": {
+                "semester_4": {
+                    "courses": [
+                        "ROB3001",
+                        "ROB3002"
+                    ],
+                    "reason": "Hoạch định tối ưu bằng A* dựa trên điểm số thực tế và tải trọng năng lực."
+                },
+                "semester_5": {
+                    "courses": [
+                        "INT3405"
+                    ],
+                    "reason": "Hoạch định tối ưu bằng A* dựa trên điểm số thực tế và tải trọng năng lực."
+                }
+            },
+            "macro_framework": {
+                "year_3": [
+                    "Khối kiến thức cơ sở ngành Robot",
+                    "Đồ án chuyên ngành"
+                ],
+                "year_4": [
+                    "Khối chuyên ngành sâu (Thị giác máy)",
+                    "Khóa luận tốt nghiệp"
+                ]
+            }
+        },
+        {
+            "rank": 2,
+            "utility_f_score": 13.0,
+            "micro_plan": {
+                "semester_4": {
+                    "courses": [
+                        "ROB3001",
+                        "ROB3002"
+                    ],
+                    "reason": "Hoạch định tối ưu bằng A* dựa trên điểm số thực tế và tải trọng năng lực."
+                },
+                "semester_5": {
+                    "courses": [
+                        "MAT1102",
+                        "INT3405"
+                    ],
+                    "reason": "Hoạch định tối ưu bằng A* dựa trên điểm số thực tế và tải trọng năng lực."
+                }
+            },
+            "macro_framework": {
+                "year_3": [
+                    "Khối kiến thức cơ sở ngành Robot",
+                    "Đồ án chuyên ngành"
+                ],
+                "year_4": [
+                    "Khối chuyên ngành sâu (Thị giác máy)",
+                    "Khóa luận tốt nghiệp"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+course_code,course_name,credits,semester,category,prerequisite_code
+PHI1006,Triết học Mác – Lênin,3,,Khối kiến thức chung,
+PEC1008,Kinh tế chính trị Mác – Lênin,2,,Khối kiến thức chung,PHI1006
+PHI1002,Chủ nghĩa xã hội khoa học,2,,Khối kiến thức chung,
+HIS1001,Lịch sử Đảng Cộng sản Việt Nam,2,,Khối kiến thức chung,
+POL1001,Tư tưởng Hồ Chí Minh,2,,Khối kiến thức chung,
+FLF1107,Tiếng Anh B1,5,,Khối kiến thức chung,
+THL1057,Nhà nước và pháp luật đại cương,2,,Khối kiến thức chung,
+INT1009,Tin học cơ sở,3,,Khối kiến thức chung,
+,Kỹ năng bổ trợ,3,,Khối kiến thức chung - không tính vào tổng tín chỉ,
+,Giáo dục thể chất,4,,Khối kiến thức chung - không tính vào tổng tín chỉ,
+,Giáo dục quốc phòng – an ninh,8,,Khối kiến thức chung - không tính vào tổng tín chỉ,
+MAT1093,Đại số,4,,Khối kiến thức theo lĩnh vực,
+MAT1041,Giải tích 1,4,,Khối kiến thức theo lĩnh vực,
+MAT1042,Giải tích 2,4,,Khối kiến thức theo lĩnh vực,MAT1041
+EPN1095,Vật lý đại cương 1,2,,Khối kiến thức theo lĩnh vực,
+EPN1096,Vật lý đại cương 2,2,,Khối kiến thức theo lĩnh vực,EPN1095
+INT1008,Nhập môn lập trình,3,,Khối kiến thức theo lĩnh vực,
+ELT2035,Tín hiệu và hệ thống,3,,Khối kiến thức theo khối ngành,MAT1041
+INT2210,Cấu trúc dữ liệu và giải thuật,4,,Khối kiến thức theo khối ngành,INT1008
+MAT1101,Xác suất thống kê,3,,Khối kiến thức theo khối ngành,MAT1041
+ELT1007,Nhập môn kỹ thuật công nghệ,2,,Khối kiến thức theo nhóm ngành,
+ELT2201,Nguyên lý Kỹ thuật điện tử,3,,Khối kiến thức theo nhóm ngành,EPN1096
+ELT3134,Thực tập Kỹ thuật điện tử,2,,Khối kiến thức theo nhóm ngành,ELT2201
+ELT3144,Xử lý tín hiệu số,4,,Khối kiến thức theo nhóm ngành,ELT2035
+ELT3051,Kỹ thuật điều khiển,3,,Khối kiến thức theo nhóm ngành,ELT2035
+ELT3290,Thiết kế số và vi xử lý,3,,Khối kiến thức theo nhóm ngành,
+ELT3240,Nhập môn hệ thống nhúng,3,,Khối kiến thức theo nhóm ngành,
+RBE2001,Vẽ kỹ thuật,2,,Khối kiến thức theo nhóm ngành,
+RBE3002,Gia công và thiết kế CAD/CAM/CAE,2,,Khối kiến thức theo nhóm ngành,RBE2001
+RBE2031,Toán ứng dụng trong Kỹ thuật Robot,2,,Khối kiến thức theo nhóm ngành,MAT1093
+ELT3295,Mạng không dây,3,,Khối kiến thức theo nhóm ngành,
+RBE1001,Trải nghiệm và khám phá về Robot,2,,Khối kiến thức theo nhóm ngành,
+RBE3017,Lập trình Robot với ROS,3,,Khối kiến thức ngành bắt buộc,INT1008
+RBE2021,Thực hành Thiết kế và xây dựng Robot 1,2,,Khối kiến thức ngành bắt buộc,RBE2001
+RBE2022,Thực hành Thiết kế và xây dựng Robot 2,2,,Khối kiến thức ngành bắt buộc,ELT3051
+RBE2003,Động học và động lực học,3,,Khối kiến thức ngành bắt buộc,
+RBE3012,Các cơ cấu chấp hành Robot,3,,Khối kiến thức ngành bắt buộc,
+RBE3013,Các cơ cấu truyền động,3,,Khối kiến thức ngành bắt buộc,
+RBE3050,Cơ học và kết cấu Robot,3,,Khối kiến thức ngành bắt buộc,
+RBE3042,Cảm biến và Đo lường cho Robot,3,,Khối kiến thức ngành bắt buộc,
+ELT3292,Điều khiển logic và PLC,3,,Khối kiến thức ngành bắt buộc,ELT3051
+RBE3015,Xử lý ảnh và thị giác Robot,3,,Khối kiến thức ngành bắt buộc,
+AIT2004,Cơ sở trí tuệ nhân tạo,3,,Khối kiến thức ngành bắt buộc,
+RBE3030,An toàn lao động và môi trường công nghiệp,2,,Khối kiến thức ngành bắt buộc,
+RBE3051,Cơ học hệ nhiều vật,2,,Khối kiến thức ngành bắt buộc,
+RBE3052,Đồ án ngành Kỹ thuật robot,3,,Khối kiến thức ngành bắt buộc,
+REB3053,Tương tác người – Robot,3,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,RBE3015
+ELT3996,Điện tử công suất và điều khiển,3,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,ELT2201
+RBE3054,Mạng truyền thông công nghiệp và điều khiển phân tán,3,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,
+RBE3016,Thiết kế kiểu dáng công nghiệp,3,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,
+RBE3057,Các vấn đề hiện đại trong Kỹ thuật Robot,2,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,
+RBE3055,Hệ thống sản xuất tích hợp máy tính (CIM),3,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,
+RBE3056,Học máy ứng dụng,3,,Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp,AIT2004
+RBE3046,Khoa học nhận thức,3,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,INT2210
+REB3053,Tương tác người – Robot,3,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,RBE3015
+RBE3047,Giải thuật cho robot thông minh,3,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,
+RBE3045,Robot phân tán,3,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,RBE3051
+RBE3056,Học máy ứng dụng,3,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,AIT2004
+RBE3043,Các thuật toán thích nghi,3,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,INT2210
+RBE3057,Các vấn đề hiện đại trong Kỹ thuật Robot,2,,Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh,
+UET1002,Kỹ năng khởi nghiệp,2,,Khối kiến thức bổ trợ,
+INT3103,Tối ưu hóa,3,,Khối kiến thức bổ trợ,MAT1093;MAT1042
+PSY1050,Tâm lý học đại cương,2,,Khối kiến thức bổ trợ,
+THL1057,Nhà nước và pháp luật đại cương,2,,Khối kiến thức bổ trợ,
+INE1050,Kinh tế vi mô,3,,Khối kiến thức bổ trợ,
+INE1051,Kinh tế vĩ mô,3,,Khối kiến thức bổ trợ,
+HIS1056,Cơ sở văn hóa Việt Nam,3,,Khối kiến thức bổ trợ,
+HIS1053,Lịch sử văn minh thế giới,3,,Khối kiến thức bổ trợ,
+RBE4004,Thực tập ngành kỹ thuật Robot,3,,Khối kiến thức thực tập và tốt nghiệp,
+RBE4001,Đồ án tốt nghiệp,10,,Khối kiến thức thực tập và tốt nghiệp,
+RBE4003,Dự án ngành kỹ thuật robot (bắt buộc),4,,Các học phần thay thế Đồ án tốt nghiệp,
+,6 tín chỉ từ danh sách các học phần tự chọn theo các định hướng mà sinh viên lựa chọn,6,,Các học phần thay thế Đồ án tốt nghiệp,

@@ -1,0 +1,128 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230003",
+  "career_goal": "PLC Programmer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 15,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 29.621,
+      "g_score": 29.05,
+      "semesters": [
+        [
+          "ELT3240",
+          "MAT1042",
+          "RBE1001",
+          "MAT1101",
+          "INT1008"
+        ],
+        [
+          "EPN1095",
+          "ELT2035",
+          "ELT1007",
+          "PHI1006",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [],
+      "priority_missing": [
+        "Các vấn đề hiện đại trong Kỹ thuật Robot",
+        "Điều khiển logic và PLC",
+        "Toán ứng dụng trong kỹ thuật Robot",
+        "Điện tử công suất và điều khiển"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "SCADA",
+        "HMI",
+        "PLC",
+        "Power Electronics",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 29.721,
+      "g_score": 29.15,
+      "semesters": [
+        [
+          "ELT3240",
+          "EPN1095",
+          "RBE1001",
+          "FLF1107",
+          "INT1008"
+        ],
+        [
+          "ELT2035",
+          "ELT1007",
+          "MAT1042",
+          "MAT1101",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [],
+      "priority_missing": [
+        "Các vấn đề hiện đại trong Kỹ thuật Robot",
+        "Điều khiển logic và PLC",
+        "Toán ứng dụng trong kỹ thuật Robot",
+        "Điện tử công suất và điều khiển"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "SCADA",
+        "HMI",
+        "PLC",
+        "Power Electronics",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 29.721,
+      "g_score": 29.15,
+      "semesters": [
+        [
+          "ELT3240",
+          "EPN1095",
+          "RBE1001",
+          "FLF1107",
+          "INT1008"
+        ],
+        [
+          "ELT2035",
+          "ELT1007",
+          "MAT1042",
+          "MAT1101",
+          "INE1050"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [],
+      "priority_missing": [
+        "Các vấn đề hiện đại trong Kỹ thuật Robot",
+        "Điều khiển logic và PLC",
+        "Toán ứng dụng trong kỹ thuật Robot",
+        "Điện tử công suất và điều khiển"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "SCADA",
+        "HMI",
+        "PLC",
+        "Power Electronics",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}
