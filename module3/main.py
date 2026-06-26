@@ -16,7 +16,7 @@ from config          import K_NEIGHBORS
 
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = BASE_DIR.parent
-MODULE2_DIR = PROJECT_DIR / 'module2_gemini'
+MODULE2_DIR = PROJECT_DIR / 'module2'
 DEFAULT_MODULE2_OUTPUT = MODULE2_DIR / 'module2_output.json'
 DEFAULT_PROFILES = MODULE2_DIR / 'data' / 'student_profiles.csv'
 DEFAULT_COURSES = MODULE2_DIR / 'data' / 'courses.csv'
