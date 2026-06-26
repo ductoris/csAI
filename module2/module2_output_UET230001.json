@@ -1,0 +1,127 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230001",
+  "career_goal": "Microcontroller Programmer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 15,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 29.771,
+      "g_score": 29.2,
+      "semesters": [
+        [
+          "INT1008",
+          "ELT3240",
+          "RBE1001",
+          "MAT1093",
+          "MAT1101"
+        ],
+        [
+          "INT1009",
+          "ELT2035",
+          "FLF1107",
+          "MAT1042"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [],
+      "priority_missing": [
+        "Cảm biến và đo lường",
+        "Điện tử công suất và điều khiển",
+        "Vi điều khiển và ứng dụng",
+        "Xử lý tín hiệu số"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "Microcontroller",
+        "STM32",
+        "Sensor",
+        "I2C/SPI/UART"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 30.421,
+      "g_score": 29.85,
+      "semesters": [
+        [
+          "INT1008",
+          "ELT3240",
+          "RBE1001",
+          "MAT1042",
+          "MAT1101"
+        ],
+        [
+          "PEC1008",
+          "HIS1001",
+          "ELT2035",
+          "INT1009",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [],
+      "priority_missing": [
+        "Cảm biến và đo lường",
+        "Điện tử công suất và điều khiển",
+        "Vi điều khiển và ứng dụng",
+        "Xử lý tín hiệu số"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "Microcontroller",
+        "STM32",
+        "Sensor",
+        "I2C/SPI/UART"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 30.421,
+      "g_score": 29.85,
+      "semesters": [
+        [
+          "INT1008",
+          "ELT3240",
+          "RBE1001",
+          "MAT1042",
+          "MAT1101"
+        ],
+        [
+          "HIS1001",
+          "ELT2035",
+          "INT1009",
+          "PHI1002",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [],
+      "priority_missing": [
+        "Cảm biến và đo lường",
+        "Điện tử công suất và điều khiển",
+        "Vi điều khiển và ứng dụng",
+        "Xử lý tín hiệu số"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "Microcontroller",
+        "STM32",
+        "Sensor",
+        "I2C/SPI/UART"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}
