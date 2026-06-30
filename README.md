@@ -36,5 +36,10 @@ python module1_rule_engine.py --all
 
 # Để chạy toàn bộ ra tổng output cuối cùng với từng sinh viên:
 ```bash
-  python3 run_pipeline.py --student UET230001
+python3 run_pipeline.py --student UET230001
+```
+```bash
+  ```bash
+python3 run_pipeline.py --student UET230001
+```
 ```
