@@ -1,0 +1,149 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230035",
+  "career_goal": "Smart Home Robotics Specialist",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 25.933,
+      "g_score": 25.6,
+      "semesters": [
+        [
+          "MAT1101",
+          "INT1008",
+          "RBE1001",
+          "ELT1007",
+          "ELT2035"
+        ],
+        [
+          "FLF1107",
+          "PHI1002",
+          "POL1001",
+          "MAT1042"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1101",
+        "POL1001",
+        "INT1008",
+        "RBE1001",
+        "ELT1007",
+        "MAT1042",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "MAT1093"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "IoT Protocols",
+        "Cloud/AWS",
+        "MQTT",
+        "WiFi/Bluetooth"
+      ],
+      "career_match_ratio": 0.2
+    },
+    {
+      "rank": 2,
+      "f_score": 25.933,
+      "g_score": 25.6,
+      "semesters": [
+        [
+          "MAT1101",
+          "INT1008",
+          "RBE1001",
+          "ELT1007",
+          "ELT2035"
+        ],
+        [
+          "FLF1107",
+          "POL1001",
+          "MAT1093",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1101",
+        "POL1001",
+        "MAT1093",
+        "INT1008",
+        "RBE1001",
+        "ELT1007",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "MAT1042"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "IoT Protocols",
+        "Cloud/AWS",
+        "MQTT",
+        "WiFi/Bluetooth"
+      ],
+      "career_match_ratio": 0.2
+    },
+    {
+      "rank": 3,
+      "f_score": 25.933,
+      "g_score": 25.6,
+      "semesters": [
+        [
+          "MAT1101",
+          "INT1008",
+          "RBE1001",
+          "ELT1007",
+          "ELT2035"
+        ],
+        [
+          "FLF1107",
+          "POL1001",
+          "PHI1002",
+          "MAT1093"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1101",
+        "POL1001",
+        "MAT1093",
+        "INT1008",
+        "RBE1001",
+        "ELT1007",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "MAT1042"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "IoT Protocols",
+        "Cloud/AWS",
+        "MQTT",
+        "WiFi/Bluetooth"
+      ],
+      "career_match_ratio": 0.2
+    }
+  ]
+}

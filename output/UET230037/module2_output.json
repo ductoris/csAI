@@ -1,0 +1,155 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230037",
+  "career_goal": "PLC Programmer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 25.336,
+      "g_score": 25.05,
+      "semesters": [
+        [
+          "ELT1007",
+          "ELT3240",
+          "RBE1001",
+          "MAT1101",
+          "INT1008"
+        ],
+        [
+          "MAT1093",
+          "POL1001",
+          "HIS1001",
+          "ELT2035",
+          "EPN1095"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "MAT1093",
+        "ELT1007",
+        "POL1001",
+        "ELT3240",
+        "RBE1001",
+        "MAT1101",
+        "INT1008",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "INT1009"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "PLC",
+        "Industrial Networks",
+        "Power Electronics",
+        "HMI",
+        "SCADA",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 25.336,
+      "g_score": 25.05,
+      "semesters": [
+        [
+          "ELT1007",
+          "ELT3240",
+          "RBE1001",
+          "MAT1101",
+          "INT1008"
+        ],
+        [
+          "MAT1093",
+          "PHI1002",
+          "POL1001",
+          "ELT2035",
+          "EPN1095"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "MAT1093",
+        "ELT1007",
+        "POL1001",
+        "ELT3240",
+        "RBE1001",
+        "MAT1101",
+        "INT1008",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "INT1009"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "PLC",
+        "Industrial Networks",
+        "Power Electronics",
+        "HMI",
+        "SCADA",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 25.431,
+      "g_score": 25.05,
+      "semesters": [
+        [
+          "ELT3240",
+          "RBE1001",
+          "MAT1101",
+          "INT1008",
+          "EPN1095"
+        ],
+        [
+          "MAT1093",
+          "PHI1002",
+          "ELT1007",
+          "HIS1001",
+          "ELT2035"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "MAT1093",
+        "ELT1007",
+        "ELT3240",
+        "RBE1001",
+        "MAT1101",
+        "INT1008",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "POL1001",
+        "INT1009"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "PLC",
+        "Industrial Networks",
+        "Power Electronics",
+        "HMI",
+        "SCADA",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

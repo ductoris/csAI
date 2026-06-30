@@ -1,0 +1,1174 @@
+{
+    "module": "Module 1 - Rule-based Knowledge Engine",
+    "output_for": "Module 2 - Search and Planning Engine",
+    "student_state": {
+        "student_id": "UET230069",
+        "major": "Kỹ thuật Robot",
+        "year": 2,
+        "current_semester": 3,
+        "gpa": 3.5,
+        "career_goal": "Motion Planning Engineer",
+        "career_track": "Robot thông minh",
+        "completed_credits": 31,
+        "remaining_credits": 119,
+        "completed_courses": [
+            "ELT1007",
+            "EPN1095",
+            "EPN1096",
+            "HIS1001",
+            "INT1008",
+            "INT2210",
+            "MAT1041",
+            "MAT1042",
+            "MAT1101",
+            "PEC1008",
+            "PHI1006"
+        ],
+        "passed_courses": [
+            "ELT1007",
+            "EPN1095",
+            "EPN1096",
+            "HIS1001",
+            "INT1008",
+            "INT2210",
+            "MAT1041",
+            "MAT1042",
+            "MAT1101",
+            "PEC1008",
+            "PHI1006"
+        ],
+        "failed_courses": [],
+        "failed_count": 0,
+        "course_grades": {
+            "ELT1007": "A",
+            "EPN1095": "A",
+            "EPN1096": "A",
+            "HIS1001": "B",
+            "INT1008": "B+",
+            "INT2210": "B+",
+            "MAT1041": "B+",
+            "MAT1042": "A",
+            "MAT1101": "A",
+            "PEC1008": "B+",
+            "PHI1006": "B"
+        }
+    },
+    "constraints": {
+        "credit_limit_per_semester": 22,
+        "study_hours_per_week": 6,
+        "risk_level": "LOW",
+        "planning_horizon_semesters": 2,
+        "must_respect_prerequisites": true,
+        "must_follow_career_track": true,
+        "total_program_credits": 150
+    },
+    "search_space": {
+        "eligible_course_count": 29,
+        "candidate_course_count": 29,
+        "blocked_course_count": 24,
+        "eligible_courses": [
+            {
+                "course_code": "FLF1107",
+                "course_name": "Tiếng Anh B1",
+                "credits": 5,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "MAT1093",
+                "course_name": "Đại số",
+                "credits": 4,
+                "semester": null,
+                "category": "Khối kiến thức theo lĩnh vực",
+                "course_type": "field",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "INT1009",
+                "course_name": "Tin học cơ sở",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT2035",
+                "course_name": "Tín hiệu và hệ thống",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo khối ngành",
+                "course_type": "block",
+                "prerequisites": [
+                    "MAT1041"
+                ],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "POL1001",
+                "course_name": "Tư tưởng Hồ Chí Minh",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "PHI1002",
+                "course_name": "Chủ nghĩa xã hội khoa học",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT3295",
+                "course_name": "Mạng không dây",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT3290",
+                "course_name": "Thiết kế số và vi xử lý",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT2201",
+                "course_name": "Nguyên lý Kỹ thuật điện tử",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "EPN1096"
+                ],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE2001",
+                "course_name": "Vẽ kỹ thuật",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3050",
+                "course_name": "Cơ học và kết cấu Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3042",
+                "course_name": "Cảm biến và Đo lường cho Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3017",
+                "course_name": "Lập trình Robot với ROS",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [
+                    "INT1008"
+                ],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3015",
+                "course_name": "Xử lý ảnh và thị giác Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3013",
+                "course_name": "Các cơ cấu truyền động",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3012",
+                "course_name": "Các cơ cấu chấp hành Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE2003",
+                "course_name": "Động học và động lực học",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "AIT2004",
+                "course_name": "Cơ sở trí tuệ nhân tạo",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3051",
+                "course_name": "Cơ học hệ nhiều vật",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3030",
+                "course_name": "An toàn lao động và môi trường công nghiệp",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "INE1051",
+                "course_name": "Kinh tế vĩ mô",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "INE1050",
+                "course_name": "Kinh tế vi mô",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "HIS1056",
+                "course_name": "Cơ sở văn hóa Việt Nam",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "HIS1053",
+                "course_name": "Lịch sử văn minh thế giới",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT3240",
+                "course_name": "Nhập môn hệ thống nhúng",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "intro",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "UET1002",
+                "course_name": "Kỹ năng khởi nghiệp",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "THL1057",
+                "course_name": "Nhà nước và pháp luật đại cương",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE1001",
+                "course_name": "Trải nghiệm và khám phá về Robot",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "intro",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "PSY1050",
+                "course_name": "Tâm lý học đại cương",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            }
+        ],
+        "candidate_courses_for_module2": [
+            {
+                "course_code": "FLF1107",
+                "course_name": "Tiếng Anh B1",
+                "credits": 5,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "MAT1093",
+                "course_name": "Đại số",
+                "credits": 4,
+                "semester": null,
+                "category": "Khối kiến thức theo lĩnh vực",
+                "course_type": "field",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "INT1009",
+                "course_name": "Tin học cơ sở",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT2035",
+                "course_name": "Tín hiệu và hệ thống",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo khối ngành",
+                "course_type": "block",
+                "prerequisites": [
+                    "MAT1041"
+                ],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "POL1001",
+                "course_name": "Tư tưởng Hồ Chí Minh",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "PHI1002",
+                "course_name": "Chủ nghĩa xã hội khoa học",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức chung",
+                "course_type": "general",
+                "prerequisites": [],
+                "priority": 90,
+                "reason": "Đủ điều kiện tiên quyết | Cần hoàn thành đại cương trước năm 3",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT3295",
+                "course_name": "Mạng không dây",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT3290",
+                "course_name": "Thiết kế số và vi xử lý",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT2201",
+                "course_name": "Nguyên lý Kỹ thuật điện tử",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "EPN1096"
+                ],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE2001",
+                "course_name": "Vẽ kỹ thuật",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [],
+                "priority": 80,
+                "reason": "Đủ điều kiện tiên quyết | Khối nhóm ngành nên hoàn thành trước năm 4",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3050",
+                "course_name": "Cơ học và kết cấu Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3042",
+                "course_name": "Cảm biến và Đo lường cho Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3017",
+                "course_name": "Lập trình Robot với ROS",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [
+                    "INT1008"
+                ],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3015",
+                "course_name": "Xử lý ảnh và thị giác Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3013",
+                "course_name": "Các cơ cấu truyền động",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3012",
+                "course_name": "Các cơ cấu chấp hành Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE2003",
+                "course_name": "Động học và động lực học",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "AIT2004",
+                "course_name": "Cơ sở trí tuệ nhân tạo",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3051",
+                "course_name": "Cơ học hệ nhiều vật",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3030",
+                "course_name": "An toàn lao động và môi trường công nghiệp",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [],
+                "priority": 60,
+                "reason": "Đủ điều kiện tiên quyết | GPA cao nên có thể học sớm môn ngành bắt buộc",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "INE1051",
+                "course_name": "Kinh tế vĩ mô",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "INE1050",
+                "course_name": "Kinh tế vi mô",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "HIS1056",
+                "course_name": "Cơ sở văn hóa Việt Nam",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "HIS1053",
+                "course_name": "Lịch sử văn minh thế giới",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "ELT3240",
+                "course_name": "Nhập môn hệ thống nhúng",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "intro",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "UET1002",
+                "course_name": "Kỹ năng khởi nghiệp",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "THL1057",
+                "course_name": "Nhà nước và pháp luật đại cương",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE1001",
+                "course_name": "Trải nghiệm và khám phá về Robot",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "intro",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "PSY1050",
+                "course_name": "Tâm lý học đại cương",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [],
+                "priority": 10,
+                "reason": "Đủ điều kiện tiên quyết",
+                "missing_prerequisites": []
+            }
+        ],
+        "blocked_courses": [
+            {
+                "course_code": "ELT3051",
+                "course_name": "Kỹ thuật điều khiển",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "ELT2035"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: ELT2035",
+                "missing_prerequisites": [
+                    "ELT2035"
+                ]
+            },
+            {
+                "course_code": "ELT3134",
+                "course_name": "Thực tập Kỹ thuật điện tử",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "ELT2201"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: ELT2201",
+                "missing_prerequisites": [
+                    "ELT2201"
+                ]
+            },
+            {
+                "course_code": "ELT3144",
+                "course_name": "Xử lý tín hiệu số",
+                "credits": 4,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "ELT2035"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: ELT2035",
+                "missing_prerequisites": [
+                    "ELT2035"
+                ]
+            },
+            {
+                "course_code": "ELT3292",
+                "course_name": "Điều khiển logic và PLC",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [
+                    "ELT3051"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: ELT3051",
+                "missing_prerequisites": [
+                    "ELT3051"
+                ]
+            },
+            {
+                "course_code": "ELT3996",
+                "course_name": "Điện tử công suất và điều khiển",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp",
+                "course_type": "other",
+                "prerequisites": [
+                    "ELT2201"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: ELT2201 | Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": [
+                    "ELT2201"
+                ]
+            },
+            {
+                "course_code": "INT3103",
+                "course_name": "Tối ưu hóa",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức bổ trợ",
+                "course_type": "support",
+                "prerequisites": [
+                    "MAT1093",
+                    "MAT1042"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: MAT1093",
+                "missing_prerequisites": [
+                    "MAT1093"
+                ]
+            },
+            {
+                "course_code": "RBE2021",
+                "course_name": "Thực hành Thiết kế và xây dựng Robot 1",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [
+                    "RBE2001"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: RBE2001",
+                "missing_prerequisites": [
+                    "RBE2001"
+                ]
+            },
+            {
+                "course_code": "RBE2022",
+                "course_name": "Thực hành Thiết kế và xây dựng Robot 2",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "mandatory_major",
+                "prerequisites": [
+                    "ELT3051"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: ELT3051",
+                "missing_prerequisites": [
+                    "ELT3051"
+                ]
+            },
+            {
+                "course_code": "RBE2031",
+                "course_name": "Toán ứng dụng trong Kỹ thuật Robot",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "MAT1093"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: MAT1093",
+                "missing_prerequisites": [
+                    "MAT1093"
+                ]
+            },
+            {
+                "course_code": "RBE3002",
+                "course_name": "Gia công và thiết kế CAD/CAM/CAE",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức theo nhóm ngành",
+                "course_type": "group",
+                "prerequisites": [
+                    "RBE2001"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: RBE2001",
+                "missing_prerequisites": [
+                    "RBE2001"
+                ]
+            },
+            {
+                "course_code": "RBE3016",
+                "course_name": "Thiết kế kiểu dáng công nghiệp",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp",
+                "course_type": "other",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3043",
+                "course_name": "Các thuật toán thích nghi",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [
+                    "INT2210"
+                ],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3045",
+                "course_name": "Robot phân tán",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [
+                    "RBE3051"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: RBE3051 | Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": [
+                    "RBE3051"
+                ]
+            },
+            {
+                "course_code": "RBE3046",
+                "course_name": "Khoa học nhận thức",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [
+                    "INT2210"
+                ],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3047",
+                "course_name": "Giải thuật cho robot thông minh",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3052",
+                "course_name": "Đồ án ngành Kỹ thuật robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành bắt buộc",
+                "course_type": "major_project",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp | Đồ án ngành chỉ được học khi đạt tối thiểu 120 tín chỉ",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3053",
+                "course_name": "Tương tác người – Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [
+                    "RBE3015"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: RBE3015 | Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": [
+                    "RBE3015"
+                ]
+            },
+            {
+                "course_code": "RBE3054",
+                "course_name": "Mạng truyền thông công nghiệp và điều khiển phân tán",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp",
+                "course_type": "other",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3055",
+                "course_name": "Hệ thống sản xuất tích hợp máy tính (CIM)",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng tự động hóa trong công nghiệp",
+                "course_type": "other",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE3056",
+                "course_name": "Học máy ứng dụng",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [
+                    "AIT2004"
+                ],
+                "blocked_reason": "Thiếu tiên quyết: AIT2004 | Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": [
+                    "AIT2004"
+                ]
+            },
+            {
+                "course_code": "RBE3057",
+                "course_name": "Các vấn đề hiện đại trong Kỹ thuật Robot",
+                "credits": 2,
+                "semester": null,
+                "category": "Khối kiến thức ngành lựa chọn - Định hướng các hệ thống Robot thông minh",
+                "course_type": "smart_robot_track",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE4001",
+                "course_name": "Đồ án tốt nghiệp",
+                "credits": 10,
+                "semester": null,
+                "category": "Khối kiến thức thực tập và tốt nghiệp",
+                "course_type": "graduation_thesis",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp | Đồ án tốt nghiệp chỉ học năm 4 hoặc trường hợp tốt nghiệp sớm | Chưa đủ tiến độ tín chỉ để học Đồ án tốt nghiệp",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE4003",
+                "course_name": "Dự án ngành kỹ thuật robot (bắt buộc) và 6 tín chỉ từ danh sách các học phần tự chọn theo các định hướng mà sinh viên lựa chọn",
+                "credits": 10,
+                "semester": null,
+                "category": "Các học phần thay thế Đồ án tốt nghiệp",
+                "course_type": "replacement_project",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp | Dự án ngành thay thế chỉ áp dụng cho sinh viên năm 4 | Dự án ngành thay thế yêu cầu tối thiểu 120 tín chỉ",
+                "missing_prerequisites": []
+            },
+            {
+                "course_code": "RBE4004",
+                "course_name": "Thực tập ngành kỹ thuật Robot",
+                "credits": 3,
+                "semester": null,
+                "category": "Khối kiến thức thực tập và tốt nghiệp",
+                "course_type": "internship",
+                "prerequisites": [],
+                "blocked_reason": "Năm 2 chưa nên học định hướng, thực tập hoặc tốt nghiệp | Thực tập ngành chỉ được học từ năm 3",
+                "missing_prerequisites": []
+            }
+        ]
+    },
+    "course_catalog_reference": {
+        "total_courses": 64,
+        "course_codes": [
+            "AIT2004",
+            "ELT1007",
+            "ELT2035",
+            "ELT2201",
+            "ELT3051",
+            "ELT3134",
+            "ELT3144",
+            "ELT3240",
+            "ELT3290",
+            "ELT3292",
+            "ELT3295",
+            "ELT3996",
+            "EPN1095",
+            "EPN1096",
+            "FLF1107",
+            "HIS1001",
+            "HIS1053",
+            "HIS1056",
+            "INE1050",
+            "INE1051",
+            "INT1008",
+            "INT1009",
+            "INT2210",
+            "INT3103",
+            "MAT1041",
+            "MAT1042",
+            "MAT1093",
+            "MAT1101",
+            "PEC1008",
+            "PHI1002",
+            "PHI1006",
+            "POL1001",
+            "PSY1050",
+            "RBE1001",
+            "RBE2001",
+            "RBE2003",
+            "RBE2021",
+            "RBE2022",
+            "RBE2031",
+            "RBE3002",
+            "RBE3012",
+            "RBE3013",
+            "RBE3015",
+            "RBE3016",
+            "RBE3017",
+            "RBE3030",
+            "RBE3042",
+            "RBE3043",
+            "RBE3045",
+            "RBE3046",
+            "RBE3047",
+            "RBE3050",
+            "RBE3051",
+            "RBE3052",
+            "RBE3053",
+            "RBE3054",
+            "RBE3055",
+            "RBE3056",
+            "RBE3057",
+            "RBE4001",
+            "RBE4003",
+            "RBE4004",
+            "THL1057",
+            "UET1002"
+        ]
+    }
+}

@@ -1,0 +1,128 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230092",
+  "career_goal": "Cloud Robotics Developer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 48.945,
+      "g_score": 48.85,
+      "semesters": [
+        [
+          "RBE4004",
+          "ELT1007",
+          "RBE3030",
+          "RBE3015",
+          "RBE3050"
+        ],
+        [
+          "RBE2021",
+          "RBE3013",
+          "RBE3012",
+          "THL1057",
+          "RBE3042"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Node-RED",
+        "WiFi/Bluetooth",
+        "IoT Protocols",
+        "MQTT",
+        "C/C++",
+        "Cloud/AWS"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 2,
+      "f_score": 48.945,
+      "g_score": 48.85,
+      "semesters": [
+        [
+          "RBE4004",
+          "ELT1007",
+          "RBE3030",
+          "RBE3015",
+          "RBE3050"
+        ],
+        [
+          "RBE2021",
+          "RBE3013",
+          "RBE3012",
+          "PSY1050",
+          "RBE3042"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Node-RED",
+        "WiFi/Bluetooth",
+        "IoT Protocols",
+        "MQTT",
+        "C/C++",
+        "Cloud/AWS"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 3,
+      "f_score": 48.945,
+      "g_score": 48.85,
+      "semesters": [
+        [
+          "RBE4004",
+          "ELT1007",
+          "RBE3015",
+          "RBE3051",
+          "RBE3050"
+        ],
+        [
+          "RBE2021",
+          "RBE3013",
+          "RBE3012",
+          "PSY1050",
+          "RBE3042"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Node-RED",
+        "WiFi/Bluetooth",
+        "IoT Protocols",
+        "MQTT",
+        "C/C++",
+        "Cloud/AWS"
+      ],
+      "career_match_ratio": 0.14
+    }
+  ]
+}

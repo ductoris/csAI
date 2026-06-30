@@ -1,0 +1,107 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230115",
+  "career_goal": "Embedded Systems Developer",
+  "current_semester": 8,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 13.0,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "THL1057",
+          "RBE3015",
+          "ELT3996",
+          "ELT1007",
+          "HIS1056"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "ELT3996"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "FreeRTOS",
+        "STM32",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "Control"
+      ],
+      "career_match_ratio": 0.43
+    },
+    {
+      "rank": 2,
+      "f_score": 13.0,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "RBE3013",
+          "THL1057",
+          "ELT3996",
+          "ELT1007",
+          "HIS1056"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "ELT3996"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "FreeRTOS",
+        "STM32",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "Control"
+      ],
+      "career_match_ratio": 0.43
+    },
+    {
+      "rank": 3,
+      "f_score": 13.0,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "THL1057",
+          "ELT3292",
+          "ELT3996",
+          "ELT1007",
+          "HIS1056"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "ELT3996"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "FreeRTOS",
+        "STM32",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "Control"
+      ],
+      "career_match_ratio": 0.43
+    }
+  ]
+}

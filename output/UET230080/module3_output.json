@@ -1,0 +1,277 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230080",
+        "career_goal": "SCADA Systems Engineer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 5,
+        "gpa": 3.19,
+        "completed_credits": 65,
+        "credit_limit": 18,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230004",
+                "gpa": 3.32,
+                "career_goal": "SCADA Systems Engineer",
+                "distance": 0.2166,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230012",
+                "gpa": 2.62,
+                "career_goal": "SCADA Systems Engineer",
+                "distance": 0.2327,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230015",
+                "gpa": 2.03,
+                "career_goal": "SCADA Systems Engineer",
+                "distance": 0.2681,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230077",
+                "gpa": 1.39,
+                "career_goal": "SCADA Systems Engineer",
+                "distance": 0.2682,
+                "study_hours_per_week": 13
+            },
+            {
+                "student_id": "UET230105",
+                "gpa": 3.17,
+                "career_goal": "IoT Robotics Engineer",
+                "distance": 0.2744,
+                "study_hours_per_week": 8
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.7174,
+                "score_breakdown": {
+                    "career_score": 0.57,
+                    "peer_score": 0.919,
+                    "load_score": 0.875,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 20,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.714,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE2021",
+                            "RBE3050",
+                            "RBE3015",
+                            "RBE3042",
+                            "RBE4004"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1050",
+                            "RBE3013",
+                            "UET1002",
+                            "RBE3012",
+                            "ELT3292"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "Power Electronics",
+                    "PLC",
+                    "HMI",
+                    "Control"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.7174,
+                "score_breakdown": {
+                    "career_score": 0.57,
+                    "peer_score": 0.919,
+                    "load_score": 0.875,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 20,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.714,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE2021",
+                            "RBE3050",
+                            "RBE3013",
+                            "RBE3042",
+                            "RBE4004"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1051",
+                            "RBE3015",
+                            "UET1002",
+                            "RBE3012",
+                            "ELT3292"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "Power Electronics",
+                    "PLC",
+                    "HMI",
+                    "Control"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.7087,
+                "score_breakdown": {
+                    "career_score": 0.57,
+                    "peer_score": 0.919,
+                    "load_score": 0.844,
+                    "foundation_score": 0.711,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 20,
+                    "first_sem_foundation_credits": 9,
+                    "overall_foundation_score": 0.741,
+                    "early_foundation_score": 0.643,
+                    "foundation_score": 0.711,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3050",
+                            "RBE3013",
+                            "RBE3042",
+                            "PSY1050",
+                            "RBE4004"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE2021",
+                            "RBE3015",
+                            "UET1002",
+                            "RBE3012",
+                            "ELT3292"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "Power Electronics",
+                    "PLC",
+                    "HMI",
+                    "Control"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "SCADA",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Industrial Networks",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "AutoCAD Electrical",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "PLC/SCADA",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "ROS",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 14,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 9.3,
+            "formula_hours": 21.0
+        }
+    }
+}

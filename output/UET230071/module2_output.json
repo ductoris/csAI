@@ -1,0 +1,155 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230071",
+  "career_goal": "Machine Learning Engineer (Robotics)",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 35.393,
+      "g_score": 35.25,
+      "semesters": [
+        [
+          "PHI1002",
+          "EPN1096",
+          "MAT1042",
+          "PHI1006",
+          "MAT1093"
+        ],
+        [
+          "ELT3295",
+          "ELT2035",
+          "ELT1007",
+          "RBE2001",
+          "ELT3290"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3295",
+        "ELT2035",
+        "PHI1002",
+        "EPN1096",
+        "RBE2001",
+        "MAT1042",
+        "ELT3290",
+        "PHI1006",
+        "MAT1093"
+      ],
+      "priority_missing": [
+        "RBE3050"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "missing_skills": [
+        "ROS2",
+        "OpenCV"
+      ],
+      "career_match_ratio": 0.67
+    },
+    {
+      "rank": 2,
+      "f_score": 35.393,
+      "g_score": 35.25,
+      "semesters": [
+        [
+          "PHI1002",
+          "EPN1096",
+          "MAT1042",
+          "PHI1006",
+          "MAT1093"
+        ],
+        [
+          "ELT3295",
+          "ELT2035",
+          "RBE2001",
+          "ELT3290",
+          "RBE1001"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3295",
+        "ELT2035",
+        "PHI1002",
+        "EPN1096",
+        "RBE2001",
+        "MAT1042",
+        "ELT3290",
+        "PHI1006",
+        "MAT1093"
+      ],
+      "priority_missing": [
+        "RBE3050"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "missing_skills": [
+        "ROS2",
+        "OpenCV"
+      ],
+      "career_match_ratio": 0.67
+    },
+    {
+      "rank": 3,
+      "f_score": 35.793,
+      "g_score": 35.65,
+      "semesters": [
+        [
+          "PHI1002",
+          "EPN1096",
+          "MAT1042",
+          "PHI1006",
+          "MAT1093"
+        ],
+        [
+          "ELT3295",
+          "ELT2035",
+          "PSY1050",
+          "RBE2001",
+          "ELT3290"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3295",
+        "ELT2035",
+        "PHI1002",
+        "EPN1096",
+        "RBE2001",
+        "MAT1042",
+        "ELT3290",
+        "PHI1006",
+        "MAT1093"
+      ],
+      "priority_missing": [
+        "RBE3050"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "missing_skills": [
+        "ROS2",
+        "OpenCV"
+      ],
+      "career_match_ratio": 0.67
+    }
+  ]
+}

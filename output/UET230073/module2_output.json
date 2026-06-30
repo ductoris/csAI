@@ -1,0 +1,125 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230073",
+  "career_goal": "Smart Home Robotics Specialist",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 13.429,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "MAT1101",
+          "POL1001",
+          "ELT3295",
+          "PHI1006",
+          "EPN1096"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "MAT1101",
+        "POL1001",
+        "ELT3295",
+        "PHI1006",
+        "EPN1096"
+      ],
+      "priority_missing": [
+        "HIS1001",
+        "PHI1002",
+        "FLF1107"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Cloud/AWS",
+        "WiFi/Bluetooth",
+        "MQTT",
+        "IoT Protocols"
+      ],
+      "career_match_ratio": 0.2
+    },
+    {
+      "rank": 2,
+      "f_score": 13.429,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "PHI1002",
+          "MAT1101",
+          "ELT3295",
+          "PHI1006",
+          "EPN1096"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "PHI1002",
+        "MAT1101",
+        "ELT3295",
+        "PHI1006",
+        "EPN1096"
+      ],
+      "priority_missing": [
+        "HIS1001",
+        "POL1001",
+        "FLF1107"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Cloud/AWS",
+        "WiFi/Bluetooth",
+        "MQTT",
+        "IoT Protocols"
+      ],
+      "career_match_ratio": 0.2
+    },
+    {
+      "rank": 3,
+      "f_score": 13.429,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "HIS1001",
+          "MAT1101",
+          "ELT3295",
+          "PHI1006",
+          "EPN1096"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "HIS1001",
+        "MAT1101",
+        "ELT3295",
+        "PHI1006",
+        "EPN1096"
+      ],
+      "priority_missing": [
+        "PHI1002",
+        "FLF1107",
+        "POL1001"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Cloud/AWS",
+        "WiFi/Bluetooth",
+        "MQTT",
+        "IoT Protocols"
+      ],
+      "career_match_ratio": 0.2
+    }
+  ]
+}

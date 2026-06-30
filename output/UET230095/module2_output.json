@@ -1,0 +1,146 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230095",
+  "career_goal": "Kinematics & Dynamics Specialist",
+  "current_semester": 6,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 52.488,
+      "g_score": 52.25,
+      "semesters": [
+        [
+          "RBE3015",
+          "RBE3042",
+          "RBE4004",
+          "RBE3013",
+          "MAT1101"
+        ],
+        [
+          "RBE3051",
+          "RBE3012",
+          "INE1050",
+          "RBE3056",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "RBE3051",
+        "RBE3012",
+        "RBE3015",
+        "RBE3042",
+        "RBE4004",
+        "RBE3013",
+        "RBE3056",
+        "INE1051"
+      ],
+      "priority_missing": [
+        "RBE3057",
+        "RBE3043"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "MATLAB/Simulink",
+        "Kinematics",
+        "Dynamics",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 52.988,
+      "g_score": 52.75,
+      "semesters": [
+        [
+          "RBE3015",
+          "HIS1056",
+          "RBE3042",
+          "RBE4004",
+          "RBE3013"
+        ],
+        [
+          "RBE3051",
+          "RBE3012",
+          "INE1050",
+          "RBE3056",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "RBE3051",
+        "RBE3012",
+        "RBE3015",
+        "RBE3042",
+        "RBE4004",
+        "RBE3013",
+        "RBE3056",
+        "INE1051"
+      ],
+      "priority_missing": [
+        "RBE3057",
+        "RBE3043"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "MATLAB/Simulink",
+        "Kinematics",
+        "Dynamics",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 54.988,
+      "g_score": 54.75,
+      "semesters": [
+        [
+          "RBE3015",
+          "RBE3042",
+          "RBE4004",
+          "RBE3013",
+          "FLF1107"
+        ],
+        [
+          "RBE3051",
+          "RBE3012",
+          "INE1050",
+          "RBE3056",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 31,
+      "priority_covered": [
+        "RBE3051",
+        "RBE3012",
+        "RBE3015",
+        "RBE3042",
+        "RBE4004",
+        "RBE3013",
+        "RBE3056",
+        "INE1051"
+      ],
+      "priority_missing": [
+        "RBE3057",
+        "RBE3043"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "MATLAB/Simulink",
+        "Kinematics",
+        "Dynamics",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

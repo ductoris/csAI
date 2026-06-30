@@ -1,0 +1,261 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230114",
+        "career_goal": "Kinematics & Dynamics Specialist",
+        "career_track": "Robot thông minh",
+        "current_semester": 8,
+        "gpa": 2.45,
+        "completed_credits": 121,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230107",
+                "gpa": 2.27,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.182,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230095",
+                "gpa": 3.25,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.2557,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230119",
+                "gpa": 2.36,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.2787,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230093",
+                "gpa": 3.66,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.2888,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230113",
+                "gpa": 3.22,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.3173,
+                "study_hours_per_week": 6
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4424,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.916,
+                    "load_score": 1.0,
+                    "foundation_score": 0.592,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        16
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.483,
+                    "early_foundation_score": 0.846,
+                    "foundation_score": 0.592,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3015",
+                            "RBE3030",
+                            "RBE3052",
+                            "PSY1050",
+                            "RBE3013"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1050",
+                            "RBE4003",
+                            "RBE3045"
+                        ],
+                        "total_credits": 16
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.4424,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.916,
+                    "load_score": 1.0,
+                    "foundation_score": 0.592,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        16
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.483,
+                    "early_foundation_score": 0.846,
+                    "foundation_score": 0.592,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3015",
+                            "RBE3030",
+                            "RBE3052",
+                            "PSY1050",
+                            "RBE3013"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1050",
+                            "RBE4003",
+                            "RBE3046"
+                        ],
+                        "total_credits": 16
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.4424,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.916,
+                    "load_score": 1.0,
+                    "foundation_score": 0.592,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        16
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.483,
+                    "early_foundation_score": 0.846,
+                    "foundation_score": 0.592,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3015",
+                            "RBE3030",
+                            "RBE3052",
+                            "PSY1050",
+                            "RBE3013"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1050",
+                            "RBE4003",
+                            "RBE3012"
+                        ],
+                        "total_credits": 16
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Control Theory",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "MATLAB/Simulink",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Kinematics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Dynamics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "ROS",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 14,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 8.7,
+            "formula_hours": 21.0
+        }
+    }
+}

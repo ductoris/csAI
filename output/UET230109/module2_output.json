@@ -1,0 +1,155 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230109",
+  "career_goal": "Motion Planning Engineer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 58.488,
+      "g_score": 58.25,
+      "semesters": [
+        [
+          "RBE3002",
+          "RBE3015",
+          "RBE3050",
+          "RBE3030",
+          "RBE4004"
+        ],
+        [
+          "RBE3042",
+          "PSY1050",
+          "RBE3012",
+          "INE1051",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3042",
+        "RBE3002",
+        "RBE3012",
+        "RBE3015",
+        "RBE3050",
+        "RBE3013",
+        "RBE3030",
+        "RBE4004"
+      ],
+      "priority_missing": [
+        "AIT2004",
+        "RBE3051"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "PID Tuning",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "ROS2",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 58.488,
+      "g_score": 58.25,
+      "semesters": [
+        [
+          "RBE3002",
+          "RBE3015",
+          "RBE3050",
+          "RBE3051",
+          "RBE4004"
+        ],
+        [
+          "RBE3042",
+          "PSY1050",
+          "RBE3012",
+          "INE1051",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3042",
+        "RBE3002",
+        "RBE3012",
+        "RBE3015",
+        "RBE3050",
+        "RBE3013",
+        "RBE3051",
+        "RBE4004"
+      ],
+      "priority_missing": [
+        "AIT2004",
+        "RBE3030"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "PID Tuning",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "ROS2",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 58.583,
+      "g_score": 58.25,
+      "semesters": [
+        [
+          "RBE3042",
+          "RBE3002",
+          "RBE3050",
+          "RBE4004",
+          "RBE3057"
+        ],
+        [
+          "PSY1050",
+          "RBE3012",
+          "INE1051",
+          "RBE3015",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3042",
+        "RBE3002",
+        "RBE3012",
+        "RBE3015",
+        "RBE3050",
+        "RBE3013",
+        "RBE4004"
+      ],
+      "priority_missing": [
+        "AIT2004",
+        "RBE3030",
+        "RBE3051"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "PID Tuning",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "ROS2",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.17
+    }
+  ]
+}

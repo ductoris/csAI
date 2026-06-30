@@ -1,0 +1,124 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230057",
+  "career_goal": "Industrial Automation Engineer",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 26.05,
+      "g_score": 26.05,
+      "semesters": [
+        [
+          "PEC1008",
+          "MAT1041",
+          "ELT3240",
+          "POL1001",
+          "RBE2001"
+        ],
+        [
+          "INT1009",
+          "ELT3290",
+          "RBE2031",
+          "PHI1002",
+          "ELT2201"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "PLC"
+      ],
+      "missing_skills": [
+        "Industrial Networks",
+        "SCADA",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 26.05,
+      "g_score": 26.05,
+      "semesters": [
+        [
+          "PEC1008",
+          "MAT1041",
+          "ELT3240",
+          "POL1001",
+          "RBE2001"
+        ],
+        [
+          "INT1009",
+          "RBE2031",
+          "PHI1002",
+          "ELT3295",
+          "ELT2201"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "PLC"
+      ],
+      "missing_skills": [
+        "Industrial Networks",
+        "SCADA",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 27.045,
+      "g_score": 26.95,
+      "semesters": [
+        [
+          "MAT1041",
+          "ELT3240",
+          "POL1001",
+          "ELT2201",
+          "RBE2001"
+        ],
+        [
+          "INT1009",
+          "PEC1008",
+          "ELT3290",
+          "PHI1002",
+          "ELT3295"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Industrial Networks",
+        "Control",
+        "SCADA",
+        "HMI",
+        "Power Electronics",
+        "PLC"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

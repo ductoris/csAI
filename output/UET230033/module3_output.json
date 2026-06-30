@@ -1,0 +1,264 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230033",
+        "career_goal": "Industrial Automation Engineer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 2,
+        "gpa": 1.88,
+        "completed_credits": 13,
+        "credit_limit": 14,
+        "risk_level": "HIGH"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230030",
+                "gpa": 1.96,
+                "career_goal": "Industrial Automation Engineer",
+                "distance": 0.0135,
+                "study_hours_per_week": 14
+            },
+            {
+                "student_id": "UET230043",
+                "gpa": 2.17,
+                "career_goal": "Industrial Automation Engineer",
+                "distance": 0.0707,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230064",
+                "gpa": 1.85,
+                "career_goal": "Industrial Automation Engineer",
+                "distance": 0.0775,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230072",
+                "gpa": 1.3,
+                "career_goal": "Industrial Automation Engineer",
+                "distance": 0.1047,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230057",
+                "gpa": 1.28,
+                "career_goal": "Industrial Automation Engineer",
+                "distance": 0.1097,
+                "study_hours_per_week": 13
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4663,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.972,
+                    "load_score": 1.0,
+                    "foundation_score": 0.719,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 19,
+                    "first_sem_foundation_credits": 9,
+                    "overall_foundation_score": 0.731,
+                    "early_foundation_score": 0.692,
+                    "foundation_score": 0.719,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1093",
+                            "ELT3240",
+                            "HIS1001",
+                            "EPN1095",
+                            "POL1001"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "MAT1101",
+                            "INT1009",
+                            "ELT2035",
+                            "INT2210"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.4663,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.972,
+                    "load_score": 1.0,
+                    "foundation_score": 0.719,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 19,
+                    "first_sem_foundation_credits": 9,
+                    "overall_foundation_score": 0.731,
+                    "early_foundation_score": 0.692,
+                    "foundation_score": 0.719,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1093",
+                            "ELT3240",
+                            "HIS1001",
+                            "EPN1095",
+                            "POL1001"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "MAT1101",
+                            "ELT2035",
+                            "PHI1006",
+                            "INT2210"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.4663,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.972,
+                    "load_score": 1.0,
+                    "foundation_score": 0.719,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 19,
+                    "first_sem_foundation_credits": 9,
+                    "overall_foundation_score": 0.731,
+                    "early_foundation_score": 0.692,
+                    "foundation_score": 0.719,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1093",
+                            "ELT3240",
+                            "HIS1001",
+                            "EPN1095",
+                            "POL1001"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "MAT1101",
+                            "INT1009",
+                            "ELT2035",
+                            "MAT1042"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "SCADA",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "HMI",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Control",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Industrial Networks",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Power Electronics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "PLC",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 16,
+            "breakdown": {
+                "ly_thuyet": 6,
+                "thuc_hanh": 7,
+                "project": 3
+            },
+            "peer_average": 13.1,
+            "formula_hours": 19.5
+        }
+    }
+}

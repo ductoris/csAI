@@ -1,0 +1,271 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230117",
+        "career_goal": "Vision-based Robotics Engineer",
+        "career_track": "Robot thông minh",
+        "current_semester": 8,
+        "gpa": 3.69,
+        "completed_credits": 120,
+        "credit_limit": 22,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230084",
+                "gpa": 3.56,
+                "career_goal": "Vision-based Robotics Engineer",
+                "distance": 0.1282,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230086",
+                "gpa": 2.44,
+                "career_goal": "Vision-based Robotics Engineer",
+                "distance": 0.2035,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230042",
+                "gpa": 3.55,
+                "career_goal": "Vision-based Robotics Engineer",
+                "distance": 0.2689,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230116",
+                "gpa": 3.55,
+                "career_goal": "Autonomous Mobile Robot (AMR) Engineer",
+                "distance": 0.2746,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230113",
+                "gpa": 3.22,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.2826,
+                "study_hours_per_week": 6
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.6307,
+                "score_breakdown": {
+                    "career_score": 0.4,
+                    "peer_score": 0.925,
+                    "load_score": 0.875,
+                    "foundation_score": 0.707,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 18,
+                    "first_sem_foundation_credits": 12,
+                    "overall_foundation_score": 0.643,
+                    "early_foundation_score": 0.857,
+                    "foundation_score": 0.707,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3045",
+                            "AIT2004",
+                            "RBE3012",
+                            "RBE3053",
+                            "UET1002"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1051",
+                            "POL1001",
+                            "INE1050",
+                            "RBE3055",
+                            "RBE3047"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "ML",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.6235,
+                "score_breakdown": {
+                    "career_score": 0.4,
+                    "peer_score": 0.925,
+                    "load_score": 0.844,
+                    "foundation_score": 0.698,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 17,
+                    "first_sem_foundation_credits": 12,
+                    "overall_foundation_score": 0.63,
+                    "early_foundation_score": 0.857,
+                    "foundation_score": 0.698,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3045",
+                            "POL1001",
+                            "AIT2004",
+                            "RBE3012",
+                            "RBE3053"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1051",
+                            "INE1050",
+                            "RBE3047",
+                            "UET1002",
+                            "ELT3134"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "ML",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.6235,
+                "score_breakdown": {
+                    "career_score": 0.4,
+                    "peer_score": 0.925,
+                    "load_score": 0.844,
+                    "foundation_score": 0.698,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 17,
+                    "first_sem_foundation_credits": 12,
+                    "overall_foundation_score": 0.63,
+                    "early_foundation_score": 0.857,
+                    "foundation_score": 0.698,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3045",
+                            "POL1001",
+                            "AIT2004",
+                            "RBE3012",
+                            "RBE3053"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1051",
+                            "INE1050",
+                            "RBE3002",
+                            "UET1002",
+                            "RBE3047"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "ML",
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "C++",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "ROS2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "OpenCV",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 7.9,
+            "formula_hours": 21.0
+        }
+    }
+}

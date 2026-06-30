@@ -1,0 +1,147 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230020",
+  "career_goal": "Firmware Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 25.79,
+      "g_score": 25.6,
+      "semesters": [
+        [
+          "MAT1101",
+          "INT1008",
+          "RBE1001",
+          "ELT1007",
+          "ELT3240"
+        ],
+        [
+          "ELT2035",
+          "INT1009",
+          "PHI1002",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "ELT2035",
+        "MAT1101",
+        "INT1009",
+        "FLF1107",
+        "INT1008",
+        "RBE1001",
+        "PHI1002",
+        "ELT1007",
+        "ELT3240"
+      ],
+      "priority_missing": [
+        "MAT1093"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "STM32"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.5
+    },
+    {
+      "rank": 2,
+      "f_score": 25.831,
+      "g_score": 25.45,
+      "semesters": [
+        [
+          "MAT1101",
+          "INT1008",
+          "RBE1001",
+          "ELT1007",
+          "ELT3240"
+        ],
+        [
+          "ELT2035",
+          "MAT1093",
+          "HIS1001",
+          "PHI1002",
+          "PEC1008"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "ELT2035",
+        "MAT1093",
+        "MAT1101",
+        "INT1008",
+        "RBE1001",
+        "PHI1002",
+        "ELT1007",
+        "ELT3240"
+      ],
+      "priority_missing": [
+        "INT1009",
+        "FLF1107"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "STM32"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.5
+    },
+    {
+      "rank": 3,
+      "f_score": 25.886,
+      "g_score": 25.6,
+      "semesters": [
+        [
+          "MAT1101",
+          "INT1008",
+          "RBE1001",
+          "ELT1007",
+          "ELT3240"
+        ],
+        [
+          "PEC1008",
+          "ELT2035",
+          "INT1009",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "ELT2035",
+        "MAT1101",
+        "INT1009",
+        "FLF1107",
+        "INT1008",
+        "RBE1001",
+        "ELT1007",
+        "ELT3240"
+      ],
+      "priority_missing": [
+        "MAT1093",
+        "PHI1002"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "STM32"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.5
+    }
+  ]
+}

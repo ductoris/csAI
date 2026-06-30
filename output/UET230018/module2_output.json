@@ -1,0 +1,131 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230018",
+  "career_goal": "Autonomous Mobile Robot (AMR) Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 15.071,
+      "g_score": 14.5,
+      "semesters": [
+        [
+          "ELT3240",
+          "INT1008",
+          "RBE1001",
+          "FLF1107",
+          "EPN1095"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "ELT3240",
+        "INT1008",
+        "RBE1001",
+        "FLF1107",
+        "EPN1095"
+      ],
+      "priority_missing": [
+        "POL1001",
+        "PHI1002",
+        "MAT1093",
+        "MAT1041"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "Path Planning",
+        "Lidar",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.33
+    },
+    {
+      "rank": 2,
+      "f_score": 15.571,
+      "g_score": 15.0,
+      "semesters": [
+        [
+          "ELT3240",
+          "POL1001",
+          "INT1008",
+          "RBE1001",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "ELT3240",
+        "POL1001",
+        "INT1008",
+        "RBE1001",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "PHI1002",
+        "EPN1095",
+        "MAT1093",
+        "MAT1041"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "Path Planning",
+        "Lidar",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.33
+    },
+    {
+      "rank": 3,
+      "f_score": 15.571,
+      "g_score": 15.0,
+      "semesters": [
+        [
+          "ELT3240",
+          "INT1008",
+          "FLF1107",
+          "EPN1095",
+          "PHI1002"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "ELT3240",
+        "INT1008",
+        "FLF1107",
+        "EPN1095",
+        "PHI1002"
+      ],
+      "priority_missing": [
+        "POL1001",
+        "MAT1093",
+        "RBE1001",
+        "MAT1041"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "Path Planning",
+        "Lidar",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.33
+    }
+  ]
+}

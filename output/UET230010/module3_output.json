@@ -1,0 +1,246 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230010",
+        "career_goal": "PLC Programmer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 2,
+        "gpa": 2.69,
+        "completed_credits": 13,
+        "credit_limit": 18,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230003",
+                "gpa": 3.28,
+                "career_goal": "PLC Programmer",
+                "distance": 0.0879,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230029",
+                "gpa": 3.31,
+                "career_goal": "PLC Programmer",
+                "distance": 0.0919,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230037",
+                "gpa": 1.38,
+                "career_goal": "PLC Programmer",
+                "distance": 0.1938,
+                "study_hours_per_week": 15
+            },
+            {
+                "student_id": "UET230001",
+                "gpa": 2.6,
+                "career_goal": "Microcontroller Programmer",
+                "distance": 0.2742,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230012",
+                "gpa": 2.62,
+                "career_goal": "SCADA Systems Engineer",
+                "distance": 0.2742,
+                "study_hours_per_week": 8
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4043,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.938,
+                    "load_score": 0.583,
+                    "foundation_score": 1.0,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 14,
+                    "overall_foundation_score": 1.0,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 1.0,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "EPN1095",
+                            "INT1008",
+                            "ELT3240",
+                            "ELT1007",
+                            "MAT1041"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 14,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.3728,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.938,
+                    "load_score": 0.542,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13
+                    ],
+                    "foundation_credits": 10,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.769,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PHI1006",
+                            "EPN1095",
+                            "INT1008",
+                            "ELT3240",
+                            "ELT1007"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 13,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.3728,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.938,
+                    "load_score": 0.542,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13
+                    ],
+                    "foundation_credits": 10,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.769,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "EPN1095",
+                            "INT1008",
+                            "INT1009",
+                            "ELT3240",
+                            "ELT1007"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 13,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Power Electronics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "PLC",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Control",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "HMI",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Industrial Networks",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "AutoCAD Electrical",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "SCADA",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "PLC/SCADA",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Embedded C/C++",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 9,
+            "breakdown": {
+                "ly_thuyet": 3,
+                "thuc_hanh": 4,
+                "project": 2
+            },
+            "peer_average": 8.3,
+            "formula_hours": 10.5
+        }
+    }
+}

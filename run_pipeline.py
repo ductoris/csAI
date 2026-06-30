@@ -4,6 +4,12 @@
 Example:
   python run_pipeline.py --student UET230001
   python run_pipeline.py --students-file module2/data/student_profiles.csv
+  python run_pipeline.py --student UET230001 --students data/student_profiles.csv
+
+Output structure:
+  output/UET230001/module1_output.json
+  output/UET230001/module2_output.json
+  output/UET230001/module3_output.json
 """
 
 import argparse
@@ -12,15 +18,18 @@ import subprocess
 import sys
 from pathlib import Path
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
+
 ROOT = Path(__file__).resolve().parent
 MODULE1_SCRIPT = ROOT / 'module1' / 'module1_rule_engine.py'
 MODULE2_SCRIPT = ROOT / 'module2' / 'main.py'
 MODULE3_SCRIPT = ROOT / 'module3' / 'main.py'
-DEFAULT_COURSES = ROOT / 'courses_uet_robotics_ctdt_official.csv'
+DEFAULT_COURSES = ROOT / 'data' / 'courses_uet_robotics_ctdt_official.csv'
 DEFAULT_STUDENTS = ROOT / 'module2' / 'data' / 'student_profiles.csv'
-DEFAULT_M1_OUTPUT_DIR = ROOT / 'module2'
-DEFAULT_M2_OUTPUT_DIR = ROOT / 'module2'
-DEFAULT_M3_OUTPUT_DIR = ROOT / 'module3'
+DEFAULT_OUTPUT_DIR = ROOT / 'output'
 
 
 def load_student_ids_from_csv(students_path):
@@ -37,9 +46,9 @@ def load_student_ids_from_csv(students_path):
 
 
 def run_command(command):
-    print('\n' + '=' * 80)
-    print('RUNNING:', ' '.join(str(x) for x in command))
-    print('=' * 80)
+    print('\n' + '=' * 80, flush=True)
+    print('RUNNING:', ' '.join(str(x) for x in command), flush=True)
+    print('=' * 80, flush=True)
     subprocess.run(command, cwd=ROOT, check=True)
 
 
@@ -90,6 +99,7 @@ def main():
     parser.add_argument('--courses', default=DEFAULT_COURSES, help='Courses CSV for Module 1.')
     parser.add_argument('--students', default=DEFAULT_STUDENTS, help='Students CSV for Module 1.')
     parser.add_argument('--career-paths', default=ROOT / 'module2' / 'data' / 'career_paths.csv', help='career_paths.csv for Module 2.')
+    parser.add_argument('--output-dir', default=DEFAULT_OUTPUT_DIR, help='Base folder where each student output folder will be saved.')
     parser.add_argument('--k', type=int, default=5, help='Number of neighbors for Module 3 k-NN.')
     parser.add_argument('--top', type=int, default=15, help='Number of top candidate courses to show for Module 1.')
     args = parser.parse_args()
@@ -104,6 +114,7 @@ def main():
     courses_path = Path(args.courses)
     students_path = Path(args.students)
     career_paths_path = Path(args.career_paths)
+    output_dir = Path(args.output_dir)
 
     if not courses_path.exists():
         raise FileNotFoundError(f'Courses file not found: {courses_path}')
@@ -112,14 +123,19 @@ def main():
     if not career_paths_path.exists():
         raise FileNotFoundError(f'Career paths file not found: {career_paths_path}')
 
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     for student_id in student_ids:
         student_id = student_id.strip()
         if not student_id:
             continue
 
-        module1_output = DEFAULT_M1_OUTPUT_DIR / f'module1_output_{student_id}.json'
-        module2_output = DEFAULT_M2_OUTPUT_DIR / f'module2_output_{student_id}.json'
-        module3_output = DEFAULT_M3_OUTPUT_DIR / f'module3_output_{student_id}.json'
+        student_output_dir = output_dir / student_id
+        student_output_dir.mkdir(parents=True, exist_ok=True)
+
+        module1_output = student_output_dir / 'module1_output.json'
+        module2_output = student_output_dir / 'module2_output.json'
+        module3_output = student_output_dir / 'module3_output.json'
 
         print('\n' + '#' * 80)
         print(f'Running pipeline for student: {student_id}')

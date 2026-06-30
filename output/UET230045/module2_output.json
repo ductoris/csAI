@@ -1,0 +1,122 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230045",
+  "career_goal": "Microcontroller Programmer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 13.581,
+      "g_score": 13.2,
+      "semesters": [
+        [
+          "POL1001",
+          "MAT1042",
+          "MAT1093",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "POL1001",
+        "MAT1042",
+        "MAT1093",
+        "INT1009"
+      ],
+      "priority_missing": [
+        "ELT3290",
+        "ELT2035",
+        "RBE3002"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Sensor",
+        "C/C++",
+        "STM32",
+        "FreeRTOS",
+        "Microcontroller",
+        "Control",
+        "I2C/SPI/UART"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 21.081,
+      "g_score": 20.7,
+      "semesters": [
+        [
+          "MAT1042",
+          "MAT1093",
+          "INT1009",
+          "RBE3002"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "MAT1042",
+        "MAT1093",
+        "INT1009",
+        "RBE3002"
+      ],
+      "priority_missing": [
+        "POL1001",
+        "ELT3290",
+        "ELT2035"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Sensor",
+        "C/C++",
+        "STM32",
+        "FreeRTOS",
+        "Microcontroller",
+        "Control",
+        "I2C/SPI/UART"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 21.081,
+      "g_score": 20.7,
+      "semesters": [
+        [
+          "POL1001",
+          "MAT1042",
+          "MAT1093",
+          "ELT3290"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "POL1001",
+        "MAT1042",
+        "MAT1093",
+        "ELT3290"
+      ],
+      "priority_missing": [
+        "INT1009",
+        "ELT2035",
+        "RBE3002"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Sensor",
+        "C/C++",
+        "STM32",
+        "FreeRTOS",
+        "Microcontroller",
+        "Control",
+        "I2C/SPI/UART"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

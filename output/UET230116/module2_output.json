@@ -1,0 +1,155 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230116",
+  "career_goal": "Autonomous Mobile Robot (AMR) Engineer",
+  "current_semester": 8,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 35.236,
+      "g_score": 34.95,
+      "semesters": [
+        [
+          "UET1002",
+          "MAT1101",
+          "RBE2003",
+          "RBE3053",
+          "ELT3292"
+        ],
+        [
+          "THL1057",
+          "POL1001",
+          "RBE3054",
+          "MAT1042",
+          "PSY1050"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "THL1057",
+        "UET1002",
+        "RBE3054",
+        "RBE2003",
+        "RBE3053",
+        "MAT1042",
+        "ELT3292",
+        "PSY1050"
+      ],
+      "priority_missing": [
+        "RBE3055",
+        "RBE4004"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Path Planning",
+        "Lidar",
+        "ROS2",
+        "C++",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 35.236,
+      "g_score": 34.95,
+      "semesters": [
+        [
+          "UET1002",
+          "MAT1101",
+          "RBE2003",
+          "RBE3053",
+          "ELT3292"
+        ],
+        [
+          "THL1057",
+          "POL1001",
+          "MAT1042",
+          "RBE3055",
+          "PSY1050"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "THL1057",
+        "UET1002",
+        "RBE2003",
+        "RBE3053",
+        "MAT1042",
+        "ELT3292",
+        "RBE3055",
+        "PSY1050"
+      ],
+      "priority_missing": [
+        "RBE3054",
+        "RBE4004"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Path Planning",
+        "Lidar",
+        "ROS2",
+        "C++",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 35.379,
+      "g_score": 34.95,
+      "semesters": [
+        [
+          "UET1002",
+          "MAT1101",
+          "RBE2003",
+          "RBE3053",
+          "ELT3292"
+        ],
+        [
+          "THL1057",
+          "POL1001",
+          "RBE3016",
+          "MAT1042",
+          "PSY1050"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "THL1057",
+        "UET1002",
+        "RBE2003",
+        "RBE3053",
+        "MAT1042",
+        "ELT3292",
+        "PSY1050"
+      ],
+      "priority_missing": [
+        "RBE3055",
+        "RBE3054",
+        "RBE4004"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Path Planning",
+        "Lidar",
+        "ROS2",
+        "C++",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.17
+    }
+  ]
+}

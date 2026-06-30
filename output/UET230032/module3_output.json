@@ -1,0 +1,261 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230032",
+        "career_goal": "Navigation Algorithm Engineer",
+        "career_track": "Robot thông minh",
+        "current_semester": 2,
+        "gpa": 3.71,
+        "completed_credits": 16,
+        "credit_limit": 22,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230026",
+                "gpa": 3.18,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.0786,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230106",
+                "gpa": 3.22,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.2672,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230094",
+                "gpa": 3.63,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.2683,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230023",
+                "gpa": 3.6,
+                "career_goal": "Machine Learning Engineer (Robotics)",
+                "distance": 0.2747,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230016",
+                "gpa": 3.49,
+                "career_goal": "AI Robotics Engineer",
+                "distance": 0.2759,
+                "study_hours_per_week": 8
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.5773,
+                "score_breakdown": {
+                    "career_score": 0.29,
+                    "peer_score": 0.924,
+                    "load_score": 0.906,
+                    "foundation_score": 0.662,
+                    "balance_score": 0.966
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15,
+                        14
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 15,
+                    "overall_foundation_score": 0.517,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 0.662,
+                    "balance_score": 0.966
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1093",
+                            "ELT1007",
+                            "INT1008",
+                            "RBE1001",
+                            "MAT1041"
+                        ],
+                        "total_credits": 15
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "HIS1001",
+                            "UET1002",
+                            "POL1001",
+                            "INT1009",
+                            "FLF1107"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": [
+                    "C++",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.5773,
+                "score_breakdown": {
+                    "career_score": 0.29,
+                    "peer_score": 0.924,
+                    "load_score": 0.906,
+                    "foundation_score": 0.662,
+                    "balance_score": 0.966
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15,
+                        14
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 15,
+                    "overall_foundation_score": 0.517,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 0.662,
+                    "balance_score": 0.966
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1093",
+                            "ELT1007",
+                            "INT1008",
+                            "RBE1001",
+                            "MAT1041"
+                        ],
+                        "total_credits": 15
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "PSY1050",
+                            "HIS1001",
+                            "POL1001",
+                            "INT1009",
+                            "FLF1107"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": [
+                    "C++",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.5677,
+                "score_breakdown": {
+                    "career_score": 0.29,
+                    "peer_score": 0.924,
+                    "load_score": 0.875,
+                    "foundation_score": 0.629,
+                    "balance_score": 0.929
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        15
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.536,
+                    "early_foundation_score": 0.846,
+                    "foundation_score": 0.629,
+                    "balance_score": 0.929
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1093",
+                            "ELT1007",
+                            "INT1008",
+                            "RBE1001",
+                            "UET1002"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "PSY1050",
+                            "HIS1001",
+                            "POL1001",
+                            "MAT1041",
+                            "FLF1107"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Lidar",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Ubuntu",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Navigation2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "ROS2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Python",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 7.5,
+            "formula_hours": 21.0
+        }
+    }
+}

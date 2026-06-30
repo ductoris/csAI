@@ -1,0 +1,260 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230035",
+        "career_goal": "Smart Home Robotics Specialist",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 2,
+        "gpa": 2.25,
+        "completed_credits": 14,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230058",
+                "gpa": 2.27,
+                "career_goal": "Smart Home Robotics Specialist",
+                "distance": 0.1211,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230073",
+                "gpa": 1.99,
+                "career_goal": "Smart Home Robotics Specialist",
+                "distance": 0.1401,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230051",
+                "gpa": 3.18,
+                "career_goal": "Smart Home Robotics Specialist",
+                "distance": 0.1465,
+                "study_hours_per_week": 9
+            },
+            {
+                "student_id": "UET230048",
+                "gpa": 3.32,
+                "career_goal": "Smart Home Robotics Specialist",
+                "distance": 0.1681,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230097",
+                "gpa": 3.25,
+                "career_goal": "Smart Home Robotics Specialist",
+                "distance": 0.2352,
+                "study_hours_per_week": 6
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.5646,
+                "score_breakdown": {
+                    "career_score": 0.2,
+                    "peer_score": 0.944,
+                    "load_score": 1.0,
+                    "foundation_score": 0.758,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 17,
+                    "first_sem_foundation_credits": 13,
+                    "overall_foundation_score": 0.654,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 0.758,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1101",
+                            "INT1008",
+                            "RBE1001",
+                            "ELT1007",
+                            "ELT2035"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "FLF1107",
+                            "PHI1002",
+                            "POL1001",
+                            "MAT1042"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": [
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.5646,
+                "score_breakdown": {
+                    "career_score": 0.2,
+                    "peer_score": 0.944,
+                    "load_score": 1.0,
+                    "foundation_score": 0.758,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 17,
+                    "first_sem_foundation_credits": 13,
+                    "overall_foundation_score": 0.654,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 0.758,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1101",
+                            "INT1008",
+                            "RBE1001",
+                            "ELT1007",
+                            "ELT2035"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "FLF1107",
+                            "POL1001",
+                            "MAT1093",
+                            "HIS1001"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": [
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.5646,
+                "score_breakdown": {
+                    "career_score": 0.2,
+                    "peer_score": 0.944,
+                    "load_score": 1.0,
+                    "foundation_score": 0.758,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 17,
+                    "first_sem_foundation_credits": 13,
+                    "overall_foundation_score": 0.654,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 0.758,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1101",
+                            "INT1008",
+                            "RBE1001",
+                            "ELT1007",
+                            "ELT2035"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "FLF1107",
+                            "POL1001",
+                            "PHI1002",
+                            "MAT1093"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": [
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "IoT Protocols",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Cloud/AWS",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "MQTT",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "WiFi/Bluetooth",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 14,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 9.7,
+            "formula_hours": 19.5
+        }
+    }
+}

@@ -9,13 +9,14 @@ from core.utility import AcademicUtility
 
 class PlanEnricher:
 
-    def __init__(self, career_goal: str, career_paths_df):
+    def __init__(self, career_goal: str, career_paths_df, course_db: dict = None):
         """
         career_goal     : mục tiêu nghề nghiệp của sinh viên
         career_paths_df : DataFrame từ career_paths.csv
         """
         self.career_goal     = career_goal
         self.career_paths_df = career_paths_df
+        self.course_db       = course_db or {}
 
     def enrich(self, top_k_plans: list) -> list:
         """
@@ -32,7 +33,7 @@ class PlanEnricher:
             all_courses = [c for sem in plan['semesters'] for c in sem]
 
             covered = AcademicUtility.get_covered_skills(
-                all_courses, self.career_goal, self.career_paths_df
+                all_courses, self.career_goal, self.career_paths_df, self.course_db
             )
             missing = AcademicUtility.get_missing_skills(
                 self.career_goal, covered, self.career_paths_df

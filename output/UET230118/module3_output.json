@@ -1,0 +1,245 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230118",
+        "career_goal": "Embedded Systems Developer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 7,
+        "gpa": 2.42,
+        "completed_credits": 106,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230120",
+                "gpa": 1.4,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.1627,
+                "study_hours_per_week": 15
+            },
+            {
+                "student_id": "UET230115",
+                "gpa": 1.27,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.1891,
+                "study_hours_per_week": 14
+            },
+            {
+                "student_id": "UET230098",
+                "gpa": 2.19,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.1979,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230099",
+                "gpa": 2.28,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.2001,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230056",
+                "gpa": 3.2,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.322,
+                "study_hours_per_week": 6
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4008,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.929,
+                    "load_score": 0.625,
+                    "foundation_score": 0.2,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15
+                    ],
+                    "foundation_credits": 3,
+                    "first_sem_foundation_credits": 3,
+                    "overall_foundation_score": 0.2,
+                    "early_foundation_score": 0.2,
+                    "foundation_score": 0.2,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "HIS1056",
+                            "INE1051",
+                            "INE1050",
+                            "INT3103",
+                            "RBE3017"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 15,
+                "covered_skills": [
+                    "C/C++"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.4008,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.929,
+                    "load_score": 0.625,
+                    "foundation_score": 0.2,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15
+                    ],
+                    "foundation_credits": 3,
+                    "first_sem_foundation_credits": 3,
+                    "overall_foundation_score": 0.2,
+                    "early_foundation_score": 0.2,
+                    "foundation_score": 0.2,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "HIS1056",
+                            "INE1051",
+                            "INE1050",
+                            "HIS1053",
+                            "RBE3017"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 15,
+                "covered_skills": [
+                    "C/C++"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.3108,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.929,
+                    "load_score": 0.625,
+                    "foundation_score": 0.0,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15
+                    ],
+                    "foundation_credits": 0,
+                    "first_sem_foundation_credits": 0,
+                    "overall_foundation_score": 0.0,
+                    "early_foundation_score": 0.0,
+                    "foundation_score": 0.0,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "HIS1056",
+                            "INE1051",
+                            "INE1050",
+                            "INT3103",
+                            "HIS1053"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 15,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Sensor",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Control",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "STM32",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Microcontroller",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "I2C/SPI/UART",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "FreeRTOS",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Embedded C/C++",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 11,
+            "breakdown": {
+                "ly_thuyet": 4,
+                "thuc_hanh": 5,
+                "project": 2
+            },
+            "peer_average": 12.0,
+            "formula_hours": 10.5
+        }
+    }
+}

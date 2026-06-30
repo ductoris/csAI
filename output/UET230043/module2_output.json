@@ -1,0 +1,104 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230043",
+  "career_goal": "Industrial Automation Engineer",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 12.5,
+      "g_score": 12.5,
+      "semesters": [
+        [
+          "ELT2201",
+          "RBE2001",
+          "POL1001",
+          "MAT1041",
+          "RBE2031"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "PLC"
+      ],
+      "missing_skills": [
+        "Industrial Networks",
+        "SCADA",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 13.0,
+      "g_score": 13.0,
+      "semesters": [
+        [
+          "RBE2001",
+          "POL1001",
+          "MAT1041",
+          "RBE2031",
+          "PHI1006"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "PLC"
+      ],
+      "missing_skills": [
+        "Industrial Networks",
+        "SCADA",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 13.5,
+      "g_score": 13.5,
+      "semesters": [
+        [
+          "ELT2201",
+          "RBE2001",
+          "MAT1041",
+          "RBE2031",
+          "PHI1006"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "PLC"
+      ],
+      "missing_skills": [
+        "Industrial Networks",
+        "SCADA",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.17
+    }
+  ]
+}

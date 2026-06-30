@@ -1,0 +1,158 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230032",
+  "career_goal": "Navigation Algorithm Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 28.636,
+      "g_score": 28.35,
+      "semesters": [
+        [
+          "MAT1093",
+          "ELT1007",
+          "INT1008",
+          "RBE1001",
+          "UET1002"
+        ],
+        [
+          "PSY1050",
+          "HIS1001",
+          "POL1001",
+          "MAT1041",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "HIS1001",
+        "MAT1093",
+        "ELT1007",
+        "INT1008",
+        "RBE1001",
+        "POL1001",
+        "MAT1041",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "INT1009",
+        "INE1051"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "Ubuntu",
+        "Navigation2",
+        "SLAM",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 2,
+      "f_score": 29.393,
+      "g_score": 29.25,
+      "semesters": [
+        [
+          "MAT1093",
+          "ELT1007",
+          "INT1008",
+          "RBE1001",
+          "MAT1041"
+        ],
+        [
+          "HIS1001",
+          "UET1002",
+          "POL1001",
+          "INT1009",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "HIS1001",
+        "MAT1093",
+        "ELT1007",
+        "INT1008",
+        "RBE1001",
+        "POL1001",
+        "MAT1041",
+        "INT1009",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "INE1051"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "Ubuntu",
+        "Navigation2",
+        "SLAM",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 3,
+      "f_score": 29.393,
+      "g_score": 29.25,
+      "semesters": [
+        [
+          "MAT1093",
+          "ELT1007",
+          "INT1008",
+          "RBE1001",
+          "MAT1041"
+        ],
+        [
+          "PSY1050",
+          "HIS1001",
+          "POL1001",
+          "INT1009",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "HIS1001",
+        "MAT1093",
+        "ELT1007",
+        "INT1008",
+        "RBE1001",
+        "POL1001",
+        "MAT1041",
+        "INT1009",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "INE1051"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "Ubuntu",
+        "Navigation2",
+        "SLAM",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.29
+    }
+  ]
+}

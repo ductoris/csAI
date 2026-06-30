@@ -1,0 +1,116 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230089",
+  "career_goal": "Firmware Engineer",
+  "current_semester": 6,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 42.84,
+      "g_score": 42.65,
+      "semesters": [
+        [
+          "RBE3013",
+          "RBE1001",
+          "AIT2004",
+          "RBE3012",
+          "RBE4004"
+        ],
+        [
+          "ELT3134",
+          "RBE3030",
+          "INE1050",
+          "HIS1056",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "STM32",
+        "Control",
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 42.84,
+      "g_score": 42.65,
+      "semesters": [
+        [
+          "RBE3013",
+          "RBE1001",
+          "AIT2004",
+          "RBE3012",
+          "RBE4004"
+        ],
+        [
+          "RBE3030",
+          "RBE3002",
+          "INE1050",
+          "HIS1056",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "STM32",
+        "Control",
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 43.24,
+      "g_score": 43.05,
+      "semesters": [
+        [
+          "RBE3013",
+          "RBE1001",
+          "AIT2004",
+          "RBE3012",
+          "RBE4004"
+        ],
+        [
+          "RBE3030",
+          "INE1050",
+          "INE1051",
+          "HIS1053",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "STM32",
+        "Control",
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

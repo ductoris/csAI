@@ -7,7 +7,13 @@
 import json
 import argparse
 import csv
+import sys
 from pathlib import Path
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 from core.knn_engine import KNNEngine
 from core.reranker   import PlanReranker
@@ -247,29 +253,28 @@ def run_module3(
     knn       = KNNEngine(student_profiles_path)
     neighbors = knn.find_neighbors(ctx, k=k)
 
-    if not plans:
-        raise ValueError(
-            f"Module 2 returned no plans for student {ctx.get('student_id', '')}. "
-            "Kiểm tra lại output Module 2 và điều kiện tìm kiếm." 
-            f"(file: {module2_json_path})"
-        )
-
     # ── 3. Re-rank plans ──────────────────────────────────────
     reranker      = PlanReranker()
     reranked_plans = reranker.rerank(plans, neighbors, ctx['credit_limit'], ctx)
 
     # ── 4. Study hours ────────────────────────────────────────
     # Lấy tổng credits từ plan rank 1 (sau khi re-rank)
-    best_plan    = reranked_plans[0] if reranked_plans else plans[0]
+    has_plans = bool(reranked_plans or plans)
+    best_plan = reranked_plans[0] if reranked_plans else plans[0] if plans else None
+    credit_load = (
+        best_plan['total_credits_2sem'] // 2
+        if best_plan
+        else ctx['credit_limit']
+    )
     study_hours  = knn.recommend_study_hours(
         neighbors    = neighbors,
-        credit_load  = best_plan['total_credits_2sem'] // 2,
+        credit_load  = credit_load,
         risk_level   = ctx['risk_level'],
     )
 
     # ── 5. Skills ─────────────────────────────────────────────
     # Lấy missing_skills từ plan rank 1
-    missing = best_plan.get('missing_skills', [])
+    missing = best_plan.get('missing_skills', []) if best_plan else []
     skills  = knn.recommend_skills(neighbors, missing, ctx['career_goal'])
 
     # ── 6. Format output ──────────────────────────────────────
@@ -278,6 +283,11 @@ def run_module3(
         'output_for': 'Final Student Interface',
 
         'student_context': ctx,
+
+        'planning_status': {
+            'has_roadmap': has_plans,
+            'reason': None if has_plans else 'Module 2 không tìm được lộ trình khả thi theo ràng buộc hiện tại.',
+        },
 
         'knn_metadata': {
             'k'          : k,
@@ -351,6 +361,9 @@ def _print_summary(output: dict):
         print(f"  {n['student_id']} | GPA {n['gpa']} | {n['career_goal']} | dist={n['distance']}")
 
     print('\n── LỘ TRÌNH 2 KỲ (re-ranked) ──')
+    if not final['roadmap']:
+        status = output.get('planning_status', {})
+        print(f"  Không tìm được lộ trình khả thi từ Module 2. {status.get('reason', '')}")
     for p in final['roadmap']:
         print(f"\n  [Rank {p['rank']}]  score={p['final_score']}"
               f"  (career={p['score_breakdown']['career_score']}"

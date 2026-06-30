@@ -1,0 +1,267 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230107",
+        "career_goal": "Kinematics & Dynamics Specialist",
+        "career_track": "Robot thông minh",
+        "current_semester": 6,
+        "gpa": 2.27,
+        "completed_credits": 86,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230114",
+                "gpa": 2.45,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.1206,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230095",
+                "gpa": 3.25,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.1678,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230093",
+                "gpa": 3.66,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.2223,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230086",
+                "gpa": 2.44,
+                "career_goal": "Vision-based Robotics Engineer",
+                "distance": 0.2762,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230100",
+                "gpa": 2.36,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.2762,
+                "study_hours_per_week": 11
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.448,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.93,
+                    "load_score": 1.0,
+                    "foundation_score": 0.62,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        14
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.556,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.62,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "AIT2004",
+                            "RBE4004",
+                            "RBE2022",
+                            "RBE2021",
+                            "RBE3013"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1051",
+                            "HIS1056",
+                            "RBE3045",
+                            "RBE3030",
+                            "INE1050"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.448,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.93,
+                    "load_score": 1.0,
+                    "foundation_score": 0.62,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        14
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.556,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.62,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "AIT2004",
+                            "RBE4004",
+                            "RBE2022",
+                            "RBE2021",
+                            "RBE3013"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "HIS1056",
+                            "RBE3030",
+                            "INE1050",
+                            "INE1051",
+                            "RBE3053"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.4343,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.93,
+                    "load_score": 1.0,
+                    "foundation_score": 0.483,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 12,
+                    "first_sem_foundation_credits": 8,
+                    "overall_foundation_score": 0.444,
+                    "early_foundation_score": 0.571,
+                    "foundation_score": 0.483,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "AIT2004",
+                            "RBE4004",
+                            "RBE2022",
+                            "INE1050",
+                            "RBE3013"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "HIS1056",
+                            "RBE3030",
+                            "RBE2021",
+                            "HIS1053",
+                            "INE1051"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Kinematics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Dynamics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "MATLAB/Simulink",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Control Theory",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "OpenCV",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 14,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 9.9,
+            "formula_hours": 19.5
+        }
+    }
+}

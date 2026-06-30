@@ -1,0 +1,272 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230067",
+        "career_goal": "Mobile Robotics Developer",
+        "career_track": "Robot thông minh",
+        "current_semester": 3,
+        "gpa": 3.41,
+        "completed_credits": 30,
+        "credit_limit": 22,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230074",
+                "gpa": 3.31,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.0598,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230121",
+                "gpa": 3.43,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.2495,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230075",
+                "gpa": 3.43,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.2739,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230069",
+                "gpa": 3.5,
+                "career_goal": "Motion Planning Engineer",
+                "distance": 0.2742,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230052",
+                "gpa": 3.31,
+                "career_goal": "Cloud Robotics Developer",
+                "distance": 0.2744,
+                "study_hours_per_week": 7
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4097,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.926,
+                    "load_score": 0.906,
+                    "foundation_score": 0.432,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        16,
+                        13
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 5,
+                    "overall_foundation_score": 0.483,
+                    "early_foundation_score": 0.312,
+                    "foundation_score": 0.432,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PHI1006",
+                            "RBE2031",
+                            "ELT2035",
+                            "INT1009",
+                            "FLF1107"
+                        ],
+                        "total_credits": 16
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "POL1001",
+                            "ELT3295",
+                            "PHI1002",
+                            "ELT2201",
+                            "ELT3290"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.4097,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.926,
+                    "load_score": 0.906,
+                    "foundation_score": 0.432,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        16,
+                        13
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 5,
+                    "overall_foundation_score": 0.483,
+                    "early_foundation_score": 0.312,
+                    "foundation_score": 0.432,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PHI1006",
+                            "ELT1007",
+                            "ELT2035",
+                            "INT1009",
+                            "FLF1107"
+                        ],
+                        "total_credits": 16
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "POL1001",
+                            "ELT3295",
+                            "PHI1002",
+                            "ELT2201",
+                            "ELT3290"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.4097,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.926,
+                    "load_score": 0.906,
+                    "foundation_score": 0.432,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        16,
+                        13
+                    ],
+                    "foundation_credits": 14,
+                    "first_sem_foundation_credits": 5,
+                    "overall_foundation_score": 0.483,
+                    "early_foundation_score": 0.312,
+                    "foundation_score": 0.432,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PHI1006",
+                            "ELT2035",
+                            "INT1009",
+                            "RBE2001",
+                            "FLF1107"
+                        ],
+                        "total_credits": 16
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "POL1001",
+                            "ELT3295",
+                            "PHI1002",
+                            "ELT2201",
+                            "ELT3290"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "ROS2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Path Planning",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Navigation2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lidar",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "C++",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Ubuntu",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Python",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "OpenCV",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 7.5,
+            "formula_hours": 21.0
+        }
+    }
+}

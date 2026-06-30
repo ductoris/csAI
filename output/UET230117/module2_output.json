@@ -1,0 +1,152 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230117",
+  "career_goal": "Vision-based Robotics Engineer",
+  "current_semester": 8,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 43.236,
+      "g_score": 42.95,
+      "semesters": [
+        [
+          "RBE3045",
+          "POL1001",
+          "AIT2004",
+          "RBE3012",
+          "RBE3053"
+        ],
+        [
+          "INE1051",
+          "INE1050",
+          "RBE3047",
+          "UET1002",
+          "ELT3134"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3045",
+        "INE1051",
+        "INE1050",
+        "AIT2004",
+        "RBE3012",
+        "RBE3053",
+        "UET1002",
+        "RBE3047"
+      ],
+      "priority_missing": [
+        "HIS1053",
+        "RBE4004"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "C++",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.4
+    },
+    {
+      "rank": 2,
+      "f_score": 43.236,
+      "g_score": 42.95,
+      "semesters": [
+        [
+          "RBE3045",
+          "POL1001",
+          "AIT2004",
+          "RBE3012",
+          "RBE3053"
+        ],
+        [
+          "INE1051",
+          "INE1050",
+          "RBE3002",
+          "UET1002",
+          "RBE3047"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3045",
+        "INE1051",
+        "INE1050",
+        "AIT2004",
+        "RBE3012",
+        "RBE3053",
+        "UET1002",
+        "RBE3047"
+      ],
+      "priority_missing": [
+        "HIS1053",
+        "RBE4004"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "C++",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.4
+    },
+    {
+      "rank": 3,
+      "f_score": 44.236,
+      "g_score": 43.95,
+      "semesters": [
+        [
+          "RBE3045",
+          "AIT2004",
+          "RBE3012",
+          "RBE3053",
+          "UET1002"
+        ],
+        [
+          "INE1051",
+          "POL1001",
+          "INE1050",
+          "RBE3055",
+          "RBE3047"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "RBE3045",
+        "INE1051",
+        "INE1050",
+        "AIT2004",
+        "RBE3012",
+        "RBE3053",
+        "UET1002",
+        "RBE3047"
+      ],
+      "priority_missing": [
+        "HIS1053",
+        "RBE4004"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "C++",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.4
+    }
+  ]
+}

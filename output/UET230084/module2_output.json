@@ -1,0 +1,125 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230084",
+  "career_goal": "Vision-based Robotics Engineer",
+  "current_semester": 6,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 50.04,
+      "g_score": 49.85,
+      "semesters": [
+        [
+          "RBE1001",
+          "RBE3042",
+          "RBE4004",
+          "RBE3012",
+          "RBE3050"
+        ],
+        [
+          "RBE3056",
+          "INE1051",
+          "RBE2021",
+          "RBE3030",
+          "RBE2003"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057",
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "C++",
+        "ROS2",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.4
+    },
+    {
+      "rank": 2,
+      "f_score": 50.04,
+      "g_score": 49.85,
+      "semesters": [
+        [
+          "RBE1001",
+          "RBE3042",
+          "RBE4004",
+          "RBE3012",
+          "RBE3050"
+        ],
+        [
+          "RBE3053",
+          "RBE2021",
+          "INE1050",
+          "RBE3030",
+          "RBE2003"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057",
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "C++",
+        "ROS2",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.4
+    },
+    {
+      "rank": 3,
+      "f_score": 50.04,
+      "g_score": 49.85,
+      "semesters": [
+        [
+          "RBE1001",
+          "RBE3042",
+          "RBE4004",
+          "RBE3012",
+          "RBE3050"
+        ],
+        [
+          "RBE3053",
+          "RBE2021",
+          "HIS1056",
+          "RBE3030",
+          "RBE2003"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057",
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "C++",
+        "ROS2",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.4
+    }
+  ]
+}

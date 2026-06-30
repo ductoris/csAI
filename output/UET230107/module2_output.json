@@ -1,0 +1,146 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230107",
+  "career_goal": "Kinematics & Dynamics Specialist",
+  "current_semester": 6,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 34.888,
+      "g_score": 34.65,
+      "semesters": [
+        [
+          "AIT2004",
+          "RBE4004",
+          "RBE2022",
+          "RBE2021",
+          "RBE3013"
+        ],
+        [
+          "INE1051",
+          "HIS1056",
+          "RBE3045",
+          "RBE3030",
+          "INE1050"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "AIT2004",
+        "RBE4004",
+        "RBE3045",
+        "RBE2022",
+        "RBE3030",
+        "RBE2021",
+        "INE1051",
+        "RBE3013"
+      ],
+      "priority_missing": [
+        "RBE3057",
+        "RBE3053"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Kinematics",
+        "Dynamics",
+        "MATLAB/Simulink",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 34.888,
+      "g_score": 34.65,
+      "semesters": [
+        [
+          "AIT2004",
+          "RBE4004",
+          "RBE2022",
+          "RBE2021",
+          "RBE3013"
+        ],
+        [
+          "HIS1056",
+          "RBE3030",
+          "INE1050",
+          "INE1051",
+          "RBE3053"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "AIT2004",
+        "RBE4004",
+        "RBE2022",
+        "RBE3030",
+        "RBE2021",
+        "INE1051",
+        "RBE3013",
+        "RBE3053"
+      ],
+      "priority_missing": [
+        "RBE3045",
+        "RBE3057"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Kinematics",
+        "Dynamics",
+        "MATLAB/Simulink",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 35.531,
+      "g_score": 35.15,
+      "semesters": [
+        [
+          "AIT2004",
+          "RBE4004",
+          "RBE2022",
+          "INE1050",
+          "RBE3013"
+        ],
+        [
+          "HIS1056",
+          "RBE3030",
+          "RBE2021",
+          "HIS1053",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "AIT2004",
+        "RBE4004",
+        "RBE2022",
+        "RBE3030",
+        "RBE2021",
+        "INE1051",
+        "RBE3013"
+      ],
+      "priority_missing": [
+        "RBE3045",
+        "RBE3057",
+        "RBE3053"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Kinematics",
+        "Dynamics",
+        "MATLAB/Simulink",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230102",
+        "career_goal": "Computer Vision Engineer",
+        "career_track": "Robot thông minh",
+        "current_semester": 6,
+        "gpa": 3.58,
+        "completed_credits": 85,
+        "credit_limit": 22,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230044",
+                "gpa": 3.21,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.1481,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230053",
+                "gpa": 3.22,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.1544,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230075",
+                "gpa": 3.43,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.2005,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230040",
+                "gpa": 3.12,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.2091,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230008",
+                "gpa": 3.08,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.2725,
+                "study_hours_per_week": 9
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.7829,
+                "score_breakdown": {
+                    "career_score": 0.67,
+                    "peer_score": 0.934,
+                    "load_score": 0.875,
+                    "foundation_score": 0.861,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 25,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.893,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.861,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3042",
+                            "RBE3050",
+                            "RBE4004",
+                            "RBE3017",
+                            "ELT1007"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE2003",
+                            "AIT2004",
+                            "EPN1096",
+                            "RBE3053",
+                            "RBE3046"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "ROS2",
+                    "TensorFlow",
+                    "PyTorch",
+                    "Python",
+                    "ML"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.7829,
+                "score_breakdown": {
+                    "career_score": 0.67,
+                    "peer_score": 0.934,
+                    "load_score": 0.875,
+                    "foundation_score": 0.861,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 25,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.893,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.861,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3042",
+                            "RBE3050",
+                            "RBE4004",
+                            "RBE3017",
+                            "ELT1007"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE2003",
+                            "AIT2004",
+                            "RBE1001",
+                            "RBE3053",
+                            "RBE3046"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "ROS2",
+                    "TensorFlow",
+                    "PyTorch",
+                    "Python",
+                    "ML"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.7829,
+                "score_breakdown": {
+                    "career_score": 0.67,
+                    "peer_score": 0.934,
+                    "load_score": 0.875,
+                    "foundation_score": 0.861,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 25,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.893,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.861,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3042",
+                            "RBE3050",
+                            "RBE1001",
+                            "RBE4004",
+                            "RBE3017"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE2003",
+                            "AIT2004",
+                            "EPN1096",
+                            "RBE3053",
+                            "RBE3046"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "ROS2",
+                    "TensorFlow",
+                    "PyTorch",
+                    "Python",
+                    "ML"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "OpenCV",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "CV",
+                "source": "career_oriented",
+                "priority": "cao"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 8.1,
+            "formula_hours": 21.0
+        }
+    }
+}

@@ -1,0 +1,158 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230016",
+  "career_goal": "AI Robotics Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 27.593,
+      "g_score": 27.45,
+      "semesters": [
+        [
+          "MAT1093",
+          "RBE1001",
+          "ELT3240",
+          "INT1008",
+          "EPN1095"
+        ],
+        [
+          "PHI1002",
+          "POL1001",
+          "PHI1006",
+          "MAT1101",
+          "MAT1042"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "PHI1002",
+        "POL1001",
+        "MAT1093",
+        "RBE1001",
+        "ELT3240",
+        "PHI1006",
+        "INT1008",
+        "MAT1101",
+        "MAT1042"
+      ],
+      "priority_missing": [
+        "ELT2035"
+      ],
+      "covered_skills": [
+        "ML",
+        "C++",
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "missing_skills": [
+        "OpenCV",
+        "SLAM",
+        "CV"
+      ],
+      "career_match_ratio": 0.57
+    },
+    {
+      "rank": 2,
+      "f_score": 27.688,
+      "g_score": 27.45,
+      "semesters": [
+        [
+          "MAT1093",
+          "RBE1001",
+          "ELT3240",
+          "INT1008",
+          "EPN1095"
+        ],
+        [
+          "PHI1002",
+          "PSY1050",
+          "PHI1006",
+          "MAT1101",
+          "MAT1042"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "PHI1002",
+        "MAT1093",
+        "RBE1001",
+        "PHI1006",
+        "ELT3240",
+        "INT1008",
+        "MAT1101",
+        "MAT1042"
+      ],
+      "priority_missing": [
+        "ELT2035",
+        "POL1001"
+      ],
+      "covered_skills": [
+        "ML",
+        "C++",
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "missing_skills": [
+        "OpenCV",
+        "SLAM",
+        "CV"
+      ],
+      "career_match_ratio": 0.57
+    },
+    {
+      "rank": 3,
+      "f_score": 27.688,
+      "g_score": 27.45,
+      "semesters": [
+        [
+          "MAT1093",
+          "RBE1001",
+          "ELT3240",
+          "INT1008",
+          "EPN1095"
+        ],
+        [
+          "PHI1002",
+          "PHI1006",
+          "THL1057",
+          "MAT1101",
+          "MAT1042"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "PHI1002",
+        "MAT1093",
+        "RBE1001",
+        "PHI1006",
+        "ELT3240",
+        "INT1008",
+        "MAT1101",
+        "MAT1042"
+      ],
+      "priority_missing": [
+        "ELT2035",
+        "POL1001"
+      ],
+      "covered_skills": [
+        "ML",
+        "C++",
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "missing_skills": [
+        "OpenCV",
+        "SLAM",
+        "CV"
+      ],
+      "career_match_ratio": 0.57
+    }
+  ]
+}

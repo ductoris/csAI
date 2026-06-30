@@ -1,0 +1,131 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230111",
+  "career_goal": "AI Robotics Engineer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 51.54,
+      "g_score": 51.35,
+      "semesters": [
+        [
+          "RBE4004",
+          "RBE3050",
+          "RBE3015",
+          "RBE3042",
+          "UET1002"
+        ],
+        [
+          "ELT3292",
+          "RBE2021",
+          "INE1051",
+          "RBE3012",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031",
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "OpenCV",
+        "CV"
+      ],
+      "missing_skills": [
+        "TensorFlow",
+        "PyTorch",
+        "C++",
+        "ML",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 2,
+      "f_score": 51.54,
+      "g_score": 51.35,
+      "semesters": [
+        [
+          "RBE4004",
+          "PSY1050",
+          "RBE3050",
+          "RBE3042",
+          "RBE3013"
+        ],
+        [
+          "ELT3292",
+          "RBE2021",
+          "INE1051",
+          "RBE3015",
+          "RBE3012"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031",
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "ML",
+        "TensorFlow",
+        "PyTorch",
+        "OpenCV",
+        "CV"
+      ],
+      "missing_skills": [
+        "C++",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.71
+    },
+    {
+      "rank": 3,
+      "f_score": 52.54,
+      "g_score": 52.35,
+      "semesters": [
+        [
+          "RBE4004",
+          "HIS1056",
+          "RBE3050",
+          "RBE3015",
+          "RBE3042"
+        ],
+        [
+          "ELT3292",
+          "RBE2021",
+          "INE1051",
+          "RBE3012",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031",
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "OpenCV",
+        "CV"
+      ],
+      "missing_skills": [
+        "TensorFlow",
+        "PyTorch",
+        "C++",
+        "ML",
+        "SLAM"
+      ],
+      "career_match_ratio": 0.29
+    }
+  ]
+}

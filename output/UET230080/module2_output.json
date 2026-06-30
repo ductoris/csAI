@@ -1,0 +1,137 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230080",
+  "career_goal": "SCADA Systems Engineer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 50.588,
+      "g_score": 50.35,
+      "semesters": [
+        [
+          "RBE3050",
+          "RBE3013",
+          "RBE3042",
+          "PSY1050",
+          "RBE4004"
+        ],
+        [
+          "RBE2021",
+          "RBE3015",
+          "UET1002",
+          "RBE3012",
+          "ELT3292"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "ELT3292"
+      ],
+      "priority_missing": [
+        "ELT3996",
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "Power Electronics",
+        "PLC",
+        "HMI",
+        "Control"
+      ],
+      "missing_skills": [
+        "SCADA",
+        "Industrial Networks",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.57
+    },
+    {
+      "rank": 2,
+      "f_score": 51.488,
+      "g_score": 51.25,
+      "semesters": [
+        [
+          "RBE2021",
+          "RBE3050",
+          "RBE3015",
+          "RBE3042",
+          "RBE4004"
+        ],
+        [
+          "INE1050",
+          "RBE3013",
+          "UET1002",
+          "RBE3012",
+          "ELT3292"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3292"
+      ],
+      "priority_missing": [
+        "ELT3996",
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "Power Electronics",
+        "PLC",
+        "HMI",
+        "Control"
+      ],
+      "missing_skills": [
+        "SCADA",
+        "Industrial Networks",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.57
+    },
+    {
+      "rank": 3,
+      "f_score": 51.488,
+      "g_score": 51.25,
+      "semesters": [
+        [
+          "RBE2021",
+          "RBE3050",
+          "RBE3013",
+          "RBE3042",
+          "RBE4004"
+        ],
+        [
+          "INE1051",
+          "RBE3015",
+          "UET1002",
+          "RBE3012",
+          "ELT3292"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3292"
+      ],
+      "priority_missing": [
+        "ELT3996",
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "Power Electronics",
+        "PLC",
+        "HMI",
+        "Control"
+      ],
+      "missing_skills": [
+        "SCADA",
+        "Industrial Networks",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.57
+    }
+  ]
+}

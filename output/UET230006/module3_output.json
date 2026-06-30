@@ -1,0 +1,247 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230006",
+        "career_goal": "Kinematics & Dynamics Specialist",
+        "career_track": "Robot thông minh",
+        "current_semester": 2,
+        "gpa": 2.83,
+        "completed_credits": 12,
+        "credit_limit": 18,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230095",
+                "gpa": 3.25,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.2671,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230007",
+                "gpa": 2.82,
+                "career_goal": "Vision-based Robotics Engineer",
+                "distance": 0.2739,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230005",
+                "gpa": 2.62,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.2759,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230008",
+                "gpa": 3.08,
+                "career_goal": "Computer Vision Engineer",
+                "distance": 0.2764,
+                "study_hours_per_week": 9
+            },
+            {
+                "student_id": "UET230026",
+                "gpa": 3.18,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.2788,
+                "study_hours_per_week": 8
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4674,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.914,
+                    "load_score": 1.0,
+                    "foundation_score": 0.846,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 22,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.846,
+                    "early_foundation_score": 0.846,
+                    "foundation_score": 0.846,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1101",
+                            "POL1001",
+                            "RBE1001",
+                            "ELT3240",
+                            "INT1008"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "PHI1002",
+                            "ELT1007",
+                            "EPN1096",
+                            "MAT1042",
+                            "ELT2035"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.457,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.914,
+                    "load_score": 1.0,
+                    "foundation_score": 0.742,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 19,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.731,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.742,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE1001",
+                            "ELT3240",
+                            "EPN1096",
+                            "PHI1006",
+                            "INT1008"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "PHI1002",
+                            "POL1001",
+                            "ELT1007",
+                            "MAT1042",
+                            "ELT2035"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.457,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.914,
+                    "load_score": 1.0,
+                    "foundation_score": 0.742,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        13
+                    ],
+                    "foundation_credits": 19,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.731,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.742,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE1001",
+                            "ELT3240",
+                            "EPN1096",
+                            "PHI1006",
+                            "INT1008"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "PHI1002",
+                            "MAT1101",
+                            "POL1001",
+                            "ELT1007",
+                            "MAT1042"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 26,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Control Theory",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Kinematics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "MATLAB/Simulink",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Dynamics",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "OpenCV",
+                "source": "peer_pattern",
+                "priority": "cao"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 9.0,
+            "formula_hours": 19.5
+        }
+    }
+}

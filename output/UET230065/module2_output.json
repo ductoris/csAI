@@ -1,0 +1,143 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230065",
+  "career_goal": "Automation PLC Engineer",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 28.038,
+      "g_score": 27.8,
+      "semesters": [
+        [
+          "EPN1096",
+          "PHI1002",
+          "MAT1093",
+          "RBE2001",
+          "FLF1107"
+        ],
+        [
+          "ELT3290",
+          "ELT3295",
+          "INT2210",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3295",
+        "EPN1096",
+        "PHI1002",
+        "INT2210",
+        "MAT1093",
+        "INT1009",
+        "ELT3290",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "ELT2035",
+        "POL1001"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "AutoCAD Electrical",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 28.038,
+      "g_score": 27.8,
+      "semesters": [
+        [
+          "EPN1096",
+          "PHI1002",
+          "MAT1093",
+          "RBE2001",
+          "FLF1107"
+        ],
+        [
+          "ELT2035",
+          "INT2210",
+          "ELT3290",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "EPN1096",
+        "ELT2035",
+        "PHI1002",
+        "INT2210",
+        "MAT1093",
+        "INT1009",
+        "ELT3290",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "POL1001",
+        "ELT3295"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "AutoCAD Electrical",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 28.038,
+      "g_score": 27.8,
+      "semesters": [
+        [
+          "EPN1096",
+          "PHI1002",
+          "MAT1093",
+          "RBE2001",
+          "FLF1107"
+        ],
+        [
+          "ELT2035",
+          "ELT3295",
+          "INT2210",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "ELT3295",
+        "EPN1096",
+        "ELT2035",
+        "PHI1002",
+        "INT2210",
+        "MAT1093",
+        "INT1009",
+        "FLF1107"
+      ],
+      "priority_missing": [
+        "ELT3290",
+        "POL1001"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "AutoCAD Electrical",
+        "Control",
+        "HMI",
+        "Power Electronics"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

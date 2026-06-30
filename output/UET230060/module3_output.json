@@ -1,0 +1,223 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230060",
+        "career_goal": "Microcontroller Programmer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 4,
+        "gpa": 2.56,
+        "completed_credits": 45,
+        "credit_limit": 18,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230103",
+                "gpa": 2.6,
+                "career_goal": "Microcontroller Programmer",
+                "distance": 0.0705,
+                "study_hours_per_week": 9
+            },
+            {
+                "student_id": "UET230045",
+                "gpa": 3.18,
+                "career_goal": "Microcontroller Programmer",
+                "distance": 0.0923,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230001",
+                "gpa": 2.6,
+                "career_goal": "Microcontroller Programmer",
+                "distance": 0.1249,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230036",
+                "gpa": 2.58,
+                "career_goal": "Microcontroller Programmer",
+                "distance": 0.1324,
+                "study_hours_per_week": 9
+            },
+            {
+                "student_id": "UET230024",
+                "gpa": 2.62,
+                "career_goal": "Microcontroller Programmer",
+                "distance": 0.1365,
+                "study_hours_per_week": 8
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.373,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.96,
+                    "load_score": 0.583,
+                    "foundation_score": 0.643,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14
+                    ],
+                    "foundation_credits": 9,
+                    "first_sem_foundation_credits": 9,
+                    "overall_foundation_score": 0.643,
+                    "early_foundation_score": 0.643,
+                    "foundation_score": 0.643,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1042",
+                            "ELT3290",
+                            "FLF1107",
+                            "RBE2001"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 14,
+                "covered_skills": []
+            },
+            {
+                "rank": 2,
+                "final_score": 0.373,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.96,
+                    "load_score": 0.583,
+                    "foundation_score": 0.643,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14
+                    ],
+                    "foundation_credits": 9,
+                    "first_sem_foundation_credits": 9,
+                    "overall_foundation_score": 0.643,
+                    "early_foundation_score": 0.643,
+                    "foundation_score": 0.643,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1042",
+                            "FLF1107",
+                            "RBE2001",
+                            "ELT3051"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 14,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.3465,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.96,
+                    "load_score": 0.542,
+                    "foundation_score": 0.462,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13
+                    ],
+                    "foundation_credits": 6,
+                    "first_sem_foundation_credits": 6,
+                    "overall_foundation_score": 0.462,
+                    "early_foundation_score": 0.462,
+                    "foundation_score": 0.462,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1042",
+                            "FLF1107",
+                            "HIS1001",
+                            "RBE2001"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 13,
+                "covered_skills": []
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "C/C++",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "FreeRTOS",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Microcontroller",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Control",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "I2C/SPI/UART",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "STM32",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Sensor",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Embedded C/C++",
+                "source": "peer_pattern",
+                "priority": "cao"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 10,
+            "breakdown": {
+                "ly_thuyet": 4,
+                "thuc_hanh": 4,
+                "project": 2
+            },
+            "peer_average": 9.2,
+            "formula_hours": 10.5
+        }
+    }
+}

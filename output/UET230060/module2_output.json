@@ -1,0 +1,101 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230060",
+  "career_goal": "Microcontroller Programmer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 13.39,
+      "g_score": 13.2,
+      "semesters": [
+        [
+          "MAT1042",
+          "FLF1107",
+          "HIS1001",
+          "RBE2001"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "C/C++",
+        "FreeRTOS",
+        "Microcontroller",
+        "Control",
+        "I2C/SPI/UART",
+        "STM32",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 13.89,
+      "g_score": 13.7,
+      "semesters": [
+        [
+          "MAT1042",
+          "ELT3290",
+          "FLF1107",
+          "RBE2001"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "C/C++",
+        "FreeRTOS",
+        "Microcontroller",
+        "Control",
+        "I2C/SPI/UART",
+        "STM32",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 13.89,
+      "g_score": 13.7,
+      "semesters": [
+        [
+          "MAT1042",
+          "FLF1107",
+          "RBE2001",
+          "ELT3051"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "C/C++",
+        "FreeRTOS",
+        "Microcontroller",
+        "Control",
+        "I2C/SPI/UART",
+        "STM32",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

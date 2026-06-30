@@ -1,0 +1,247 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230041",
+        "career_goal": "Cloud Robotics Developer",
+        "career_track": "Robot thông minh",
+        "current_semester": 4,
+        "gpa": 2.33,
+        "completed_credits": 45,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230092",
+                "gpa": 1.47,
+                "career_goal": "Cloud Robotics Developer",
+                "distance": 0.154,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230052",
+                "gpa": 3.31,
+                "career_goal": "Cloud Robotics Developer",
+                "distance": 0.1742,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230021",
+                "gpa": 3.29,
+                "career_goal": "Cloud Robotics Developer",
+                "distance": 0.2059,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230039",
+                "gpa": 2.5,
+                "career_goal": "Motion Planning Engineer",
+                "distance": 0.2768,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230085",
+                "gpa": 2.34,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.2822,
+                "study_hours_per_week": 12
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.4606,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.928,
+                    "load_score": 0.625,
+                    "foundation_score": 0.8,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15
+                    ],
+                    "foundation_credits": 12,
+                    "first_sem_foundation_credits": 12,
+                    "overall_foundation_score": 0.8,
+                    "early_foundation_score": 0.8,
+                    "foundation_score": 0.8,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "INT1009",
+                            "INT2210",
+                            "MAT1101",
+                            "RBE2001",
+                            "ELT3051"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 15,
+                "covered_skills": [
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.4606,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.928,
+                    "load_score": 0.625,
+                    "foundation_score": 0.8,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15
+                    ],
+                    "foundation_credits": 12,
+                    "first_sem_foundation_credits": 12,
+                    "overall_foundation_score": 0.8,
+                    "early_foundation_score": 0.8,
+                    "foundation_score": 0.8,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "INT1009",
+                            "INT2210",
+                            "MAT1101",
+                            "RBE2001",
+                            "ELT3295"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 15,
+                "covered_skills": [
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.4606,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.928,
+                    "load_score": 0.625,
+                    "foundation_score": 0.8,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        15
+                    ],
+                    "foundation_credits": 12,
+                    "first_sem_foundation_credits": 12,
+                    "overall_foundation_score": 0.8,
+                    "early_foundation_score": 0.8,
+                    "foundation_score": 0.8,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "INT2210",
+                            "MAT1101",
+                            "RBE2001",
+                            "ELT3051",
+                            "PHI1006"
+                        ],
+                        "total_credits": 15
+                    }
+                ],
+                "total_credits": 15,
+                "covered_skills": [
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "C/C++",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "WiFi/Bluetooth",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Node-RED",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "MQTT",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Cloud/AWS",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "IoT Protocols",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "ROS",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 10,
+            "breakdown": {
+                "ly_thuyet": 4,
+                "thuc_hanh": 4,
+                "project": 2
+            },
+            "peer_average": 9.4,
+            "formula_hours": 10.5
+        }
+    }
+}

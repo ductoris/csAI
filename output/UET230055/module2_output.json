@@ -1,0 +1,93 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230055",
+  "career_goal": "Firmware Engineer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 13.39,
+      "g_score": 13.2,
+      "semesters": [
+        [
+          "ELT3295",
+          "PHI1006",
+          "ELT3134",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "I2C/SPI/UART",
+        "STM32",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 13.39,
+      "g_score": 13.2,
+      "semesters": [
+        [
+          "ELT3134",
+          "PHI1006",
+          "ELT3051",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 13,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "I2C/SPI/UART",
+        "STM32",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 14.2,
+      "g_score": 14.2,
+      "semesters": [
+        [
+          "ELT3134",
+          "PHI1006",
+          "ELT3144",
+          "FLF1107"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [
+        "ELT3144"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "Sensor"
+      ],
+      "missing_skills": [
+        "Control",
+        "I2C/SPI/UART",
+        "STM32"
+      ],
+      "career_match_ratio": 0.25
+    }
+  ]
+}

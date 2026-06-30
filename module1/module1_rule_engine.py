@@ -1,9 +1,15 @@
 import pandas as pd
 import argparse
 import json
+import sys
 import unicodedata
 from pathlib import Path
 from collections import defaultdict
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 
 # =========================================================
@@ -148,11 +154,12 @@ class CourseKnowledgeBase:
 
         df = df.copy()
 
+        df = df[df["course_code"].notna()]
         df["course_code"] = df["course_code"].astype(str).str.strip()
 
+        invalid_course_codes = {"", "nan", "none", "null", "<na>"}
         df = df[
-            (df["course_code"] != "") &
-            (df["course_code"].str.lower() != "nan")
+            ~df["course_code"].str.lower().isin(invalid_course_codes)
         ]
 
         df["course_name"] = df["course_name"].astype(str).str.strip()

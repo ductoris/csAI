@@ -1,0 +1,152 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230030",
+  "career_goal": "Industrial Automation Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 26.021,
+      "g_score": 25.45,
+      "semesters": [
+        [
+          "MAT1101",
+          "ELT3240",
+          "ELT2035",
+          "RBE1001",
+          "ELT1007"
+        ],
+        [
+          "PHI1002",
+          "EPN1096",
+          "MAT1093",
+          "INT1009",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "MAT1101",
+        "ELT3240",
+        "ELT2035",
+        "MAT1093",
+        "RBE1001",
+        "ELT1007",
+        "INT1009"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "INT2210",
+        "FLF1107"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "Control",
+        "SCADA",
+        "PLC",
+        "HMI",
+        "Industrial Networks"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 26.021,
+      "g_score": 25.45,
+      "semesters": [
+        [
+          "MAT1101",
+          "ELT3240",
+          "ELT2035",
+          "RBE1001",
+          "ELT1007"
+        ],
+        [
+          "POL1001",
+          "EPN1096",
+          "MAT1093",
+          "INT1009",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "MAT1101",
+        "ELT3240",
+        "ELT2035",
+        "MAT1093",
+        "RBE1001",
+        "ELT1007",
+        "INT1009"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "INT2210",
+        "FLF1107"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "Control",
+        "SCADA",
+        "PLC",
+        "HMI",
+        "Industrial Networks"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 26.021,
+      "g_score": 25.45,
+      "semesters": [
+        [
+          "MAT1101",
+          "ELT3240",
+          "ELT2035",
+          "RBE1001",
+          "ELT1007"
+        ],
+        [
+          "PHI1002",
+          "POL1001",
+          "EPN1096",
+          "MAT1093",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "MAT1101",
+        "ELT3240",
+        "ELT2035",
+        "MAT1093",
+        "RBE1001",
+        "ELT1007",
+        "INT1009"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "INT2210",
+        "FLF1107"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "Control",
+        "SCADA",
+        "PLC",
+        "HMI",
+        "Industrial Networks"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230081",
+        "career_goal": "Navigation Algorithm Engineer",
+        "career_track": "Robot thông minh",
+        "current_semester": 5,
+        "gpa": 1.42,
+        "completed_credits": 66,
+        "credit_limit": 14,
+        "risk_level": "HIGH"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230085",
+                "gpa": 2.34,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.1494,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230078",
+                "gpa": 2.37,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.1497,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230079",
+                "gpa": 3.2,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.2746,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230106",
+                "gpa": 3.22,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.275,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230087",
+                "gpa": 1.41,
+                "career_goal": "Machine Learning Engineer (Robotics)",
+                "distance": 0.2763,
+                "study_hours_per_week": 14
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.6604,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.927,
+                    "load_score": 1.0,
+                    "foundation_score": 0.6,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 18,
+                    "first_sem_foundation_credits": 7,
+                    "overall_foundation_score": 0.643,
+                    "early_foundation_score": 0.5,
+                    "foundation_score": 0.6,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PEC1008",
+                            "MAT1042",
+                            "RBE4004",
+                            "ELT3292",
+                            "PSY1050"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3050",
+                            "INE1051",
+                            "RBE3042",
+                            "RBE3017",
+                            "RBE2021"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "ROS2",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.6604,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.927,
+                    "load_score": 1.0,
+                    "foundation_score": 0.6,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 18,
+                    "first_sem_foundation_credits": 7,
+                    "overall_foundation_score": 0.643,
+                    "early_foundation_score": 0.5,
+                    "foundation_score": 0.6,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PEC1008",
+                            "RBE3050",
+                            "MAT1042",
+                            "RBE4004",
+                            "PSY1050"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INE1051",
+                            "RBE3042",
+                            "RBE3017",
+                            "RBE3015",
+                            "RBE2021"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "ROS2",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.6604,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.927,
+                    "load_score": 1.0,
+                    "foundation_score": 0.6,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 18,
+                    "first_sem_foundation_credits": 7,
+                    "overall_foundation_score": 0.643,
+                    "early_foundation_score": 0.5,
+                    "foundation_score": 0.6,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "PEC1008",
+                            "MAT1042",
+                            "RBE4004",
+                            "PSY1050",
+                            "RBE2003"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3050",
+                            "INE1051",
+                            "RBE3042",
+                            "RBE3017",
+                            "RBE2021"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "C++",
+                    "ROS2",
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Navigation2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Ubuntu",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lidar",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 15,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 7,
+                "project": 3
+            },
+            "peer_average": 10.2,
+            "formula_hours": 21.0
+        }
+    }
+}

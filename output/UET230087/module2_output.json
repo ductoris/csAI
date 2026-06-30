@@ -1,0 +1,125 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230087",
+  "career_goal": "Machine Learning Engineer (Robotics)",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 41.945,
+      "g_score": 41.85,
+      "semesters": [
+        [
+          "RBE4004",
+          "HIS1001",
+          "HIS1056",
+          "RBE3042",
+          "RBE2022"
+        ],
+        [
+          "PSY1050",
+          "RBE3012",
+          "RBE3050",
+          "ELT3134",
+          "RBE3017"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "ROS2",
+        "ML",
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "missing_skills": [
+        "OpenCV"
+      ],
+      "career_match_ratio": 0.83
+    },
+    {
+      "rank": 2,
+      "f_score": 41.945,
+      "g_score": 41.85,
+      "semesters": [
+        [
+          "RBE4004",
+          "HIS1001",
+          "RBE2022",
+          "INE1051",
+          "RBE3050"
+        ],
+        [
+          "RBE3042",
+          "PSY1050",
+          "RBE3012",
+          "ELT3134",
+          "RBE3017"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "ROS2",
+        "ML",
+        "Python",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "missing_skills": [
+        "OpenCV"
+      ],
+      "career_match_ratio": 0.83
+    },
+    {
+      "rank": 3,
+      "f_score": 41.945,
+      "g_score": 41.85,
+      "semesters": [
+        [
+          "RBE4004",
+          "HIS1001",
+          "HIS1056",
+          "RBE3042",
+          "RBE2022"
+        ],
+        [
+          "UET1002",
+          "RBE3012",
+          "RBE3050",
+          "ELT3134",
+          "RBE3017"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "ROS2",
+        "Python"
+      ],
+      "missing_skills": [
+        "PyTorch",
+        "TensorFlow",
+        "ML",
+        "OpenCV"
+      ],
+      "career_match_ratio": 0.33
+    }
+  ]
+}

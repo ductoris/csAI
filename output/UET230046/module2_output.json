@@ -1,0 +1,134 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230046",
+  "career_goal": "Embedded Systems Developer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 22.571,
+      "g_score": 22.0,
+      "semesters": [
+        [
+          "HIS1001",
+          "ELT3240",
+          "MAT1042",
+          "ELT3295",
+          "PHI1002"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [
+        "HIS1001",
+        "ELT3240",
+        "MAT1042",
+        "ELT3295",
+        "PHI1002"
+      ],
+      "priority_missing": [
+        "PEC1008",
+        "FLF1107",
+        "POL1001",
+        "ELT2035"
+      ],
+      "covered_skills": [
+        "FreeRTOS",
+        "I2C/SPI/UART",
+        "Microcontroller",
+        "C/C++",
+        "STM32"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.71
+    },
+    {
+      "rank": 2,
+      "f_score": 22.571,
+      "g_score": 22.0,
+      "semesters": [
+        [
+          "HIS1001",
+          "ELT3240",
+          "POL1001",
+          "MAT1042",
+          "ELT2035"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [
+        "HIS1001",
+        "ELT3240",
+        "POL1001",
+        "MAT1042",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "PEC1008",
+        "ELT3295",
+        "FLF1107",
+        "PHI1002"
+      ],
+      "covered_skills": [
+        "FreeRTOS",
+        "I2C/SPI/UART",
+        "Microcontroller",
+        "C/C++",
+        "STM32"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.71
+    },
+    {
+      "rank": 3,
+      "f_score": 22.571,
+      "g_score": 22.0,
+      "semesters": [
+        [
+          "PEC1008",
+          "ELT3240",
+          "MAT1042",
+          "ELT3295",
+          "PHI1002"
+        ]
+      ],
+      "total_credits": 14,
+      "priority_covered": [
+        "PEC1008",
+        "ELT3240",
+        "MAT1042",
+        "ELT3295",
+        "PHI1002"
+      ],
+      "priority_missing": [
+        "FLF1107",
+        "POL1001",
+        "HIS1001",
+        "ELT2035"
+      ],
+      "covered_skills": [
+        "FreeRTOS",
+        "I2C/SPI/UART",
+        "Microcontroller",
+        "C/C++",
+        "STM32"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.71
+    }
+  ]
+}

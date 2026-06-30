@@ -1,0 +1,131 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230113",
+  "career_goal": "Mobile Robotics Developer",
+  "current_semester": 8,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 51.25,
+      "g_score": 51.25,
+      "semesters": [
+        [
+          "RBE4003",
+          "RBE1001",
+          "RBE3012",
+          "RBE3052",
+          "RBE3050"
+        ],
+        [
+          "RBE3053",
+          "RBE2022",
+          "RBE3013",
+          "FLF1107",
+          "PHI1002"
+        ]
+      ],
+      "total_credits": 36,
+      "priority_covered": [
+        "RBE3052"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "SLAM",
+        "Path Planning",
+        "Python"
+      ],
+      "missing_skills": [
+        "Ubuntu",
+        "Lidar",
+        "ROS2",
+        "C++",
+        "Navigation2"
+      ],
+      "career_match_ratio": 0.38
+    },
+    {
+      "rank": 2,
+      "f_score": 56.85,
+      "g_score": 56.85,
+      "semesters": [
+        [
+          "RBE4003",
+          "RBE1001",
+          "RBE3012",
+          "RBE3052",
+          "RBE3050"
+        ],
+        [
+          "RBE3053",
+          "RBE2022",
+          "RBE3013",
+          "RBE3045",
+          "PHI1002"
+        ]
+      ],
+      "total_credits": 34,
+      "priority_covered": [
+        "RBE3052"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "SLAM",
+        "Path Planning",
+        "Python"
+      ],
+      "missing_skills": [
+        "Ubuntu",
+        "Lidar",
+        "ROS2",
+        "C++",
+        "Navigation2"
+      ],
+      "career_match_ratio": 0.38
+    },
+    {
+      "rank": 3,
+      "f_score": 57.0,
+      "g_score": 57.0,
+      "semesters": [
+        [
+          "RBE4003",
+          "RBE1001",
+          "RBE3012",
+          "RBE3052",
+          "RBE3050"
+        ],
+        [
+          "RBE3053",
+          "RBE2022",
+          "RBE4004",
+          "RBE3013",
+          "PHI1002"
+        ]
+      ],
+      "total_credits": 34,
+      "priority_covered": [
+        "RBE3052"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "SLAM",
+        "Path Planning",
+        "Python"
+      ],
+      "missing_skills": [
+        "Ubuntu",
+        "Lidar",
+        "ROS2",
+        "C++",
+        "Navigation2"
+      ],
+      "career_match_ratio": 0.38
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230106",
+  "career_goal": "Navigation Algorithm Engineer",
+  "current_semester": 6,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 44.345,
+      "g_score": 44.25,
+      "semesters": [
+        [
+          "RBE3015",
+          "RBE3042",
+          "RBE4004",
+          "AIT2004",
+          "MAT1101"
+        ],
+        [
+          "RBE3046",
+          "RBE3045",
+          "INE1051",
+          "INE1050",
+          "RBE2022"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Ubuntu",
+        "C++",
+        "SLAM",
+        "Lidar",
+        "Navigation2",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 2,
+      "f_score": 44.845,
+      "g_score": 44.75,
+      "semesters": [
+        [
+          "INE1051",
+          "RBE3015",
+          "RBE3042",
+          "RBE4004",
+          "AIT2004"
+        ],
+        [
+          "RBE3046",
+          "RBE3045",
+          "HIS1056",
+          "INE1050",
+          "RBE2022"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Ubuntu",
+        "C++",
+        "SLAM",
+        "Lidar",
+        "Navigation2",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 3,
+      "f_score": 44.845,
+      "g_score": 44.75,
+      "semesters": [
+        [
+          "RBE3015",
+          "INT1009",
+          "RBE3042",
+          "RBE4004",
+          "AIT2004"
+        ],
+        [
+          "RBE3046",
+          "RBE3045",
+          "INE1051",
+          "INE1050",
+          "RBE2022"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Ubuntu",
+        "C++",
+        "SLAM",
+        "Lidar",
+        "Navigation2",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.14
+    }
+  ]
+}

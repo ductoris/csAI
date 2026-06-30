@@ -1,0 +1,134 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230075",
+  "career_goal": "Computer Vision Engineer",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 29.15,
+      "g_score": 29.15,
+      "semesters": [
+        [
+          "FLF1107",
+          "PHI1006",
+          "INT1009",
+          "RBE2031",
+          "MAT1101"
+        ],
+        [
+          "EPN1095",
+          "PHI1002",
+          "RBE2001",
+          "ELT3144",
+          "ELT3295"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "ROS2",
+        "TensorFlow",
+        "PyTorch",
+        "SLAM",
+        "Python",
+        "ML"
+      ],
+      "missing_skills": [
+        "C++",
+        "OpenCV",
+        "CV"
+      ],
+      "career_match_ratio": 0.67
+    },
+    {
+      "rank": 2,
+      "f_score": 29.15,
+      "g_score": 29.15,
+      "semesters": [
+        [
+          "FLF1107",
+          "PHI1006",
+          "INT1009",
+          "RBE2031",
+          "MAT1101"
+        ],
+        [
+          "ELT3290",
+          "EPN1095",
+          "PHI1002",
+          "RBE2001",
+          "ELT3144"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "RBE2031"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "ROS2",
+        "TensorFlow",
+        "PyTorch",
+        "SLAM",
+        "Python",
+        "ML"
+      ],
+      "missing_skills": [
+        "C++",
+        "OpenCV",
+        "CV"
+      ],
+      "career_match_ratio": 0.67
+    },
+    {
+      "rank": 3,
+      "f_score": 29.245,
+      "g_score": 29.15,
+      "semesters": [
+        [
+          "FLF1107",
+          "PHI1006",
+          "RBE3030",
+          "INT1009",
+          "MAT1101"
+        ],
+        [
+          "ELT3290",
+          "EPN1095",
+          "PHI1002",
+          "RBE2001",
+          "ELT3144"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "TensorFlow",
+        "PyTorch",
+        "Python",
+        "ML"
+      ],
+      "missing_skills": [
+        "C++",
+        "SLAM",
+        "OpenCV",
+        "ROS2",
+        "CV"
+      ],
+      "career_match_ratio": 0.44
+    }
+  ]
+}

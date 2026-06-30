@@ -1,0 +1,141 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230019",
+  "career_goal": "Kinematics & Dynamics Specialist",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 14,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 25.688,
+      "g_score": 25.45,
+      "semesters": [
+        [
+          "ELT3240",
+          "HIS1001",
+          "MAT1093",
+          "RBE1001",
+          "EPN1095"
+        ],
+        [
+          "FLF1107",
+          "INT2210",
+          "MAT1041"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "ELT3240",
+        "HIS1001",
+        "MAT1093",
+        "FLF1107",
+        "MAT1041",
+        "RBE1001",
+        "EPN1095",
+        "INT2210"
+      ],
+      "priority_missing": [
+        "POL1001",
+        "INT1009"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control Theory",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "Dynamics"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 25.688,
+      "g_score": 25.45,
+      "semesters": [
+        [
+          "ELT3240",
+          "POL1001",
+          "MAT1093",
+          "RBE1001",
+          "EPN1095"
+        ],
+        [
+          "FLF1107",
+          "INT2210",
+          "MAT1041"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "ELT3240",
+        "POL1001",
+        "MAT1093",
+        "FLF1107",
+        "MAT1041",
+        "RBE1001",
+        "EPN1095",
+        "INT2210"
+      ],
+      "priority_missing": [
+        "INT1009",
+        "HIS1001"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control Theory",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "Dynamics"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 25.938,
+      "g_score": 25.7,
+      "semesters": [
+        [
+          "ELT3240",
+          "POL1001",
+          "MAT1093",
+          "RBE1001",
+          "EPN1095"
+        ],
+        [
+          "INT1009",
+          "MAT1041",
+          "HIS1001",
+          "INT2210"
+        ]
+      ],
+      "total_credits": 26,
+      "priority_covered": [
+        "ELT3240",
+        "POL1001",
+        "HIS1001",
+        "MAT1093",
+        "MAT1041",
+        "RBE1001",
+        "EPN1095",
+        "INT1009",
+        "INT2210"
+      ],
+      "priority_missing": [
+        "FLF1107"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control Theory",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "Dynamics"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

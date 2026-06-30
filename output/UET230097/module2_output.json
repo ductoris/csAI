@@ -1,0 +1,152 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230097",
+  "career_goal": "Smart Home Robotics Specialist",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 57.688,
+      "g_score": 57.45,
+      "semesters": [
+        [
+          "RBE3015",
+          "RBE4004",
+          "RBE3050",
+          "RBE3042",
+          "ELT1007"
+        ],
+        [
+          "AIT2004",
+          "ELT3292",
+          "RBE1001",
+          "RBE3012",
+          "RBE3030"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3015",
+        "AIT2004",
+        "ELT3292",
+        "RBE4004",
+        "RBE3050",
+        "RBE3042",
+        "RBE3012",
+        "RBE3030"
+      ],
+      "priority_missing": [
+        "INE1051",
+        "RBE3051"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "IoT Protocols",
+        "WiFi/Bluetooth",
+        "Cloud/AWS",
+        "MQTT"
+      ],
+      "career_match_ratio": 0.2
+    },
+    {
+      "rank": 2,
+      "f_score": 57.688,
+      "g_score": 57.45,
+      "semesters": [
+        [
+          "RBE3015",
+          "RBE4004",
+          "RBE3050",
+          "RBE3042",
+          "ELT1007"
+        ],
+        [
+          "EPN1095",
+          "AIT2004",
+          "ELT3292",
+          "RBE3051",
+          "RBE3012"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3015",
+        "AIT2004",
+        "ELT3292",
+        "RBE3051",
+        "RBE4004",
+        "RBE3050",
+        "RBE3042",
+        "RBE3012"
+      ],
+      "priority_missing": [
+        "INE1051",
+        "RBE3030"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "IoT Protocols",
+        "WiFi/Bluetooth",
+        "Cloud/AWS",
+        "MQTT"
+      ],
+      "career_match_ratio": 0.2
+    },
+    {
+      "rank": 3,
+      "f_score": 57.688,
+      "g_score": 57.45,
+      "semesters": [
+        [
+          "RBE3015",
+          "RBE4004",
+          "RBE3050",
+          "RBE3042",
+          "ELT1007"
+        ],
+        [
+          "AIT2004",
+          "ELT3292",
+          "RBE3051",
+          "RBE1001",
+          "RBE3012"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE3015",
+        "AIT2004",
+        "ELT3292",
+        "RBE3051",
+        "RBE4004",
+        "RBE3050",
+        "RBE3042",
+        "RBE3012"
+      ],
+      "priority_missing": [
+        "INE1051",
+        "RBE3030"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "IoT Protocols",
+        "WiFi/Bluetooth",
+        "Cloud/AWS",
+        "MQTT"
+      ],
+      "career_match_ratio": 0.2
+    }
+  ]
+}

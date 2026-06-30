@@ -1,0 +1,248 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230119",
+        "career_goal": "Mobile Robotics Developer",
+        "career_track": "Robot thông minh",
+        "current_semester": 8,
+        "gpa": 2.36,
+        "completed_credits": 120,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230113",
+                "gpa": 3.22,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.1678,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230100",
+                "gpa": 2.36,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.1757,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230121",
+                "gpa": 3.43,
+                "career_goal": "Mobile Robotics Developer",
+                "distance": 0.2401,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230114",
+                "gpa": 2.45,
+                "career_goal": "Kinematics & Dynamics Specialist",
+                "distance": 0.2776,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230086",
+                "gpa": 2.44,
+                "career_goal": "Vision-based Robotics Engineer",
+                "distance": 0.3193,
+                "study_hours_per_week": 11
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.56,
+                "score_breakdown": {
+                    "career_score": 0.38,
+                    "peer_score": 0.924,
+                    "load_score": 0.542,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13
+                    ],
+                    "foundation_credits": 10,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.769,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3017",
+                            "INE1051",
+                            "RBE3012",
+                            "RBE2022",
+                            "RBE2021"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 13,
+                "covered_skills": [
+                    "C++",
+                    "Python",
+                    "ROS2"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.56,
+                "score_breakdown": {
+                    "career_score": 0.38,
+                    "peer_score": 0.924,
+                    "load_score": 0.542,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13
+                    ],
+                    "foundation_credits": 10,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.769,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3017",
+                            "RBE3012",
+                            "RBE2022",
+                            "RBE2021",
+                            "HIS1056"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 13,
+                "covered_skills": [
+                    "C++",
+                    "Python",
+                    "ROS2"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.56,
+                "score_breakdown": {
+                    "career_score": 0.38,
+                    "peer_score": 0.924,
+                    "load_score": 0.542,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13
+                    ],
+                    "foundation_credits": 10,
+                    "first_sem_foundation_credits": 10,
+                    "overall_foundation_score": 0.769,
+                    "early_foundation_score": 0.769,
+                    "foundation_score": 0.769,
+                    "balance_score": 0.5
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE3017",
+                            "INE1051",
+                            "RBE2022",
+                            "RBE3045",
+                            "RBE2021"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 13,
+                "covered_skills": [
+                    "C++",
+                    "Python",
+                    "ROS2"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Navigation2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Ubuntu",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lidar",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Path Planning",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "AI - Machine Learning",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "OpenCV",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "ROS",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 10,
+            "breakdown": {
+                "ly_thuyet": 4,
+                "thuc_hanh": 4,
+                "project": 2
+            },
+            "peer_average": 10.0,
+            "formula_hours": 9.0
+        }
+    }
+}

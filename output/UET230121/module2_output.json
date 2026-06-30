@@ -1,0 +1,131 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230121",
+  "career_goal": "Mobile Robotics Developer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 58.445,
+      "g_score": 58.35,
+      "semesters": [
+        [
+          "RBE4004",
+          "RBE3015",
+          "RBE3017",
+          "PSY1050",
+          "RBE3013"
+        ],
+        [
+          "HIS1056",
+          "AIT2004",
+          "RBE3047",
+          "RBE3030",
+          "RBE3051"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "C++",
+        "Navigation2",
+        "Path Planning",
+        "Python",
+        "ROS2"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "SLAM",
+        "Ubuntu"
+      ],
+      "career_match_ratio": 0.62
+    },
+    {
+      "rank": 2,
+      "f_score": 58.445,
+      "g_score": 58.35,
+      "semesters": [
+        [
+          "RBE4004",
+          "RBE3015",
+          "AIT2004",
+          "RBE3017",
+          "UET1002"
+        ],
+        [
+          "HIS1056",
+          "RBE3043",
+          "RBE3030",
+          "RBE3051",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python",
+        "ROS2"
+      ],
+      "missing_skills": [
+        "Navigation2",
+        "Lidar",
+        "Path Planning",
+        "SLAM",
+        "Ubuntu"
+      ],
+      "career_match_ratio": 0.38
+    },
+    {
+      "rank": 3,
+      "f_score": 58.445,
+      "g_score": 58.35,
+      "semesters": [
+        [
+          "RBE4004",
+          "RBE3015",
+          "AIT2004",
+          "RBE3017",
+          "UET1002"
+        ],
+        [
+          "RBE3046",
+          "HIS1056",
+          "RBE3030",
+          "RBE3051",
+          "RBE3013"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python",
+        "ROS2"
+      ],
+      "missing_skills": [
+        "Navigation2",
+        "Lidar",
+        "Path Planning",
+        "SLAM",
+        "Ubuntu"
+      ],
+      "career_match_ratio": 0.38
+    }
+  ]
+}

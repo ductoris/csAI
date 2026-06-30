@@ -1,0 +1,124 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230088",
+  "career_goal": "Motion Planning Engineer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 58.545,
+      "g_score": 58.45,
+      "semesters": [
+        [
+          "RBE3042",
+          "RBE3050",
+          "RBE1001",
+          "RBE4004",
+          "RBE3015"
+        ],
+        [
+          "ELT3292",
+          "RBE3013",
+          "RBE3012",
+          "RBE2003",
+          "RBE2022"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Kinematics",
+        "Control Theory",
+        "PID Tuning",
+        "MATLAB/Simulink",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 58.545,
+      "g_score": 58.45,
+      "semesters": [
+        [
+          "RBE3042",
+          "RBE3050",
+          "RBE1001",
+          "RBE4004",
+          "RBE3015"
+        ],
+        [
+          "AIT2004",
+          "RBE3013",
+          "RBE3012",
+          "RBE2003",
+          "RBE2022"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Kinematics",
+        "Control Theory",
+        "PID Tuning",
+        "MATLAB/Simulink",
+        "ROS2"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 58.945,
+      "g_score": 58.85,
+      "semesters": [
+        [
+          "RBE3042",
+          "RBE3050",
+          "RBE4004",
+          "RBE2022",
+          "RBE3015"
+        ],
+        [
+          "ELT3292",
+          "RBE3013",
+          "RBE3012",
+          "RBE2003",
+          "PEC1008"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE2031"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control Theory",
+        "PID Tuning",
+        "Python",
+        "MATLAB/Simulink",
+        "ROS2",
+        "Kinematics"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

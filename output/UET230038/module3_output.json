@@ -1,0 +1,274 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230038",
+        "career_goal": "AI Robotics Engineer",
+        "career_track": "Robot thông minh",
+        "current_semester": 2,
+        "gpa": 3.41,
+        "completed_credits": 16,
+        "credit_limit": 22,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230016",
+                "gpa": 3.49,
+                "career_goal": "AI Robotics Engineer",
+                "distance": 0.0139,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230050",
+                "gpa": 3.23,
+                "career_goal": "AI Robotics Engineer",
+                "distance": 0.0573,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230062",
+                "gpa": 3.32,
+                "career_goal": "AI Robotics Engineer",
+                "distance": 0.1059,
+                "study_hours_per_week": 7
+            },
+            {
+                "student_id": "UET230111",
+                "gpa": 2.4,
+                "career_goal": "AI Robotics Engineer",
+                "distance": 0.2569,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230021",
+                "gpa": 3.29,
+                "career_goal": "Cloud Robotics Developer",
+                "distance": 0.2747,
+                "study_hours_per_week": 8
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.6431,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.95,
+                    "load_score": 0.906,
+                    "foundation_score": 0.568,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        16,
+                        13
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.517,
+                    "early_foundation_score": 0.688,
+                    "foundation_score": 0.568,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "FLF1107",
+                            "EPN1096",
+                            "ELT3240",
+                            "MAT1041",
+                            "ELT1007"
+                        ],
+                        "total_credits": 16
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "INT2210",
+                            "HIS1001",
+                            "POL1001",
+                            "INT1009",
+                            "PHI1002"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": [
+                    "ML",
+                    "TensorFlow",
+                    "PyTorch"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.6431,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.95,
+                    "load_score": 0.906,
+                    "foundation_score": 0.568,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        16,
+                        13
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.517,
+                    "early_foundation_score": 0.688,
+                    "foundation_score": 0.568,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "INT2210",
+                            "FLF1107",
+                            "EPN1096",
+                            "ELT3240",
+                            "ELT1007"
+                        ],
+                        "total_credits": 16
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "HIS1001",
+                            "POL1001",
+                            "PSY1050",
+                            "INT1009",
+                            "MAT1041"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": [
+                    "ML",
+                    "TensorFlow",
+                    "PyTorch"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.6431,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.95,
+                    "load_score": 0.906,
+                    "foundation_score": 0.568,
+                    "balance_score": 0.897
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        16,
+                        13
+                    ],
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.517,
+                    "early_foundation_score": 0.688,
+                    "foundation_score": 0.568,
+                    "balance_score": 0.897
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "INT2210",
+                            "FLF1107",
+                            "EPN1096",
+                            "ELT3240",
+                            "ELT1007"
+                        ],
+                        "total_credits": 16
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "HIS1001",
+                            "POL1001",
+                            "INT1009",
+                            "MAT1041",
+                            "UET1002"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 29,
+                "covered_skills": [
+                    "ML",
+                    "TensorFlow",
+                    "PyTorch"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "OpenCV",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "C++",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "CV",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Python",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 7.7,
+            "formula_hours": 21.0
+        }
+    }
+}

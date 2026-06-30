@@ -5,9 +5,16 @@
 
 import json
 import argparse
+import sys
 import pandas as pd
+import unicodedata
 from pathlib import Path
 from itertools import combinations
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 from core.astar    import AcademicAStar
 from core.enricher import PlanEnricher
@@ -16,6 +23,49 @@ from config        import MIN_CREDITS_DEFAULT
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / 'data'
+
+
+def read_csv_auto(file_path):
+    encodings = ['utf-8-sig', 'utf-8', 'cp1258', 'latin1']
+    last_error = None
+    for enc in encodings:
+        try:
+            return pd.read_csv(file_path, encoding=enc)
+        except Exception as exc:
+            last_error = exc
+    raise ValueError(f'Cannot read CSV file: {file_path}') from last_error
+
+
+def normalize_text(text):
+    text = '' if pd.isna(text) else str(text).lower().strip()
+    text = unicodedata.normalize('NFD', text)
+    return ''.join(ch for ch in text if unicodedata.category(ch) != 'Mn')
+
+
+def split_semicolon(value):
+    if pd.isna(value):
+        return []
+    return [item.strip() for item in str(value).split(';') if item.strip()]
+
+
+def resolve_course_tokens(course_tokens, course_db):
+    name_to_code = {
+        normalize_text(info.get('course_name', '')): code
+        for code, info in course_db.items()
+        if info.get('course_name')
+    }
+
+    resolved = []
+    for token in course_tokens:
+        if token in course_db:
+            code = token
+        else:
+            code = name_to_code.get(normalize_text(token))
+
+        if code and code not in resolved:
+            resolved.append(code)
+
+    return resolved
 
 
 # ── 1. Đọc output JSON từ Module 1 ───────────────────────────
@@ -54,6 +104,7 @@ def extract_from_module1(m1: dict) -> dict:
             'credits' : c['credits'],
             'category': c['category'],
             'semester': c.get('semester', 1),
+            'course_name': c.get('course_name', ''),
         }
 
     # Danh sách môn hợp lệ (đã lọc tiên quyết, quy chế bởi Module 1)
@@ -107,13 +158,16 @@ def make_combo_func(
 
 
 # ── 3. Load career_paths.csv ──────────────────────────────────
-def get_priority_courses(career_goal: str, career_paths_path: str) -> list:
+def get_priority_courses(career_goal: str, career_paths_path: str, course_db: dict) -> list:
     try:
-        df = pd.read_csv(career_paths_path, encoding='utf-8-sig')
+        df = read_csv_auto(career_paths_path)
         rows = df[df['career_goal'] == career_goal]
         if rows.empty:
             return []
-        return rows.iloc[0]['priority_courses'].split(';')
+        priority_tokens = []
+        for _, row in rows.iterrows():
+            priority_tokens.extend(split_semicolon(row.get('priority_courses', '')))
+        return resolve_course_tokens(priority_tokens, course_db)
     except Exception:
         return []
 
@@ -136,7 +190,7 @@ def run_module2(
     eligible_codes     = info['eligible_codes']
 
     # Priority courses từ career_paths.csv
-    priority_courses = get_priority_courses(career_goal, career_paths_path)
+    priority_courses = get_priority_courses(career_goal, career_paths_path, course_db)
 
     # Nếu không có trong career_paths.csv, fallback: dùng eligible codes có priority cao
     if not priority_courses:
@@ -167,8 +221,8 @@ def run_module2(
 
     # Enrich skills (nếu có career_paths.csv)
     try:
-        career_paths_df = pd.read_csv(career_paths_path, encoding='utf-8-sig')
-        enricher        = PlanEnricher(career_goal, career_paths_df)
+        career_paths_df = read_csv_auto(career_paths_path)
+        enricher        = PlanEnricher(career_goal, career_paths_df, course_db)
         enriched        = enricher.enrich(top_k_plans)
     except Exception:
         enriched = top_k_plans   # fallback nếu không có file career_paths

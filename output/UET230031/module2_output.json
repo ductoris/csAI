@@ -1,0 +1,158 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230031",
+  "career_goal": "IoT Robotics Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 29.536,
+      "g_score": 29.25,
+      "semesters": [
+        [
+          "MAT1093",
+          "MAT1041",
+          "RBE1001",
+          "ELT1007",
+          "INT1008"
+        ],
+        [
+          "FLF1107",
+          "POL1001",
+          "PHI1006",
+          "UET1002",
+          "THL1057"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1093",
+        "POL1001",
+        "MAT1041",
+        "RBE1001",
+        "ELT1007",
+        "INT1008",
+        "PHI1006"
+      ],
+      "priority_missing": [
+        "INE1051",
+        "INE1050"
+      ],
+      "covered_skills": [
+        "C/C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Node-RED",
+        "IoT Protocols",
+        "Cloud/AWS",
+        "WiFi/Bluetooth",
+        "MQTT"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 2,
+      "f_score": 29.536,
+      "g_score": 29.25,
+      "semesters": [
+        [
+          "MAT1093",
+          "MAT1041",
+          "RBE1001",
+          "ELT1007",
+          "INT1008"
+        ],
+        [
+          "FLF1107",
+          "POL1001",
+          "PSY1050",
+          "PHI1006",
+          "UET1002"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1093",
+        "POL1001",
+        "MAT1041",
+        "RBE1001",
+        "ELT1007",
+        "INT1008",
+        "PHI1006"
+      ],
+      "priority_missing": [
+        "INE1051",
+        "INE1050"
+      ],
+      "covered_skills": [
+        "C/C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Node-RED",
+        "IoT Protocols",
+        "Cloud/AWS",
+        "WiFi/Bluetooth",
+        "MQTT"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 3,
+      "f_score": 29.536,
+      "g_score": 29.25,
+      "semesters": [
+        [
+          "MAT1093",
+          "MAT1041",
+          "RBE1001",
+          "ELT1007",
+          "INT1008"
+        ],
+        [
+          "FLF1107",
+          "POL1001",
+          "PSY1050",
+          "PHI1006",
+          "THL1057"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1093",
+        "POL1001",
+        "MAT1041",
+        "RBE1001",
+        "ELT1007",
+        "INT1008",
+        "PHI1006"
+      ],
+      "priority_missing": [
+        "INE1051",
+        "INE1050"
+      ],
+      "covered_skills": [
+        "C/C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Node-RED",
+        "IoT Protocols",
+        "Cloud/AWS",
+        "WiFi/Bluetooth",
+        "MQTT"
+      ],
+      "career_match_ratio": 0.29
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230024",
+  "career_goal": "Microcontroller Programmer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 27.39,
+      "g_score": 27.2,
+      "semesters": [
+        [
+          "RBE1001",
+          "HIS1001",
+          "ELT3240",
+          "FLF1107",
+          "EPN1095"
+        ],
+        [
+          "MAT1041",
+          "INT1009",
+          "INT2210",
+          "POL1001"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE1001",
+        "INT2210",
+        "POL1001",
+        "HIS1001",
+        "ELT3240",
+        "MAT1041",
+        "FLF1107",
+        "INT1009",
+        "EPN1095"
+      ],
+      "priority_missing": [
+        "MAT1093"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Microcontroller",
+        "STM32",
+        "C/C++",
+        "FreeRTOS"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.71
+    },
+    {
+      "rank": 2,
+      "f_score": 27.39,
+      "g_score": 27.2,
+      "semesters": [
+        [
+          "RBE1001",
+          "HIS1001",
+          "ELT3240",
+          "FLF1107",
+          "EPN1095"
+        ],
+        [
+          "INT1009",
+          "MAT1093",
+          "POL1001",
+          "INT2210"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE1001",
+        "MAT1093",
+        "POL1001",
+        "ELT3240",
+        "INT2210",
+        "HIS1001",
+        "FLF1107",
+        "INT1009",
+        "EPN1095"
+      ],
+      "priority_missing": [
+        "MAT1041"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Microcontroller",
+        "STM32",
+        "C/C++",
+        "FreeRTOS"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.71
+    },
+    {
+      "rank": 3,
+      "f_score": 27.39,
+      "g_score": 27.2,
+      "semesters": [
+        [
+          "RBE1001",
+          "HIS1001",
+          "ELT3240",
+          "FLF1107",
+          "EPN1095"
+        ],
+        [
+          "MAT1041",
+          "INT1009",
+          "MAT1093",
+          "POL1001"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [
+        "RBE1001",
+        "MAT1093",
+        "POL1001",
+        "HIS1001",
+        "ELT3240",
+        "MAT1041",
+        "FLF1107",
+        "INT1009",
+        "EPN1095"
+      ],
+      "priority_missing": [
+        "INT2210"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Microcontroller",
+        "STM32",
+        "C/C++",
+        "FreeRTOS"
+      ],
+      "missing_skills": [
+        "Control",
+        "Sensor"
+      ],
+      "career_match_ratio": 0.71
+    }
+  ]
+}

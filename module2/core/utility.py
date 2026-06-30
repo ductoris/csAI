@@ -12,6 +12,20 @@ from config import (
     GRADE_MAPPING,
     GPA_LOW,
 )
+import pandas as pd
+import unicodedata
+
+
+def normalize_text(text) -> str:
+    text = '' if pd.isna(text) else str(text).lower().strip()
+    text = unicodedata.normalize('NFD', text)
+    return ''.join(ch for ch in text if unicodedata.category(ch) != 'Mn')
+
+
+def split_semicolon(value) -> list:
+    if pd.isna(value):
+        return []
+    return [item.strip() for item in str(value).split(';') if item.strip()]
 
 
 class AcademicUtility:
@@ -161,3 +175,104 @@ class AcademicUtility:
         row = rows.iloc[0]
         all_skills = set(row['required_skills'].split(';'))
         return list(all_skills - set(covered_skills))
+
+
+def _get_covered_skills_fixed(
+    courses_in_plan: list,
+    career_goal: str,
+    career_paths_df,
+    course_db: dict = None,
+) -> list:
+    rows = career_paths_df[career_paths_df['career_goal'] == career_goal]
+    if rows.empty:
+        return []
+
+    course_db = course_db or {}
+    name_to_code = {
+        normalize_text(info.get('course_name', '')): code
+        for code, info in course_db.items()
+        if info.get('course_name')
+    }
+    plan_codes = set(courses_in_plan)
+    covered_skills = []
+    planned_course_names = [
+        normalize_text(course_db.get(code, {}).get('course_name', ''))
+        for code in courses_in_plan
+    ]
+
+    skill_aliases = {
+        'C++': ['c++', 'lap trinh', 'ros'],
+        'C/C++': ['c/c++', 'c++', 'lap trinh', 'nhung'],
+        'Python': ['python', 'lap trinh', 'tri tue nhan tao', 'ai'],
+        'ROS2': ['ros'],
+        'ROS': ['ros'],
+        'SLAM': ['slam'],
+        'Navigation2': ['navigation', 'dieu huong', 'giai thuat', 'dong hoc'],
+        'Path Planning': ['path planning', 'hoach dinh', 'giai thuat', 'dong hoc'],
+        'OpenCV': ['opencv', 'thi giac', 'xu ly anh'],
+        'CV': ['thi giac', 'xu ly anh'],
+        'ML': ['hoc may', 'tri tue nhan tao', 'ai'],
+        'TensorFlow': ['hoc may', 'tri tue nhan tao', 'ai'],
+        'PyTorch': ['hoc may', 'tri tue nhan tao', 'ai'],
+        'Microcontroller': ['vi dieu khien', 'he thong nhung', 'nhung'],
+        'STM32': ['vi dieu khien', 'he thong nhung', 'nhung'],
+        'FreeRTOS': ['vi dieu khien', 'he thong nhung', 'nhung'],
+        'I2C/SPI/UART': ['vi dieu khien', 'he thong nhung', 'nhung', 'cam bien'],
+        'Sensor': ['cam bien', 'do luong'],
+        'Control': ['dieu khien'],
+        'Control Theory': ['dieu khien', 'ly thuyet dieu khien'],
+        'PID Tuning': ['pid', 'dieu khien'],
+        'PLC': ['plc'],
+        'SCADA': ['scada'],
+        'HMI': ['hmi'],
+        'Power Electronics': ['dien tu cong suat'],
+        'Kinematics': ['dong hoc'],
+        'Dynamics': ['dong luc'],
+        'Lidar': ['lidar'],
+    }
+
+    for _, row in rows.iterrows():
+        priority_list = split_semicolon(row.get('priority_courses', ''))
+        skill_list = split_semicolon(row.get('required_skills', ''))
+
+        for i, priority_course in enumerate(priority_list):
+            course_code = (
+                priority_course
+                if priority_course in course_db
+                else name_to_code.get(normalize_text(priority_course))
+            )
+            if course_code not in plan_codes:
+                continue
+
+            skill = skill_list[i] if i < len(skill_list) else priority_course
+            if skill not in covered_skills:
+                covered_skills.append(skill)
+
+        for skill in skill_list:
+            if skill in covered_skills:
+                continue
+            aliases = skill_aliases.get(skill, [normalize_text(skill)])
+            if any(alias in course_name for alias in aliases for course_name in planned_course_names):
+                covered_skills.append(skill)
+
+    return covered_skills
+
+
+def _get_missing_skills_fixed(
+    career_goal: str,
+    covered_skills: list,
+    career_paths_df,
+) -> list:
+    rows = career_paths_df[career_paths_df['career_goal'] == career_goal]
+    if rows.empty:
+        return []
+
+    all_skills = set()
+    for _, row in rows.iterrows():
+        all_skills.update(split_semicolon(row.get('required_skills', '')))
+
+    return list(all_skills - set(covered_skills))
+
+
+AcademicUtility.get_covered_skills = staticmethod(_get_covered_skills_fixed)
+AcademicUtility.get_missing_skills = staticmethod(_get_missing_skills_fixed)

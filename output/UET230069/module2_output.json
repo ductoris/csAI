@@ -1,0 +1,154 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230069",
+  "career_goal": "Motion Planning Engineer",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 30.05,
+      "g_score": 30.05,
+      "semesters": [
+        [
+          "INT1009",
+          "RBE2001",
+          "MAT1093",
+          "FLF1107",
+          "ELT2035"
+        ],
+        [
+          "ELT2201",
+          "POL1001",
+          "PHI1002",
+          "ELT3295",
+          "ELT3290"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [
+        "INT1009",
+        "POL1001",
+        "ELT2201",
+        "RBE2001",
+        "PHI1002",
+        "MAT1093",
+        "FLF1107",
+        "ELT3295",
+        "ELT3290",
+        "ELT2035"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "PID Tuning",
+        "ROS2",
+        "MATLAB/Simulink",
+        "Kinematics",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 30.145,
+      "g_score": 30.05,
+      "semesters": [
+        [
+          "INT1009",
+          "RBE1001",
+          "MAT1093",
+          "FLF1107",
+          "ELT2035"
+        ],
+        [
+          "ELT2201",
+          "POL1001",
+          "PHI1002",
+          "ELT3295",
+          "ELT3290"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [
+        "INT1009",
+        "POL1001",
+        "ELT2201",
+        "PHI1002",
+        "MAT1093",
+        "FLF1107",
+        "ELT3295",
+        "ELT3290",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "RBE2001"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "PID Tuning",
+        "ROS2",
+        "MATLAB/Simulink",
+        "Kinematics",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 30.193,
+      "g_score": 30.05,
+      "semesters": [
+        [
+          "INT1009",
+          "RBE2001",
+          "MAT1093",
+          "FLF1107",
+          "ELT2035"
+        ],
+        [
+          "ELT2201",
+          "POL1001",
+          "PHI1002",
+          "ELT3295",
+          "ELT3240"
+        ]
+      ],
+      "total_credits": 30,
+      "priority_covered": [
+        "INT1009",
+        "POL1001",
+        "ELT2201",
+        "RBE2001",
+        "PHI1002",
+        "MAT1093",
+        "FLF1107",
+        "ELT3295",
+        "ELT2035"
+      ],
+      "priority_missing": [
+        "ELT3290"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "PID Tuning",
+        "ROS2",
+        "MATLAB/Simulink",
+        "Kinematics",
+        "Control Theory"
+      ],
+      "career_match_ratio": 0.17
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230025",
+  "career_goal": "Vision-based Robotics Engineer",
+  "current_semester": 2,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 28.85,
+      "g_score": 28.85,
+      "semesters": [
+        [
+          "INT2210",
+          "EPN1096",
+          "RBE1001",
+          "ELT3240",
+          "MAT1093"
+        ],
+        [
+          "MAT1041",
+          "INT1009",
+          "PHI1002",
+          "PHI1006",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "MAT1041",
+        "INT2210",
+        "EPN1096",
+        "INT1009",
+        "PHI1002",
+        "PHI1006",
+        "RBE1001",
+        "ELT3240",
+        "MAT1093",
+        "HIS1001"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "ROS2",
+        "SLAM",
+        "C++"
+      ],
+      "career_match_ratio": 0.4
+    },
+    {
+      "rank": 2,
+      "f_score": 28.945,
+      "g_score": 28.85,
+      "semesters": [
+        [
+          "INT2210",
+          "EPN1096",
+          "RBE1001",
+          "ELT3240",
+          "MAT1093"
+        ],
+        [
+          "MAT1041",
+          "THL1057",
+          "INT1009",
+          "PHI1006",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "MAT1041",
+        "INT2210",
+        "EPN1096",
+        "INT1009",
+        "PHI1006",
+        "RBE1001",
+        "ELT3240",
+        "MAT1093",
+        "HIS1001"
+      ],
+      "priority_missing": [
+        "PHI1002"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "ROS2",
+        "SLAM",
+        "C++"
+      ],
+      "career_match_ratio": 0.4
+    },
+    {
+      "rank": 3,
+      "f_score": 28.945,
+      "g_score": 28.85,
+      "semesters": [
+        [
+          "INT2210",
+          "EPN1096",
+          "RBE1001",
+          "ELT3240",
+          "MAT1093"
+        ],
+        [
+          "MAT1041",
+          "INT1009",
+          "PHI1006",
+          "HIS1001",
+          "PSY1050"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "MAT1041",
+        "INT2210",
+        "EPN1096",
+        "INT1009",
+        "PHI1006",
+        "RBE1001",
+        "ELT3240",
+        "MAT1093",
+        "HIS1001"
+      ],
+      "priority_missing": [
+        "PHI1002"
+      ],
+      "covered_skills": [
+        "ML",
+        "Python"
+      ],
+      "missing_skills": [
+        "ROS2",
+        "SLAM",
+        "C++"
+      ],
+      "career_match_ratio": 0.4
+    }
+  ]
+}

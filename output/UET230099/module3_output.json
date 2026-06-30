@@ -1,0 +1,279 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230099",
+        "career_goal": "Embedded Systems Developer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 5,
+        "gpa": 2.28,
+        "completed_credits": 65,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230098",
+                "gpa": 2.19,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.026,
+                "study_hours_per_week": 10
+            },
+            {
+                "student_id": "UET230118",
+                "gpa": 2.42,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.1485,
+                "study_hours_per_week": 11
+            },
+            {
+                "student_id": "UET230056",
+                "gpa": 3.2,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.1841,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230046",
+                "gpa": 1.11,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.1917,
+                "study_hours_per_week": 15
+            },
+            {
+                "student_id": "UET230002",
+                "gpa": 2.39,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.2265,
+                "study_hours_per_week": 11
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.6778,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.946,
+                    "load_score": 1.0,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 20,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.714,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE2021",
+                            "RBE3015",
+                            "RBE4004",
+                            "RBE3050",
+                            "RBE3042"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3017",
+                            "ELT3292",
+                            "RBE3012",
+                            "PSY1050",
+                            "HIS1056"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "I2C/SPI/UART",
+                    "Sensor",
+                    "C/C++"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.6778,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.946,
+                    "load_score": 1.0,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 20,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.714,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE2021",
+                            "RBE3015",
+                            "RBE4004",
+                            "RBE3050",
+                            "RBE3042"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3017",
+                            "INE1050",
+                            "ELT3292",
+                            "RBE3012",
+                            "PSY1050"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "I2C/SPI/UART",
+                    "Sensor",
+                    "C/C++"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.6778,
+                "score_breakdown": {
+                    "career_score": 0.43,
+                    "peer_score": 0.946,
+                    "load_score": 1.0,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        14
+                    ],
+                    "foundation_credits": 20,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.714,
+                    "early_foundation_score": 0.786,
+                    "foundation_score": 0.736,
+                    "balance_score": 1.0
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE2021",
+                            "RBE3015",
+                            "RBE4004",
+                            "RBE3050",
+                            "RBE3042"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3017",
+                            "ELT3292",
+                            "INE1051",
+                            "RBE3012",
+                            "PSY1050"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 28,
+                "covered_skills": [
+                    "I2C/SPI/UART",
+                    "Sensor",
+                    "C/C++"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "Control",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Microcontroller",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "STM32",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "FreeRTOS",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Embedded C/C++",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "cao"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 15,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 7,
+                "project": 3
+            },
+            "peer_average": 10.3,
+            "formula_hours": 21.0
+        }
+    }
+}

@@ -1,0 +1,261 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230059",
+        "career_goal": "IoT Robotics Engineer",
+        "career_track": "Tự động hóa công nghiệp",
+        "current_semester": 4,
+        "gpa": 3.4,
+        "completed_credits": 46,
+        "credit_limit": 22,
+        "risk_level": "LOW"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230068",
+                "gpa": 3.55,
+                "career_goal": "IoT Robotics Engineer",
+                "distance": 0.0225,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230105",
+                "gpa": 3.17,
+                "career_goal": "IoT Robotics Engineer",
+                "distance": 0.0916,
+                "study_hours_per_week": 8
+            },
+            {
+                "student_id": "UET230031",
+                "gpa": 3.39,
+                "career_goal": "IoT Robotics Engineer",
+                "distance": 0.1159,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230090",
+                "gpa": 3.22,
+                "career_goal": "IoT Robotics Engineer",
+                "distance": 0.1473,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230056",
+                "gpa": 3.2,
+                "career_goal": "Embedded Systems Developer",
+                "distance": 0.2755,
+                "study_hours_per_week": 6
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.5568,
+                "score_breakdown": {
+                    "career_score": 0.29,
+                    "peer_score": 0.954,
+                    "load_score": 0.844,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 16,
+                    "first_sem_foundation_credits": 5,
+                    "overall_foundation_score": 0.593,
+                    "early_foundation_score": 0.357,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "RBE2021",
+                            "MAT1101",
+                            "POL1001",
+                            "FLF1107",
+                            "PHI1002"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "EPN1095",
+                            "INT1008",
+                            "ELT3290",
+                            "RBE3050",
+                            "HIS1001"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "C/C++",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.5568,
+                "score_breakdown": {
+                    "career_score": 0.29,
+                    "peer_score": 0.954,
+                    "load_score": 0.844,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 16,
+                    "first_sem_foundation_credits": 5,
+                    "overall_foundation_score": 0.593,
+                    "early_foundation_score": 0.357,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1101",
+                            "POL1001",
+                            "ELT1007",
+                            "FLF1107",
+                            "PHI1002"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "EPN1095",
+                            "INT1008",
+                            "ELT3290",
+                            "RBE3042",
+                            "HIS1001"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "C/C++",
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.5568,
+                "score_breakdown": {
+                    "career_score": 0.29,
+                    "peer_score": 0.954,
+                    "load_score": 0.844,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 16,
+                    "first_sem_foundation_credits": 5,
+                    "overall_foundation_score": 0.593,
+                    "early_foundation_score": 0.357,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "MAT1101",
+                            "POL1001",
+                            "FLF1107",
+                            "PHI1002",
+                            "RBE2022"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "EPN1095",
+                            "INT1008",
+                            "ELT3290",
+                            "RBE3042",
+                            "HIS1001"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "C/C++",
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "MQTT",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "IoT Protocols",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Cloud/AWS",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Node-RED",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "WiFi/Bluetooth",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Embedded C/C++",
+                "source": "peer_pattern",
+                "priority": "thấp"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 12,
+            "breakdown": {
+                "ly_thuyet": 4,
+                "thuc_hanh": 5,
+                "project": 2
+            },
+            "peer_average": 7.5,
+            "formula_hours": 19.5
+        }
+    }
+}

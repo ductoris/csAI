@@ -1,0 +1,128 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230049",
+  "career_goal": "Industrial Automation Engineer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 15.476,
+      "g_score": 15.0,
+      "semesters": [
+        [
+          "MAT1093",
+          "POL1001",
+          "ELT3134",
+          "FLF1107",
+          "RBE2001"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "MAT1093",
+        "POL1001",
+        "ELT3134",
+        "FLF1107",
+        "RBE2001"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "PHI1002",
+        "HIS1001",
+        "ELT3051"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "HMI",
+        "Industrial Networks",
+        "PLC",
+        "SCADA",
+        "Control"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 15.976,
+      "g_score": 15.5,
+      "semesters": [
+        [
+          "MAT1093",
+          "POL1001",
+          "FLF1107",
+          "PHI1002",
+          "RBE2001"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "MAT1093",
+        "POL1001",
+        "FLF1107",
+        "PHI1002",
+        "RBE2001"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "ELT3134",
+        "HIS1001",
+        "ELT3051"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "HMI",
+        "Industrial Networks",
+        "PLC",
+        "SCADA",
+        "Control"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 15.976,
+      "g_score": 15.5,
+      "semesters": [
+        [
+          "MAT1093",
+          "ELT3134",
+          "FLF1107",
+          "PHI1002",
+          "HIS1001"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "MAT1093",
+        "ELT3134",
+        "FLF1107",
+        "PHI1002",
+        "HIS1001"
+      ],
+      "priority_missing": [
+        "PHI1006",
+        "POL1001",
+        "RBE2001",
+        "ELT3051"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "HMI",
+        "Industrial Networks",
+        "PLC",
+        "SCADA",
+        "Control"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

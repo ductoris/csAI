@@ -1,0 +1,128 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230054",
+  "career_goal": "Embedded Systems Developer",
+  "current_semester": 3,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 37.15,
+      "g_score": 37.15,
+      "semesters": [
+        [
+          "EPN1095",
+          "RBE2031",
+          "PHI1006",
+          "INT1009",
+          "FLF1107"
+        ],
+        [
+          "ELT3290",
+          "RBE2001",
+          "ELT3295",
+          "HIS1001",
+          "ELT3144"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "ELT3144"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "FreeRTOS"
+      ],
+      "missing_skills": [
+        "Sensor",
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "STM32",
+        "Control"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 2,
+      "f_score": 37.15,
+      "g_score": 37.15,
+      "semesters": [
+        [
+          "EPN1095",
+          "RBE2031",
+          "PHI1006",
+          "INT1009",
+          "FLF1107"
+        ],
+        [
+          "RBE2001",
+          "ELT3295",
+          "HIS1001",
+          "ELT3051",
+          "ELT3144"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "ELT3144"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "FreeRTOS"
+      ],
+      "missing_skills": [
+        "Sensor",
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "STM32",
+        "Control"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 3,
+      "f_score": 37.15,
+      "g_score": 37.15,
+      "semesters": [
+        [
+          "EPN1095",
+          "RBE2031",
+          "PHI1006",
+          "INT1009",
+          "FLF1107"
+        ],
+        [
+          "ELT3290",
+          "RBE1001",
+          "ELT3295",
+          "HIS1001",
+          "ELT3144"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "ELT3144"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "FreeRTOS"
+      ],
+      "missing_skills": [
+        "Sensor",
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "STM32",
+        "Control"
+      ],
+      "career_match_ratio": 0.14
+    }
+  ]
+}

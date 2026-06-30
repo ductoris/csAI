@@ -1,0 +1,149 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230101",
+  "career_goal": "Firmware Engineer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 59.088,
+      "g_score": 58.85,
+      "semesters": [
+        [
+          "RBE2021",
+          "RBE3042",
+          "RBE3050",
+          "RBE3017",
+          "RBE4004"
+        ],
+        [
+          "RBE3013",
+          "AIT2004",
+          "RBE3015",
+          "PSY1050",
+          "RBE2003"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "RBE3013",
+        "RBE3042",
+        "AIT2004",
+        "RBE3050",
+        "RBE3015",
+        "RBE3017",
+        "RBE2003",
+        "RBE4004"
+      ],
+      "priority_missing": [
+        "ELT3292",
+        "RBE3051"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "STM32",
+        "Control"
+      ],
+      "career_match_ratio": 0.5
+    },
+    {
+      "rank": 2,
+      "f_score": 59.088,
+      "g_score": 58.85,
+      "semesters": [
+        [
+          "RBE2021",
+          "RBE3042",
+          "RBE3050",
+          "RBE3017",
+          "RBE4004"
+        ],
+        [
+          "RBE3013",
+          "AIT2004",
+          "THL1057",
+          "RBE3015",
+          "RBE2003"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "RBE3013",
+        "RBE3042",
+        "AIT2004",
+        "RBE3050",
+        "RBE3015",
+        "RBE3017",
+        "RBE2003",
+        "RBE4004"
+      ],
+      "priority_missing": [
+        "ELT3292",
+        "RBE3051"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "STM32",
+        "Control"
+      ],
+      "career_match_ratio": 0.5
+    },
+    {
+      "rank": 3,
+      "f_score": 59.088,
+      "g_score": 58.85,
+      "semesters": [
+        [
+          "RBE2021",
+          "RBE3042",
+          "RBE3050",
+          "RBE3017",
+          "RBE4004"
+        ],
+        [
+          "RBE3013",
+          "ELT3292",
+          "RBE3015",
+          "HIS1001",
+          "RBE2003"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "RBE3013",
+        "RBE3042",
+        "ELT3292",
+        "RBE3050",
+        "RBE3015",
+        "RBE3017",
+        "RBE2003",
+        "RBE4004"
+      ],
+      "priority_missing": [
+        "RBE3051",
+        "AIT2004"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "STM32",
+        "Control"
+      ],
+      "career_match_ratio": 0.5
+    }
+  ]
+}

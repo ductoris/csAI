@@ -1,0 +1,106 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230118",
+  "career_goal": "Embedded Systems Developer",
+  "current_semester": 7,
+  "constraints_used": {
+    "max_credits_per_semester": 16,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 16.19,
+      "g_score": 16.0,
+      "semesters": [
+        [
+          "HIS1056",
+          "INE1051",
+          "INE1050",
+          "INT3103",
+          "RBE3017"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [
+        "C/C++"
+      ],
+      "missing_skills": [
+        "Sensor",
+        "Control",
+        "STM32",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "FreeRTOS"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 2,
+      "f_score": 16.19,
+      "g_score": 16.0,
+      "semesters": [
+        [
+          "HIS1056",
+          "INE1051",
+          "INE1050",
+          "HIS1053",
+          "RBE3017"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [
+        "C/C++"
+      ],
+      "missing_skills": [
+        "Sensor",
+        "Control",
+        "STM32",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "FreeRTOS"
+      ],
+      "career_match_ratio": 0.14
+    },
+    {
+      "rank": 3,
+      "f_score": 16.69,
+      "g_score": 16.5,
+      "semesters": [
+        [
+          "HIS1056",
+          "INE1051",
+          "INE1050",
+          "INT3103",
+          "HIS1053"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3144"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Control",
+        "STM32",
+        "Sensor",
+        "C/C++",
+        "Microcontroller",
+        "I2C/SPI/UART",
+        "FreeRTOS"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

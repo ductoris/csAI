@@ -1,0 +1,125 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230108",
+  "career_goal": "Autonomous Mobile Robot (AMR) Engineer",
+  "current_semester": 6,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 58.545,
+      "g_score": 58.45,
+      "semesters": [
+        [
+          "RBE4004",
+          "RBE3017",
+          "EPN1095",
+          "RBE3042",
+          "RBE3050"
+        ],
+        [
+          "ELT1007",
+          "RBE3053",
+          "RBE3043",
+          "RBE3056",
+          "ELT3292"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python",
+        "ROS2"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "Path Planning",
+        "Lidar"
+      ],
+      "career_match_ratio": 0.5
+    },
+    {
+      "rank": 2,
+      "f_score": 58.545,
+      "g_score": 58.45,
+      "semesters": [
+        [
+          "RBE4004",
+          "RBE3017",
+          "EPN1095",
+          "RBE3042",
+          "RBE3050"
+        ],
+        [
+          "ELT1007",
+          "RBE3053",
+          "RBE3045",
+          "RBE3056",
+          "ELT3292"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [],
+      "priority_missing": [
+        "RBE3057"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python",
+        "ROS2"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "Path Planning",
+        "Lidar"
+      ],
+      "career_match_ratio": 0.5
+    },
+    {
+      "rank": 3,
+      "f_score": 58.85,
+      "g_score": 58.85,
+      "semesters": [
+        [
+          "ELT1007",
+          "RBE4004",
+          "RBE3017",
+          "RBE3042",
+          "RBE3050"
+        ],
+        [
+          "RBE3053",
+          "RBE3057",
+          "INE1051",
+          "RBE3056",
+          "ELT3292"
+        ]
+      ],
+      "total_credits": 28,
+      "priority_covered": [
+        "RBE3057"
+      ],
+      "priority_missing": [],
+      "covered_skills": [
+        "C++",
+        "Python",
+        "ROS2"
+      ],
+      "missing_skills": [
+        "SLAM",
+        "Path Planning",
+        "Lidar"
+      ],
+      "career_match_ratio": 0.5
+    }
+  ]
+}

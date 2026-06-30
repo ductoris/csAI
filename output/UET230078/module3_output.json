@@ -1,0 +1,278 @@
+{
+    "module": "Module 3 - k-NN Re-ranking & Recommendation Engine",
+    "output_for": "Final Student Interface",
+    "student_context": {
+        "student_id": "UET230078",
+        "career_goal": "Navigation Algorithm Engineer",
+        "career_track": "Robot thông minh",
+        "current_semester": 6,
+        "gpa": 2.37,
+        "completed_credits": 86,
+        "credit_limit": 16,
+        "risk_level": "MEDIUM"
+    },
+    "planning_status": {
+        "has_roadmap": true,
+        "reason": null
+    },
+    "knn_metadata": {
+        "k": 5,
+        "neighbors_found": 5,
+        "neighbors": [
+            {
+                "student_id": "UET230085",
+                "gpa": 2.34,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.1126,
+                "study_hours_per_week": 12
+            },
+            {
+                "student_id": "UET230079",
+                "gpa": 3.2,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.1382,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230106",
+                "gpa": 3.22,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.1487,
+                "study_hours_per_week": 6
+            },
+            {
+                "student_id": "UET230081",
+                "gpa": 1.42,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.1652,
+                "study_hours_per_week": 14
+            },
+            {
+                "student_id": "UET230094",
+                "gpa": 3.63,
+                "career_goal": "Navigation Algorithm Engineer",
+                "distance": 0.2,
+                "study_hours_per_week": 7
+            }
+        ]
+    },
+    "final_output": {
+        "roadmap": [
+            {
+                "rank": 1,
+                "final_score": 0.5116,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.947,
+                    "load_score": 1.0,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        13,
+                        14
+                    ],
+                    "foundation_credits": 13,
+                    "first_sem_foundation_credits": 8,
+                    "overall_foundation_score": 0.481,
+                    "early_foundation_score": 0.615,
+                    "foundation_score": 0.522,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "THL1057",
+                            "RBE3013",
+                            "RBE2022",
+                            "RBE4004",
+                            "RBE3012"
+                        ],
+                        "total_credits": 13
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3051",
+                            "HIS1056",
+                            "INE1050",
+                            "RBE3053",
+                            "INE1051"
+                        ],
+                        "total_credits": 14
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "Python"
+                ]
+            },
+            {
+                "rank": 2,
+                "final_score": 0.5102,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.947,
+                    "load_score": 1.0,
+                    "foundation_score": 0.508,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 13,
+                    "first_sem_foundation_credits": 8,
+                    "overall_foundation_score": 0.481,
+                    "early_foundation_score": 0.571,
+                    "foundation_score": 0.508,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "HIS1056",
+                            "RBE3013",
+                            "RBE2022",
+                            "RBE4004",
+                            "RBE3012"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3051",
+                            "INE1050",
+                            "RBE3056",
+                            "INE1051",
+                            "THL1057"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "Python"
+                ]
+            },
+            {
+                "rank": 3,
+                "final_score": 0.5025,
+                "score_breakdown": {
+                    "career_score": 0.14,
+                    "peer_score": 0.947,
+                    "load_score": 1.0,
+                    "foundation_score": 0.431,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 10,
+                    "first_sem_foundation_credits": 8,
+                    "overall_foundation_score": 0.37,
+                    "early_foundation_score": 0.571,
+                    "foundation_score": 0.431,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "HIS1056",
+                            "RBE3013",
+                            "RBE2022",
+                            "RBE4004",
+                            "RBE3012"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "RBE3051",
+                            "INE1050",
+                            "INE1051",
+                            "THL1057",
+                            "HIS1053"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": [
+                    "Python"
+                ]
+            }
+        ],
+        "skills_to_improve": [
+            {
+                "skill": "SLAM",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "ROS2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lidar",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "C++",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Navigation2",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Ubuntu",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "Lập trình",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Toán nền tảng",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điều khiển",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            },
+            {
+                "skill": "Điện tử - vi xử lý",
+                "source": "peer_pattern",
+                "priority": "trung bình"
+            }
+        ],
+        "study_hours_per_week": {
+            "total_per_week": 13,
+            "breakdown": {
+                "ly_thuyet": 5,
+                "thuc_hanh": 6,
+                "project": 3
+            },
+            "peer_average": 9.1,
+            "formula_hours": 19.5
+        }
+    }
+}

@@ -1,0 +1,131 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230039",
+  "career_goal": "Motion Planning Engineer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 18.571,
+      "g_score": 18.0,
+      "semesters": [
+        [
+          "FLF1107",
+          "MAT1101",
+          "ELT3290",
+          "PHI1006",
+          "MAT1042"
+        ]
+      ],
+      "total_credits": 18,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1101",
+        "ELT3290",
+        "PHI1006",
+        "MAT1042"
+      ],
+      "priority_missing": [
+        "ELT3134",
+        "ELT3144",
+        "MAT1093",
+        "PHI1002"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Control Theory",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "ROS2",
+        "PID Tuning"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 2,
+      "f_score": 18.571,
+      "g_score": 18.0,
+      "semesters": [
+        [
+          "FLF1107",
+          "MAT1101",
+          "PHI1002",
+          "MAT1042",
+          "MAT1093"
+        ]
+      ],
+      "total_credits": 18,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1101",
+        "PHI1002",
+        "MAT1042",
+        "MAT1093"
+      ],
+      "priority_missing": [
+        "ELT3290",
+        "ELT3134",
+        "ELT3144",
+        "PHI1006"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Control Theory",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "ROS2",
+        "PID Tuning"
+      ],
+      "career_match_ratio": 0.17
+    },
+    {
+      "rank": 3,
+      "f_score": 18.571,
+      "g_score": 18.0,
+      "semesters": [
+        [
+          "FLF1107",
+          "MAT1101",
+          "ELT3290",
+          "PHI1006",
+          "MAT1093"
+        ]
+      ],
+      "total_credits": 18,
+      "priority_covered": [
+        "FLF1107",
+        "MAT1101",
+        "ELT3290",
+        "PHI1006",
+        "MAT1093"
+      ],
+      "priority_missing": [
+        "MAT1042",
+        "ELT3134",
+        "ELT3144",
+        "PHI1002"
+      ],
+      "covered_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "Control Theory",
+        "Kinematics",
+        "MATLAB/Simulink",
+        "ROS2",
+        "PID Tuning"
+      ],
+      "career_match_ratio": 0.17
+    }
+  ]
+}

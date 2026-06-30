@@ -14,11 +14,16 @@ import subprocess
 import sys
 from pathlib import Path
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
+
 ROOT = Path(__file__).resolve().parent
 MODULE1_SCRIPT = ROOT / 'module1' / 'module1_rule_engine.py'
 MODULE2_SCRIPT = ROOT / 'module2' / 'main.py'
 MODULE3_SCRIPT = ROOT / 'module3' / 'main.py'
-DEFAULT_COURSES = ROOT / 'courses_uet_robotics_ctdt_official.csv'
+DEFAULT_COURSES = ROOT / 'data' / 'courses_uet_robotics_ctdt_official.csv'
 DEFAULT_STUDENTS = ROOT / 'module2' / 'data' / 'student_profiles.csv'
 DEFAULT_CAREER_PATHS = ROOT / 'module2' / 'data' / 'career_paths.csv'
 DEFAULT_OUTPUT_DIR = ROOT / 'output'
@@ -38,9 +43,9 @@ def load_student_ids_from_csv(students_path):
 
 
 def run_command(command):
-    print('\n' + '=' * 80)
-    print('RUNNING:', ' '.join(str(x) for x in command))
-    print('=' * 80)
+    print('\n' + '=' * 80, flush=True)
+    print('RUNNING:', ' '.join(str(x) for x in command), flush=True)
+    print('=' * 80, flush=True)
     subprocess.run(command, cwd=ROOT, check=True)
 
 

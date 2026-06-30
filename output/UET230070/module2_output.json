@@ -1,0 +1,122 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230070",
+  "career_goal": "Automation PLC Engineer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 15.571,
+      "g_score": 15.0,
+      "semesters": [
+        [
+          "HIS1001",
+          "PEC1008",
+          "MAT1101",
+          "MAT1042",
+          "MAT1093"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "HIS1001",
+        "PEC1008",
+        "MAT1101",
+        "MAT1042",
+        "MAT1093"
+      ],
+      "priority_missing": [
+        "ELT3051",
+        "RBE3002",
+        "ELT3144",
+        "INT1009"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "HMI",
+        "Control",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 2,
+      "f_score": 16.071,
+      "g_score": 15.5,
+      "semesters": [
+        [
+          "HIS1001",
+          "PEC1008",
+          "MAT1042",
+          "MAT1093",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 15,
+      "priority_covered": [
+        "HIS1001",
+        "PEC1008",
+        "MAT1042",
+        "MAT1093",
+        "INT1009"
+      ],
+      "priority_missing": [
+        "ELT3051",
+        "RBE3002",
+        "ELT3144",
+        "MAT1101"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "HMI",
+        "Control",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    },
+    {
+      "rank": 3,
+      "f_score": 16.524,
+      "g_score": 16.0,
+      "semesters": [
+        [
+          "PEC1008",
+          "MAT1101",
+          "MAT1042",
+          "MAT1093",
+          "INT1009"
+        ]
+      ],
+      "total_credits": 16,
+      "priority_covered": [
+        "PEC1008",
+        "MAT1101",
+        "MAT1042",
+        "MAT1093",
+        "INT1009"
+      ],
+      "priority_missing": [
+        "ELT3051",
+        "RBE3002",
+        "ELT3144",
+        "HIS1001"
+      ],
+      "covered_skills": [],
+      "missing_skills": [
+        "Power Electronics",
+        "HMI",
+        "Control",
+        "AutoCAD Electrical"
+      ],
+      "career_match_ratio": 0.0
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230074",
+  "career_goal": "Mobile Robotics Developer",
+  "current_semester": 4,
+  "constraints_used": {
+    "max_credits_per_semester": 22,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 29.836,
+      "g_score": 29.55,
+      "semesters": [
+        [
+          "FLF1107",
+          "INT1009",
+          "MAT1042",
+          "POL1001",
+          "RBE1001"
+        ],
+        [
+          "HIS1001",
+          "RBE3050",
+          "PEC1008",
+          "INT1008",
+          "ELT3051"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "HIS1001",
+        "FLF1107",
+        "INT1009",
+        "MAT1042",
+        "POL1001",
+        "RBE3050",
+        "PEC1008",
+        "ELT3051"
+      ],
+      "priority_missing": [
+        "RBE3042",
+        "RBE3015"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "SLAM",
+        "Path Planning",
+        "Ubuntu",
+        "ROS2",
+        "Navigation2"
+      ],
+      "career_match_ratio": 0.25
+    },
+    {
+      "rank": 2,
+      "f_score": 29.836,
+      "g_score": 29.55,
+      "semesters": [
+        [
+          "FLF1107",
+          "INT1009",
+          "MAT1042",
+          "POL1001",
+          "RBE3051"
+        ],
+        [
+          "HIS1001",
+          "RBE3015",
+          "PEC1008",
+          "INT1008",
+          "ELT3051"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "HIS1001",
+        "FLF1107",
+        "INT1009",
+        "RBE3015",
+        "MAT1042",
+        "POL1001",
+        "PEC1008",
+        "ELT3051"
+      ],
+      "priority_missing": [
+        "RBE3050",
+        "RBE3042"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "SLAM",
+        "Path Planning",
+        "Ubuntu",
+        "ROS2",
+        "Navigation2"
+      ],
+      "career_match_ratio": 0.25
+    },
+    {
+      "rank": 3,
+      "f_score": 29.836,
+      "g_score": 29.55,
+      "semesters": [
+        [
+          "FLF1107",
+          "INT1009",
+          "MAT1042",
+          "POL1001",
+          "RBE2021"
+        ],
+        [
+          "HIS1001",
+          "RBE3015",
+          "PEC1008",
+          "INT1008",
+          "ELT3051"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [
+        "HIS1001",
+        "FLF1107",
+        "INT1009",
+        "RBE3015",
+        "MAT1042",
+        "POL1001",
+        "PEC1008",
+        "ELT3051"
+      ],
+      "priority_missing": [
+        "RBE3050",
+        "RBE3042"
+      ],
+      "covered_skills": [
+        "C++",
+        "Python"
+      ],
+      "missing_skills": [
+        "Lidar",
+        "SLAM",
+        "Path Planning",
+        "Ubuntu",
+        "ROS2",
+        "Navigation2"
+      ],
+      "career_match_ratio": 0.25
+    }
+  ]
+}

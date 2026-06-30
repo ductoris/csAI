@@ -1,0 +1,128 @@
+{
+  "module": "Module 2 - A* Search & Planning Engine",
+  "output_for": "Module 3 - Re-ranking & Recommendation Engine",
+  "student_id": "UET230103",
+  "career_goal": "Microcontroller Programmer",
+  "current_semester": 5,
+  "constraints_used": {
+    "max_credits_per_semester": 18,
+    "min_credits_per_semester": 13,
+    "planning_horizon": "2 kỳ"
+  },
+  "top_k_recommendations": [
+    {
+      "rank": 1,
+      "f_score": 45.293,
+      "g_score": 45.15,
+      "semesters": [
+        [
+          "RBE3050",
+          "RBE4004",
+          "RBE3042",
+          "INE1050",
+          "AIT2004"
+        ],
+        [
+          "HIS1056",
+          "UET1002",
+          "RBE3012",
+          "RBE3015",
+          "INE1051"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3996"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "STM32",
+        "FreeRTOS",
+        "Microcontroller",
+        "C/C++",
+        "Control"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 2,
+      "f_score": 45.293,
+      "g_score": 45.15,
+      "semesters": [
+        [
+          "RBE3050",
+          "RBE4004",
+          "RBE3015",
+          "INE1051",
+          "RBE3042"
+        ],
+        [
+          "HIS1056",
+          "RBE3012",
+          "THL1057",
+          "INE1050",
+          "AIT2004"
+        ]
+      ],
+      "total_credits": 29,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3996"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "STM32",
+        "FreeRTOS",
+        "Microcontroller",
+        "C/C++",
+        "Control"
+      ],
+      "career_match_ratio": 0.29
+    },
+    {
+      "rank": 3,
+      "f_score": 50.893,
+      "g_score": 50.75,
+      "semesters": [
+        [
+          "PSY1050",
+          "RBE3050",
+          "RBE3012",
+          "RBE3042",
+          "RBE4004"
+        ],
+        [
+          "UET1002",
+          "RBE3015",
+          "INE1051",
+          "RBE3030",
+          "AIT2004"
+        ]
+      ],
+      "total_credits": 27,
+      "priority_covered": [],
+      "priority_missing": [
+        "ELT3996"
+      ],
+      "covered_skills": [
+        "I2C/SPI/UART",
+        "Sensor"
+      ],
+      "missing_skills": [
+        "STM32",
+        "FreeRTOS",
+        "Microcontroller",
+        "C/C++",
+        "Control"
+      ],
+      "career_match_ratio": 0.29
+    }
+  ]
+}
