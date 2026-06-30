@@ -687,10 +687,8 @@ class Module1RuleEngine:
             reverse=True
         )
 
-        module2_candidates = [
-            course for course in eligible_courses
-            if course["priority"] > 0
-        ]
+        # Mở rộng candidate pool cho Module 2: mọi môn eligible đều là candidate.
+        module2_candidates = list(eligible_courses)
 
         output = {
             "module": "Module 1 - Rule-based Knowledge Engine",

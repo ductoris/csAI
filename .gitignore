@@ -15,3 +15,7 @@ module3/module3_output_*.json
 
 # Logs
 *.log
+
+# Batch outputs
+output/
+output.zip

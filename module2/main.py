@@ -85,7 +85,7 @@ def make_combo_func(
     Module 1 đã lọc tiên quyết → Module 2 chỉ cần lọc thêm tổng tín chỉ.
 
     Chiến lược:
-      - Ưu tiên combo 5-4-3 môn để đạt ngưỡng tín chỉ tối thiểu
+      - Ưu tiên combo 7-6-5-4-3 môn để đạt ngưỡng tín chỉ tối thiểu
       - Chỉ nhận combo có min_credits <= tổng tín chỉ <= max_credits
       - Giới hạn 30 combo để tránh bùng nổ
     """
@@ -93,8 +93,12 @@ def make_combo_func(
         # Lọc ra môn chưa học trong passed_courses hiện tại
         available = [c for c in eligible_codes if c not in passed_courses]
 
+        # Nếu có quá nhiều môn, chỉ dùng top 20 để tránh khai thác tổ hợp quá lớn.
+        if len(available) > 20:
+            available = available[:20]
+
         valid = []
-        for size in [5, 4, 3]:
+        for size in [7, 6, 5, 4, 3]:
             for combo in combinations(available, min(size, len(available))):
                 total = sum(course_db.get(c, {}).get('credits', 3) for c in combo)
                 if min_credits <= total <= max_credits:
