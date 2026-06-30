@@ -1,0 +1,111 @@
+\section{Phương pháp đề xuất}
+\label{sec:phuong_phap_de_xuat}
+
+Trong dự án \textbf{csAI\_github}, phương pháp đề xuất được thiết kế theo hướng kết hợp giữa \textit{quy tắc nghiệp vụ}, \textit{tìm kiếm tối ưu} và \textit{gợi ý cá nhân hóa}. Cách tiếp cận này giúp hệ thống không chỉ lọc ra các môn học hợp lệ mà còn xây dựng được một lộ trình học tập phù hợp với mục tiêu nghề nghiệp, giới hạn tín chỉ và lịch sử học tập của từng sinh viên.
+
+\subsection{Mô hình tổng thể}
+
+Hệ thống được triển khai theo ba module liên tiếp:
+\begin{itemize}
+    \item \textbf{Module 1 - Rule-based Knowledge Engine}: phân tích hồ sơ sinh viên, chương trình đào tạo và các ràng buộc tiên quyết để tạo ra tập hợp các môn học khả thi.
+    \item \textbf{Module 2 - A* Planning Engine}: sử dụng thuật toán A* để tìm các lộ trình học tập tối ưu trong vòng hai học kỳ tiếp theo.
+    \item \textbf{Module 3 - k-NN Recommendation Engine}: rà soát các sinh viên có đặc điểm tương đồng và điều chỉnh lại thứ tự ưu tiên của các lộ trình để tăng tính cá nhân hóa.
+\end{itemize}
+
+Nhờ cấu trúc phân tầng như vậy, hệ thống có thể xử lý đồng thời hai loại yêu cầu: (1) đảm bảo tính hợp lệ của kế hoạch học tập và (2) tối ưu hóa trải nghiệm gợi ý cho từng người dùng.
+
+\subsection{Module 1: Lọc ràng buộc và xây dựng không gian tìm kiếm}
+
+Module 1 đóng vai trò là tầng tiền xử lý cho toàn bộ hệ thống. Tại đây, dữ liệu đầu vào bao gồm hồ sơ sinh viên, danh sách môn học và chương trình đào tạo được đọc từ các file CSV. Hệ thống tiến hành chuẩn hóa dữ liệu, kiểm tra các môn đã hoàn thành, xác định các môn có thể đăng ký và loại bỏ những môn vi phạm điều kiện tiên quyết hoặc không phù hợp với ngữ cảnh sinh viên.
+
+Quá trình này giúp tạo ra một không gian tìm kiếm hợp lệ, trong đó mỗi môn học đều có đầy đủ thông tin về tín chỉ, phân loại và học kỳ dự kiến. Điều này là nền tảng quan trọng để Module 2 có thể tìm kiếm các lộ trình phù hợp mà không bị lẫn giữa các lựa chọn không khả thi.
+
+\subsection{Module 2: Tìm kiếm lộ trình bằng thuật toán A*}
+
+Sau khi có tập hợp các môn hợp lệ, Module 2 chuyển sang bước xây dựng lộ trình học tập. Mỗi trạng thái trong thuật toán được biểu diễn bằng tập hợp các môn đã hoàn thành và số học kỳ đã lên kế hoạch. Mỗi hành động tương ứng với một tập hợp môn được đăng ký trong một học kỳ, đồng thời phải thỏa mãn giới hạn tín chỉ tối đa cho phép.
+
+Thuật toán A* được lựa chọn vì nó kết hợp tốt giữa chi phí thực tế và ước lượng còn lại. Hàm đánh giá được định nghĩa dưới dạng
+\begin{equation}
+    f(n) = g(n) + h(n),
+\end{equation}
+
+trong đó $g(n)$ là chi phí tích lũy của lộ trình hiện tại, còn $h(n)$ là ước lượng chi phí còn lại để đạt được các mục tiêu ưu tiên như môn học quan trọng theo hướng nghề nghiệp của sinh viên. Việc sử dụng heuristic giúp thuật toán ưu tiên các đường đi có khả năng dẫn đến giải pháp tốt hơn, thay vì duyệt toàn bộ không gian trạng thái.
+
+Ngoài ra, hệ thống còn bổ sung các tiêu chí như ưu tiên môn nền tảng, cân bằng khối lượng tín chỉ giữa các học kỳ và giảm thiểu việc xếp các môn mang tính chất chung quá sớm. Những điều chỉnh này làm cho các kế hoạch đề xuất vừa hợp lệ vừa có tính thực tiễn cao.
+
+\subsection{Module 3: Tái xếp hạng và cá nhân hóa bằng k-NN}
+
+Để tăng độ phù hợp với từng sinh viên, Module 3 sử dụng phương pháp \textit{k-nearest neighbors} (k-NN). Từ hồ sơ của sinh viên hiện tại, hệ thống tìm các sinh viên có đặc điểm tương đồng về GPA, mục tiêu nghề nghiệp, mức độ rủi ro học tập và khối lượng tín chỉ phù hợp. Những sinh viên này được xem như các \textit{peer} để làm nền tảng cho việc đề xuất.
+
+Các lộ trình được sinh ra từ Module 2 sau đó được tái sắp xếp dựa trên các yếu tố như:
+\begin{itemize}
+    \item mức độ phù hợp với mục tiêu nghề nghiệp;
+    \item kinh nghiệm học tập của các sinh viên đồng cảnh;
+    \item tải trọng tín chỉ ở mỗi học kỳ;
+    \item tỷ lệ môn nền tảng và môn cốt lõi trong kế hoạch.
+\end{itemize}
+
+Thông qua bước này, hệ thống không chỉ đưa ra một lộ trình khả thi mà còn chọn ra lộ trình có khả năng thành công cao nhất đối với từng sinh viên cụ thể.
+
+\subsection{Ưu điểm của phương pháp đề xuất}
+
+Phương pháp đề xuất trong dự án có một số ưu điểm nổi bật:
+\begin{itemize}
+    \item \textbf{Đảm bảo tính hợp lệ}: tất cả các lộ trình đều được kiểm tra trước khi được đề xuất.
+    \item \textbf{Tối ưu hóa kế hoạch}: thuật toán A* giúp tìm được các giải pháp tốt hơn so với cách chọn ngẫu nhiên hoặc thủ công.
+    \item \textbf{Cá nhân hóa}: k-NN cho phép hệ thống thích nghi với đặc điểm riêng của từng sinh viên.
+    \item \textbf{Tính mở rộng}: hệ thống có thể dễ dàng cập nhật khi dữ liệu môn học hoặc hồ sơ sinh viên thay đổi.
+\end{itemize}
+
+Nhìn chung, phương pháp đề xuất trong \textit{csAI\_github} là một hệ thống ba tầng, kết hợp giữa logic quy tắc, thuật toán tối ưu và học máy không giám sát. Cách tiếp cận này phù hợp với bối cảnh đề xuất lộ trình học tập, nơi cần vừa bảo đảm tính đúng đắn về quy chế, vừa đáp ứng nhu cầu cá nhân hóa của người dùng.
+
+\section{Kết quả và đánh giá}
+\label{sec:ket_qua_danh_gia}
+
+Để kiểm tra tính khả thi của hệ thống, nhóm đã chạy Module 2 trên đầu vào của sinh viên \textbf{UET\_MaiDucTri} với mục tiêu nghề nghiệp \textit{Computer Vision Engineer} và học kỳ hiện tại là học kỳ 3. Kết quả cho thấy hệ thống có thể sinh ra các lộ trình học tập hợp lệ trong vòng hai học kỳ tiếp theo và sắp xếp ưu tiên theo mức độ phù hợp.
+
+\subsection{Kết quả chạy thực nghiệm}
+
+Bảng \ref{tab:ket-qua-module2} trình bày các phương án đề xuất mà hệ thống sinh ra. Mỗi phương án đều có cấu trúc theo học kỳ và được đánh giá thông qua chỉ số \textit{utility} $F$-score.
+
+\begin{table}[h]
+\centering
+\caption{Kết quả đề xuất từ Module 2}
+\label{tab:ket-qua-module2}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Hạng & Utility $F$-score & Học kỳ 4 & Học kỳ 5 \\
+\hline
+1 & 9.0 & ROB3001, ROB3002 & INT3405 \\
+2 & 13.0 & ROB3001, ROB3002 & MAT1102, INT3405 \\
+\hline
+\end{tabular}
+\end{table}
+
+Để trực quan hóa hiệu quả của hệ thống, hình \ref{fig:do-thi-utility} biểu diễn mức độ ưu tiên của các phương án đề xuất. Phương án thứ hai đạt điểm utility cao hơn, do đó được ưu tiên ở vị trí cao hơn trong danh sách gợi ý.
+
+\begin{figure}[h]
+\centering
+\begin{picture}(10,5)
+\put(1,1){\line(0,1){3.2}}
+\put(1,1){\line(1,0){8}}
+\put(2,1){\line(0,1){2.7}}
+\put(4,1){\line(0,1){4.2}}
+\put(1.6,0.2){Phương án 1}
+\put(3.6,0.2){Phương án 2}
+\put(0.2,3.2){9.0}
+\put(0.2,4.2){13.0}
+\put(2.2,3.8){\small 9.0}
+\put(4.2,5.3){\small 13.0}
+\end{picture}
+\caption{Biểu đồ so sánh utility của hai phương án đề xuất.}
+\label{fig:do-thi-utility}
+\end{figure}
+
+\subsection{Đánh giá}
+
+Từ kết quả trên, có thể nhận thấy hệ thống hoạt động đúng mục tiêu ban đầu. Thứ nhất, các đề xuất đều tuân thủ cấu trúc học tập theo học kỳ và có thể được sử dụng ngay trong thực tế. Thứ hai, thuật toán A* kết hợp với heuristic cho phép hệ thống ưu tiên các lộ trình có khả năng phù hợp hơn với mục tiêu nghề nghiệp của sinh viên. Điều này thể hiện rõ ở việc phương án có utility cao hơn cũng được xếp ở hạng ưu tiên cao hơn.
+
+Bên cạnh những ưu điểm, hệ thống vẫn còn một số hạn chế. Độ chính xác của đề xuất phụ thuộc nhiều vào chất lượng dữ liệu đầu vào, đặc biệt là thông tin về môn học, điều kiện tiên quyết và hồ sơ sinh viên. Nếu dữ liệu thiếu đầy đủ hoặc không cập nhật, các lộ trình đề xuất có thể bị sai lệch. Ngoài ra, phạm vi thử nghiệm hiện tại mới dừng ở hai học kỳ tiếp theo, nên chưa đánh giá được hiệu quả của hệ thống trên quy mô lớn hơn hoặc với nhiều nhóm đối tượng sinh viên khác nhau.
+
+Nhìn chung, phần kết quả thực nghiệm cho thấy dự án \textit{csAI\_github} đã xây dựng được một quy trình đề xuất lộ trình học tập có thể chạy được, có khả năng sinh ra các phương án hợp lệ và có tính sắp xếp ưu tiên rõ ràng. Đây là nền tảng tốt để mở rộng sang các phiên bản nâng cao hơn như tích hợp dữ liệu học tập thực tế, thêm ràng buộc thời khóa biểu hoặc cải thiện heuristic bằng học máy.

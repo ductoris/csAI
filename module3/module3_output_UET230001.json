@@ -56,154 +56,157 @@
         "roadmap": [
             {
                 "rank": 1,
-                "final_score": 0.4751,
+                "final_score": 0.4705,
                 "score_breakdown": {
                     "career_score": 0.0,
                     "peer_score": 0.969,
                     "load_score": 1.0,
-                    "foundation_score": 0.813,
-                    "balance_score": 1.0
+                    "foundation_score": 0.767,
+                    "balance_score": 0.963
                 },
                 "plan_metrics": {
                     "semester_credits": [
-                        15,
-                        15
-                    ],
-                    "foundation_credits": 22,
-                    "first_sem_foundation_credits": 15,
-                    "overall_foundation_score": 0.733,
-                    "early_foundation_score": 1.0,
-                    "foundation_score": 0.813,
-                    "balance_score": 1.0
-                },
-                "semesters": [
-                    {
-                        "semester_offset": 1,
-                        "courses": [
-                            "INT1008",
-                            "ELT3240",
-                            "RBE1001",
-                            "MAT1093",
-                            "MAT1101"
-                        ],
-                        "total_credits": 15
-                    },
-                    {
-                        "semester_offset": 2,
-                        "courses": [
-                            "INT1009",
-                            "ELT2035",
-                            "FLF1107",
-                            "MAT1042"
-                        ],
-                        "total_credits": 15
-                    }
-                ],
-                "total_credits": 30,
-                "covered_skills": []
-            },
-            {
-                "rank": 2,
-                "final_score": 0.4658,
-                "score_breakdown": {
-                    "career_score": 0.0,
-                    "peer_score": 0.969,
-                    "load_score": 1.0,
-                    "foundation_score": 0.72,
-                    "balance_score": 1.0
-                },
-                "plan_metrics": {
-                    "semester_credits": [
-                        15,
-                        15
+                        14,
+                        13
                     ],
                     "foundation_credits": 18,
-                    "first_sem_foundation_credits": 15,
-                    "overall_foundation_score": 0.6,
+                    "first_sem_foundation_credits": 14,
+                    "overall_foundation_score": 0.667,
                     "early_foundation_score": 1.0,
-                    "foundation_score": 0.72,
-                    "balance_score": 1.0
+                    "foundation_score": 0.767,
+                    "balance_score": 0.963
                 },
                 "semesters": [
                     {
                         "semester_offset": 1,
                         "courses": [
-                            "INT1008",
+                            "ELT2035",
                             "ELT3240",
                             "RBE1001",
-                            "MAT1042",
+                            "INT1008",
                             "MAT1101"
                         ],
-                        "total_credits": 15
+                        "total_credits": 14
                     },
                     {
                         "semester_offset": 2,
                         "courses": [
                             "PEC1008",
-                            "HIS1001",
-                            "ELT2035",
-                            "INT1009",
-                            "FLF1107"
+                            "MAT1093",
+                            "FLF1107",
+                            "PHI1002"
                         ],
-                        "total_credits": 15
+                        "total_credits": 13
                     }
                 ],
-                "total_credits": 30,
+                "total_credits": 27,
                 "covered_skills": []
             },
             {
-                "rank": 3,
-                "final_score": 0.4658,
+                "rank": 2,
+                "final_score": 0.4705,
                 "score_breakdown": {
                     "career_score": 0.0,
                     "peer_score": 0.969,
                     "load_score": 1.0,
-                    "foundation_score": 0.72,
+                    "foundation_score": 0.767,
+                    "balance_score": 0.963
+                },
+                "plan_metrics": {
+                    "semester_credits": [
+                        14,
+                        13
+                    ],
+                    "foundation_credits": 18,
+                    "first_sem_foundation_credits": 14,
+                    "overall_foundation_score": 0.667,
+                    "early_foundation_score": 1.0,
+                    "foundation_score": 0.767,
+                    "balance_score": 0.963
+                },
+                "semesters": [
+                    {
+                        "semester_offset": 1,
+                        "courses": [
+                            "ELT2035",
+                            "ELT3240",
+                            "RBE1001",
+                            "INT1008",
+                            "MAT1101"
+                        ],
+                        "total_credits": 14
+                    },
+                    {
+                        "semester_offset": 2,
+                        "courses": [
+                            "HIS1001",
+                            "MAT1093",
+                            "FLF1107",
+                            "PHI1002"
+                        ],
+                        "total_credits": 13
+                    }
+                ],
+                "total_credits": 27,
+                "covered_skills": []
+            },
+            {
+                "rank": 3,
+                "final_score": 0.4596,
+                "score_breakdown": {
+                    "career_score": 0.0,
+                    "peer_score": 0.969,
+                    "load_score": 1.0,
+                    "foundation_score": 0.658,
                     "balance_score": 1.0
                 },
                 "plan_metrics": {
                     "semester_credits": [
-                        15,
-                        15
+                        13,
+                        13
                     ],
-                    "foundation_credits": 18,
-                    "first_sem_foundation_credits": 15,
-                    "overall_foundation_score": 0.6,
-                    "early_foundation_score": 1.0,
-                    "foundation_score": 0.72,
+                    "foundation_credits": 15,
+                    "first_sem_foundation_credits": 11,
+                    "overall_foundation_score": 0.577,
+                    "early_foundation_score": 0.846,
+                    "foundation_score": 0.658,
                     "balance_score": 1.0
                 },
                 "semesters": [
                     {
                         "semester_offset": 1,
                         "courses": [
-                            "INT1008",
                             "ELT3240",
                             "RBE1001",
-                            "MAT1042",
-                            "MAT1101"
+                            "INT1008",
+                            "MAT1101",
+                            "PHI1002"
                         ],
-                        "total_credits": 15
+                        "total_credits": 13
                     },
                     {
                         "semester_offset": 2,
                         "courses": [
                             "HIS1001",
-                            "ELT2035",
-                            "INT1009",
-                            "PHI1002",
-                            "FLF1107"
+                            "MAT1093",
+                            "FLF1107",
+                            "PEC1008"
                         ],
-                        "total_credits": 15
+                        "total_credits": 13
                     }
                 ],
-                "total_credits": 30,
+                "total_credits": 26,
                 "covered_skills": []
             }
         ],
         "skills_to_improve": [
             {
-                "skill": "Control",
+                "skill": "Sensor",
+                "source": "career_oriented",
+                "priority": "cao"
+            },
+            {
+                "skill": "I2C/SPI/UART",
                 "source": "career_oriented",
                 "priority": "cao"
             },
@@ -218,12 +221,7 @@
                 "priority": "cao"
             },
             {
-                "skill": "Sensor",
-                "source": "career_oriented",
-                "priority": "cao"
-            },
-            {
-                "skill": "I2C/SPI/UART",
+                "skill": "Control",
                 "source": "career_oriented",
                 "priority": "cao"
             },
@@ -244,14 +242,14 @@
             }
         ],
         "study_hours_per_week": {
-            "total_per_week": 14,
+            "total_per_week": 13,
             "breakdown": {
                 "ly_thuyet": 5,
                 "thuc_hanh": 6,
                 "project": 3
             },
             "peer_average": 8.6,
-            "formula_hours": 22.5
+            "formula_hours": 19.5
         }
     }
 }

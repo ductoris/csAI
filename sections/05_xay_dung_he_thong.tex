@@ -1,0 +1,59 @@
+\section{Xây dựng hệ thống}
+\label{sec:xay_dung_he_thong}
+
+Hệ thống được xây dựng theo hướng module hóa nhằm tăng tính rõ ràng, dễ bảo trì và dễ mở rộng trong quá trình phát triển. Mỗi thành phần của hệ thống có một vai trò riêng, phối hợp với nhau để tạo thành một quy trình đề xuất lộ trình học tập hoàn chỉnh từ dữ liệu đầu vào đến kết quả cuối cùng.
+
+\subsection{Kiến trúc tổng thể}
+
+Kiến trúc của hệ thống gồm ba tầng chính:
+\begin{itemize}
+    \item \textbf{Tầng dữ liệu}: tiếp nhận hồ sơ sinh viên, danh sách môn học và chương trình đào tạo từ các file CSV hoặc JSON.
+    \item \textbf{Tầng xử lý}: thực hiện các thao tác lọc điều kiện, tìm kiếm lộ trình và tái xếp hạng đề xuất.
+    \item \textbf{Tầng đầu ra}: xuất kết quả dưới dạng file JSON hoặc dữ liệu có thể sử dụng cho giao diện người dùng hoặc các bước xử lý tiếp theo.
+\end{itemize}
+
+Cách tổ chức này giúp hệ thống có thể thay đổi từng module riêng biệt mà không ảnh hưởng lớn đến toàn bộ quy trình. Ngoài ra, việc tách module còn giúp dễ dàng kiểm thử và đánh giá từng phần của hệ thống một cách độc lập.
+
+\subsection{Cấu trúc thư mục và thành phần chính}
+
+Dự án được tổ chức theo cấu trúc thư mục rõ ràng, trong đó mỗi module tương ứng với một nhiệm vụ cụ thể:
+\begin{itemize}
+    \item \textbf{module1}: thực hiện đọc dữ liệu, chuẩn hóa thông tin và lọc các môn học hợp lệ dựa trên quy tắc của chương trình đào tạo.
+    \item \textbf{module2}: xây dựng các lộ trình học tập bằng thuật toán A* và tối ưu hóa theo giới hạn tín chỉ và mục tiêu nghề nghiệp.
+    \item \textbf{module3}: thực hiện gợi ý cá nhân hóa bằng phương pháp k-NN và xếp hạng lại các lộ trình phù hợp với từng sinh viên.
+    \item \textbf{data}: lưu trữ các file dữ liệu đầu vào như hồ sơ sinh viên, catalog môn học và các cấu hình liên quan.
+    \item \textbf{run\_pipeline.py}: điều phối toàn bộ quy trình từ Module 1 đến Module 3 để chạy theo luồng hoàn chỉnh.
+\end{itemize}
+
+Việc phân chia này giúp hệ thống vừa phù hợp cho mục tiêu nghiên cứu, vừa có thể phát triển thành một ứng dụng thực tế ở mức độ cao hơn.
+
+\subsection{Quy trình thực thi hệ thống}
+
+Quy trình hoạt động của hệ thống được thực hiện tuần tự theo các bước sau:
+\begin{enumerate}
+    \item Đọc dữ liệu đầu vào từ các file CSV và JSON.
+    \item Xác định các môn đã hoàn thành, mục tiêu nghề nghiệp và các ràng buộc của sinh viên.
+    \item Lọc các môn học khả thi và tạo không gian tìm kiếm cho Module 2.
+    \item Sinh ra các lộ trình học tập bằng thuật toán A*.
+    \item Tái xếp hạng và cá nhân hóa kết quả bằng k-NN.
+    \item Xuất kết quả dưới dạng JSON để sử dụng tiếp cho giao diện hoặc phân tích sau này.
+\end{enumerate}
+
+Quy trình này cho thấy hệ thống không chỉ dừng ở việc sinh ra một danh sách môn học, mà còn tạo ra một kế hoạch học tập có cấu trúc, có thể so sánh và có thể điều chỉnh theo bối cảnh thực tế.
+
+\subsection{Các kỹ thuật và công cụ được sử dụng}
+
+Trong quá trình xây dựng hệ thống, nhóm sử dụng các công cụ và kỹ thuật phổ biến trong phát triển phần mềm và trí tuệ nhân tạo, bao gồm:
+\begin{itemize}
+    \item \textbf{Python}: ngôn ngữ chính để triển khai toàn bộ pipeline.
+    \item \textbf{Pandas}: dùng để đọc, xử lý và chuẩn hóa dữ liệu từ file CSV.
+    \item \textbf{JSON}: dùng để trao đổi dữ liệu giữa các module.
+    \item \textbf{A* Search}: thuật toán tìm kiếm cho bài toán lập kế hoạch học tập.
+    \item \textbf{k-NN}: kỹ thuật gợi ý dựa trên các đối tượng tương đồng.
+\end{itemize}
+
+Sự kết hợp giữa các công cụ này giúp hệ thống vừa dễ triển khai vừa có thể mở rộng để tích hợp thêm các thuật toán khác trong tương lai.
+
+\subsection{Đánh giá chung về hệ thống}
+
+Hệ thống xây dựng được một quy trình đề xuất lộ trình học tập có cấu trúc rõ ràng, có thể chạy tự động và có khả năng mở rộng. Với cách thiết kế theo module, hệ thống có thể được cải tiến từng phần mà không cần thay đổi toàn bộ kiến trúc. Đây là một lợi thế quan trọng khi hệ thống được phát triển tiếp trong các phiên bản sau hoặc tích hợp vào môi trường ứng dụng thực tế.

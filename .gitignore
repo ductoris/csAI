@@ -1,0 +1,17 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor/project files
+.vscode/
+.idea/
+.DS_Store
+
+# Generated output files
+module2/module1_output_*.json
+module2/module2_output_*.json
+module3/module3_output_*.json
+
+# Logs
+*.log

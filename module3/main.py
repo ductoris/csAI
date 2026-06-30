@@ -247,6 +247,13 @@ def run_module3(
     knn       = KNNEngine(student_profiles_path)
     neighbors = knn.find_neighbors(ctx, k=k)
 
+    if not plans:
+        raise ValueError(
+            f"Module 2 returned no plans for student {ctx.get('student_id', '')}. "
+            "Kiểm tra lại output Module 2 và điều kiện tìm kiếm." 
+            f"(file: {module2_json_path})"
+        )
+
     # ── 3. Re-rank plans ──────────────────────────────────────
     reranker      = PlanReranker()
     reranked_plans = reranker.rerank(plans, neighbors, ctx['credit_limit'], ctx)

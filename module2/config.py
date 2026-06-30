@@ -35,4 +35,4 @@ GPA_MEDIUM = 3.0
 
 # --- Tín chỉ tối đa/tối thiểu mỗi kỳ ---
 MAX_CREDITS_DEFAULT = 21
-MIN_CREDITS_DEFAULT = 15
+MIN_CREDITS_DEFAULT = 13

@@ -82,6 +82,19 @@ class AcademicAStar:
             # ── EXPAND: lấy tổ hợp môn hợp lệ từ Module 1 ──
             valid_actions = get_valid_combinations_func(list(passed_set))
 
+            if not valid_actions:
+                if len(path) > 0:
+                    top_k_paths.append({
+                        'rank'            : len(top_k_paths) + 1,
+                        'f_score'         : round(f, 3),
+                        'g_score'         : round(g, 3),
+                        'semesters'       : [list(action) for action in path],
+                        'total_credits'   : self._total_credits(path),
+                        'priority_covered': list(self.priority_courses & passed_set),
+                        'priority_missing': list(self.priority_courses - passed_set),
+                    })
+                continue
+
             for action in valid_actions:
                 if not action:
                     continue
