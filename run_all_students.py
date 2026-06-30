@@ -117,6 +117,7 @@ def main():
         raise ValueError(f'No student IDs found in {students_path}')
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    failed_students = []
 
     for student_id in student_ids:
         student_id = student_id.strip()
@@ -135,43 +136,54 @@ def main():
         print(f'Output folder: {student_dir}')
         print('#' * 80)
 
-        if args.force or not module1_output.exists():
-            run_module1(
-                student_id=student_id,
-                courses_path=courses_path,
-                students_path=students_path,
-                output_path=module1_output,
-                top=args.top,
-            )
-        else:
-            print(f'Skipping Module 1 for {student_id}: {module1_output} already exists')
+        try:
+            if args.force or not module1_output.exists():
+                run_module1(
+                    student_id=student_id,
+                    courses_path=courses_path,
+                    students_path=students_path,
+                    output_path=module1_output,
+                    top=args.top,
+                )
+            else:
+                print(f'Skipping Module 1 for {student_id}: {module1_output} already exists')
 
-        if args.force or not module2_output.exists():
-            run_module2(
-                module1_output=module1_output,
-                module2_output=module2_output,
-                career_paths=career_paths_path,
-            )
-        else:
-            print(f'Skipping Module 2 for {student_id}: {module2_output} already exists')
+            if args.force or not module2_output.exists():
+                run_module2(
+                    module1_output=module1_output,
+                    module2_output=module2_output,
+                    career_paths=career_paths_path,
+                )
+            else:
+                print(f'Skipping Module 2 for {student_id}: {module2_output} already exists')
 
-        if args.force or not module3_output.exists():
-            run_module3(
-                module2_output=module2_output,
-                student_profiles=students_path,
-                courses_path=courses_path,
-                module3_output=module3_output,
-                k=args.k,
-            )
-        else:
-            print(f'Skipping Module 3 for {student_id}: {module3_output} already exists')
+            if args.force or not module3_output.exists():
+                run_module3(
+                    module2_output=module2_output,
+                    student_profiles=students_path,
+                    courses_path=courses_path,
+                    module3_output=module3_output,
+                    k=args.k,
+                )
+            else:
+                print(f'Skipping Module 3 for {student_id}: {module3_output} already exists')
 
-        print(f'Pipeline completed for {student_id}')
-        print(f'  Module 1 JSON: {module1_output}')
-        print(f'  Module 2 JSON: {module2_output}')
-        print(f'  Module 3 JSON: {module3_output}')
+            print(f'Pipeline completed for {student_id}')
+            print(f'  Module 1 JSON: {module1_output}')
+            print(f'  Module 2 JSON: {module2_output}')
+            print(f'  Module 3 JSON: {module3_output}')
+        except subprocess.CalledProcessError as exc:
+            print(f'\nERROR: student {student_id} failed with subprocess error:')
+            print(exc)
+            failed_students.append(student_id)
+        except Exception as exc:
+            print(f'\nERROR: student {student_id} failed with unexpected error:')
+            print(exc)
+            failed_students.append(student_id)
 
-    print(f'\nBatch run completed: {len(student_ids)} students processed.')
+    print(f'\nBatch run completed: {len(student_ids)} students requested.')
+    if failed_students:
+        print(f'Failed students ({len(failed_students)}): {", ".join(failed_students)}')
 
 
 if __name__ == '__main__':

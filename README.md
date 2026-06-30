@@ -39,7 +39,5 @@ python module1_rule_engine.py --all
 python3 run_pipeline.py --student UET230001
 ```
 ```bash
-  ```bash
-python3 run_pipeline.py --student UET230001
-```
+python3 run_all_students.py --force
 ```
